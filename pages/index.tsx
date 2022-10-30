@@ -9,6 +9,12 @@ import Contact from './components/Contact'
 import Header from './components/Header'
 import NavTabs from './components/Navtabs'
 import Footer from './components/Footer'
+import { useCallback } from "react"
+import Particles from "react-particles";
+import type { Engine } from "tsparticles-engine";
+import { loadFull } from "tsparticles";
+import ParticlesContainer from "./particles/ParticlesContainer";
+
 
 
 export default function App() {
@@ -32,6 +38,12 @@ const handlePageChange = (page:any) => setCurrentPage(page);
 
 return (
   <div>
+     <div >
+      <ParticlesContainer  />
+      
+      
+    </div>
+    
     <Header />
     {/* We are passing the currentPage from state and the function to update it */}
     <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
