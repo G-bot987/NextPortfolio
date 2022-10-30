@@ -2,10 +2,11 @@ import { useCallback } from "react"
 import Particles from "react-particles";
 import type { Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
+import { loadPolygonPath } from "tsparticles-path-polygon";
 
-export default function ParticlesContainer(props: unknown) {
-
-  const customInit = useCallback(async (engine: Engine) => {
+export default function ParticlesContainer(props: any) {
+    const customInit = useCallback(async (engine: Engine) => {
+      await loadPolygonPath(engine);
     await loadFull(engine);
   }, []);
 
@@ -13,66 +14,88 @@ export default function ParticlesContainer(props: unknown) {
     
     <Particles
       options={{
-        smooth: true,
-        interactivity: {
-          events: {
-            onHover: {
-              enable: true,
-              mode: "bubble",
-              parallax: {
-                enable: false,
-                force: 2,
-                smooth: 10
-              }
-            }
-          },
-          modes: {
-            bubble: {
-              distance: 40,
-              duration: 2,
-              opacity: 8,
-              size: 15
-            }
-          }
-        },
         particles: {
-          move: {
+            color: {
+              value: "#FF0000",
+              animation: {
+                enable: true,
+                speed: 10
+              }
+            },
+            move: {
+              attract: {
+                enable: true,
+                rotate: {
+                  distance: 100,
+                  x: 2000,
+                  y: 2000
+                }
+              },
+              direction: "none",
+              enable: true,
+              outModes: {
+                default: "destroy"
+              },
+              path: {
+                clamp: false,
+                enable: true,
+                delay: {
+                  value: 0
+                },
+                generator: "polygonPathGenerator",
+                options: {
+                  sides: 6,
+                  turnSteps: 30,
+                  angle: 30
+                }
+              },
+              random: false,
+              speed: 3,
+              straight: false,
+              trail: {
+                fillColor: "#000",
+                length: 20,
+                enable: true
+              }
+            },
+            number: {
+              density: {
+                enable: true,
+                area: 800
+              },
+              value: 0
+            },
+            opacity: {
+              value: 1
+            },
+            shape: {
+              type: "circle"
+            },
+            size: {
+              value: 2
+            }
+          },
+          background: {
+            color: "#000"
+          },
+          fullScreen: {
+            zIndex: -1
+          },
+          emitters: {
             direction: "none",
-            distance: 5,
-            enable: true,
-            outModes: "none",
-            speed: 1
-          },
-          number: {
-            value: 600
-          },
-          shape: {
-            type: ["circle", "square", "triangle"]
-          },
-          size: {
-            value: {
-              min: 3,
-              max: 5
+            rate: {
+              quantity: 1,
+              delay: 0.25
+            },
+            size: {
+              width: 0,
+              height: 0
+            },
+            position: {
+              x: 50,
+              y: 50
             }
           }
-        },
-        canvasMask: {
-          enable: true,
-          scale: 5,
-          pixels: {
-            filter: "pixelFilter"
-          },
-          image: {
-            src: "https://particles.js.org/images/amongus_cyan.png"
-          }
-        },
-        background: {
-          color: "#000000",
-          image: "",
-          position: "50% 50%",
-          repeat: "no-repeat",
-          size: "cover"
-        }
         
       }}
       init={customInit}
