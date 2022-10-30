@@ -26,7 +26,6 @@ export default function ParticlesContainer(props: any) {
               attract: {
                 enable: true,
                 rotate: {
-                  distance: 100,
                   x: 2000,
                   y: 2000
                 }
