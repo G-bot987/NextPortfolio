@@ -8,7 +8,7 @@ import CV from './mainPages/Cv'
 import Contact from './components/Contact'
 import Header from './components/Header'
 import NavTabs from './components/Navtabs'
-import Footer from './components/footer'
+import Footer from './components/Footer'
 
 
 export default function App() {
