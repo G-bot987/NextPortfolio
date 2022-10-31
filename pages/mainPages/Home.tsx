@@ -3,7 +3,7 @@ import styles from "../../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className={`mt-6 ${styles.neonBoxBody}`}>
+    <div className={`mt-6 mr-8 ml-8 border-double border-4 border-sky-500 rounded-lg border-white min-w-min ${styles.neonBoxBody}`}>
       <h1>Home Page</h1>
       {/* <img src={Georgia} className="Georgia" alt="its me" /> */}
 

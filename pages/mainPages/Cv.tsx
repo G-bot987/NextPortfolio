@@ -4,7 +4,7 @@ import styles from "../../styles/Home.module.css";
 // import CVlink from "../../img/cv/CV.pdf";
 export default function CV() {
   return (
-    <div className={`mt-6 ${styles.neonBoxBody}`}>
+    <div className={`mt-6 mr-8 ml-8 border-double border-4 border-sky-500 rounded-lg border-white min-w-min ${styles.neonBoxBody}`}>
       <h1>Contact Page</h1>
       <p>
         <h3>Proficent In:</h3>
