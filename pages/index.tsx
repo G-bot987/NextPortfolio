@@ -7,7 +7,7 @@ import Projects from './mainPages/Projects'
 import CV from './mainPages/Cv'
 import Contact from './components/Contact'
 import Header from './components/Header'
-import NavTabs from './components/Navtabs'
+import NavLinks from './components/hamburgerMenu/NavLinks'
 import Footer from './components/Footer'
 import { useCallback } from "react"
 import Particles from "react-particles";
@@ -46,7 +46,9 @@ return (
     
     <Header />
     {/* We are passing the currentPage from state and the function to update it */}
-    <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+  
+    <NavLinks currentPage={currentPage} handlePageChange={handlePageChange} />
+  
     {/* Here we are calling the renderPage method which will return a component  */}
     {renderPage()}
     <Footer />

@@ -12,8 +12,8 @@ function NavTabs({ currentPage , handlePageChange }:Props) {
 
 
   return (
-    <ul className="nav nav-tabs">
-      <li className="nav-item">
+    <ul className="inline-flex">
+      <li className="pl-4">
         <a
           href="#home"
           onClick={() => handlePageChange("Home")}
@@ -24,7 +24,7 @@ function NavTabs({ currentPage , handlePageChange }:Props) {
           Home/about me
         </a>
       </li>
-      <li className="nav-item">
+      <li className="pl-4">
         <a
           href="#Projects"
           onClick={() => handlePageChange("Projects")}
@@ -36,7 +36,7 @@ function NavTabs({ currentPage , handlePageChange }:Props) {
           Projects
         </a>
       </li>
-      <li className="nav-item">
+      <li className="pl-4">
         <a
           href="#contact"
           onClick={() => handlePageChange("Contact")}
@@ -46,7 +46,7 @@ function NavTabs({ currentPage , handlePageChange }:Props) {
           Contact
         </a>
       </li>
-      <li className="nav-item">
+      <li className="pl-4">
         <a
           href="#CV"
           onClick={() => handlePageChange("CV")}
