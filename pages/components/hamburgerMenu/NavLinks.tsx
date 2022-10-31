@@ -1,16 +1,13 @@
 import React from "react";
 
-interface Props{
-currentPage:any;
-handlePageChange:any;
+interface Props {
+  currentPage: any;
+  handlePageChange: any;
 }
-
 
 // Here we are using object destructuring assignment to pluck off our variables from the props object
 // We assign them to their own variable names
-function NavTabs({ currentPage , handlePageChange }:Props) {
-
-
+function NavTabs({ currentPage, handlePageChange }: Props) {
   return (
     <ul className="inline-flex">
       <li className="pl-4">
