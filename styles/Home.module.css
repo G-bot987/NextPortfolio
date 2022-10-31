@@ -6,6 +6,7 @@
   flex-basis: min-content;
   overflow: hidden;
   display: flex;
+  font-family: "Yellowtail", sans-serif;
   color: #fff;
   text-shadow:
       0 0 7px #fff,
@@ -18,8 +19,19 @@
       0 0 151px #5271ff;
 }
 
-.neonBox{
+.neonBoxHeader{
   width: min-content;
+  box-shadow:
+  0 0 7px #fff,
+  0 0 10px #fff,
+  0 0 21px #fff,
+  0 0 42px #5271ff,
+  0 0 82px #5271ff,
+  0 0 92px #5271ff,
+  0 0 102px #5271ff,
+  0 0 151px #5271ff;
+}
+.neonBoxBody{
   box-shadow:
   0 0 7px #fff,
   0 0 10px #fff,

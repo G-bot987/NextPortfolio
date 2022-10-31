@@ -4,7 +4,7 @@ import styles from '../../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <div>
+    <div className={styles.neonBoxBody}>
 
       <h1 className={styles.potato}>Home Page</h1>
       {/* <img src={Georgia} className="Georgia" alt="its me" /> */}

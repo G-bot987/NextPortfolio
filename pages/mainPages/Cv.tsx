@@ -1,9 +1,10 @@
 import React from "react";
+import styles from "../../styles/Home.module.css";
 // import PDF from "../../img/pdf.png";
 // import CVlink from "../../img/cv/CV.pdf";
 export default function CV() {
   return (
-    <div>
+    <div className={styles.neonBoxBody}>
       <h1>Contact Page</h1>
       <p>
         <h3>Proficent In:</h3>
@@ -22,7 +23,6 @@ export default function CV() {
         <div className="Java">Javascript</div>
         <div className="Git.">Git.</div>
         Please click on the logo to view my CV
-
       </p>
     </div>
   );
