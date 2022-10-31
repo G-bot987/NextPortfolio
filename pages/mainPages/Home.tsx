@@ -1,20 +1,34 @@
 import React from "react";
-import styles from '../../styles/Home.module.css'
-
+import styles from "../../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.neonBoxBody}>
-
-      <h1 className={styles.potato}>Home Page</h1>
+    <div className={`mt-6 ${styles.neonBoxBody}`}>
+      <h1>Home Page</h1>
       {/* <img src={Georgia} className="Georgia" alt="its me" /> */}
+
+      <h2>Bio</h2>
       <p>
-        Thank you for taking the time to view my profile, After Graduating from
-        Marketing in 2019 my passion from digital marketing evolved into a
-        interest in web development. It was this passion that led me to enroll
-        on the University of Birmingham coding Bootcamp. The course curriculum
-        has seem me learn the full stack from HTML5, MongoDB to React.
+        Experienced Full stack web developer. competent with; NextJS,
+        TypeScript, React.js, ReactNative for IOS and Android, Node.js,
+        JavaScript, MySQL and MongoDB, Git. My current role has allowed me to
+        develop exceptional diagnostical skills coupled with my strong core
+        programming principles; front end, back end and mobile development roles
+        are well within my comfort zone. My role as a Support developer has
+        given me experience fixing bugs of varying complexity using technologies
+        such as Insomnia, Redux Devtools and Android Studio.
       </p>
+      <h2>strengths</h2>
+      <p>this is strenghts txt</p>
+
+      <h2>goals</h2>
+      <p>i am goals text</p>
+
+      <h2>based in:</h2>
+      <p>based in text</p>
+
+      <h2>currently seeking </h2>
+      <p>currently seeking text</p>
     </div>
   );
 }

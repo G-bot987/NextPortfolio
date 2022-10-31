@@ -3,7 +3,7 @@ import styles from "../../styles/Home.module.css";
 
 export default function Projects() {
   return (
-    <div className={styles.neonBoxBody}>
+    <div className={`mt-6 ${styles.neonBoxBody}`}>
       <h1>Projects</h1>
       <p>
         WHEN I am presented with the Portfolio section THEN I see titled images
