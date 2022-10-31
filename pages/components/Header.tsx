@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <div className="flex-wrap">
       <div
-        className={`border-double border-4 border-sky-500 rounded-lg border-white min-w-min ${styles.neon}`}
+        className={`border-double border-4 border-sky-500 rounded-lg border-white min-w-min ${styles.neonBox}`}
       >
         <h1 className={`text-9xl italic ${styles.neonText}`}>Georgia Hobson</h1>
       </div>
