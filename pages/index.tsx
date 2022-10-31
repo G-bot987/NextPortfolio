@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.css";
 import Home from "./mainPages/Home";
 import Projects from "./mainPages/Projects";
 import CV from "./mainPages/Cv";
-import Contact from "./components/Contact";
+import Contact from "./mainPages/Contact";
 import Header from "./components/Header";
 import NavLinks from "./components/hamburgerMenu/NavLinks";
 import Footer from "./components/Footer";
