@@ -9,11 +9,8 @@ import Contact from "./mainPages/Contact";
 import Header from "./components/Header";
 import NavLinks from "./components/hamburgerMenu/NavLinks";
 import Footer from "./components/Footer";
-import { useCallback } from "react";
-import Particles from "react-particles";
-import type { Engine } from "tsparticles-engine";
-import { loadFull } from "tsparticles";
 import ParticlesContainer from "./particles/ParticlesContainer";
+import footerData from "../data/footerData";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("Home");
@@ -43,7 +40,7 @@ export default function App() {
 
       {/* Here we are calling the renderPage method which will return a component  */}
       {renderPage()}
-      <Footer />
+      <Footer {...footerData} />
     </div>
   );
 }
