@@ -1,4 +1,4 @@
-const projects = [
+const projectsData = [
   {
     header: "Tech Blog",
     description:
@@ -60,4 +60,4 @@ const projects = [
   },
 ];
 
-export default projects;
+export default projectsData;
