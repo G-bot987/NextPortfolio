@@ -34,7 +34,7 @@ export default function App() {
   const handlePageChange = (page: any) => setCurrentPage(page);
 
   return (
-    <div>
+    <div className="flex-col">
       <ParticlesContainer />
 
       <NavLinks currentPage={currentPage} handlePageChange={handlePageChange} />
