@@ -3,12 +3,14 @@ import githubIMG from "../public/images/icons/business/octocat.png";
 
 const footerData = {
   socials: "My Socials",
-
-  image: linkedinIMG,
-  link: "https://www.linkedin.com/in/georgia-h-b48434150/",
-
-  gitlink: "https://github.com/G-bot987",
-  gitimage: githubIMG,
+  linkedin: {
+    image: linkedinIMG,
+    link: "https://www.linkedin.com/in/georgia-h-b48434150/",
+  },
+  git: {
+    link: "https://github.com/G-bot987",
+    image: githubIMG,
+  },
 };
 
 export default footerData;

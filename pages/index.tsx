@@ -11,6 +11,7 @@ import NavLinks from "./components/hamburgerMenu/NavLinks";
 import Footer from "./components/Footer";
 import ParticlesContainer from "./particles/ParticlesContainer";
 import footerData from "../data/footerData";
+import projectsData from "../data/projectsData";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("Home");
