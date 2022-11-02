@@ -11,6 +11,7 @@ import NavLinks from "./components/hamburgerMenu/NavLinks";
 import Footer from "./components/Footer";
 import ParticlesContainer from "./particles/ParticlesContainer";
 import footerData from "../data/footerData";
+import { headerData } from "../data/headerData";
 import projectsData from "../data/projectsData";
 
 export default function App() {
@@ -36,7 +37,7 @@ export default function App() {
       <ParticlesContainer />
 
       <NavLinks currentPage={currentPage} handlePageChange={handlePageChange} />
-      <Header />
+      <Header {...headerData} />
       {/* We are passing the currentPage from state and the function to update it */}
 
       {/* Here we are calling the renderPage method which will return a component  */}
