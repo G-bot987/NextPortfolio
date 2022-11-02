@@ -13,6 +13,7 @@ import ParticlesContainer from "./particles/ParticlesContainer";
 import footerData from "../data/footerData";
 import { headerData } from "../data/headerData";
 import projectsData from "../data/projectsData";
+import { skillsData } from "../data/skillsData";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("Home");
@@ -25,7 +26,7 @@ export default function App() {
       return <Projects {...projectsData} />;
     }
     if (currentPage === "CV") {
-      return <CV />;
+      return <CV {...skillsData} />;
     }
     return <Contact />;
   };
