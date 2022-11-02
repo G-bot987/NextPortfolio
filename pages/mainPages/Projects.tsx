@@ -14,12 +14,13 @@ export default function Projects(props: ProjectInterface[]) {
         of six of the developer’s applications with links to both the deployed
         applications and the corresponding GitHub repositories
       </p>
-
-      {Object.keys(props).map((project: any, index: number) => (
-        <ul key={`${index}`}>
-          <Project {...props[project]} />
-        </ul>
-      ))}
+      <ul>
+        {Object.keys(props).map((project: any, index: number) => (
+          <div key={`${index}`}>
+            <Project {...props[project]} />
+          </div>
+        ))}
+      </ul>
     </div>
   );
 }
