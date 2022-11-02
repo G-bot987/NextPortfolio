@@ -22,7 +22,7 @@ export default function App() {
       return <Home />;
     }
     if (currentPage === "Projects") {
-      return <Projects />;
+      return <Projects {...projectsData} />;
     }
     if (currentPage === "CV") {
       return <CV />;

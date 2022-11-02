@@ -2,7 +2,8 @@ import React from "react";
 import styles from "../../styles/Home.module.css";
 import { ProjectInterface } from "../../interface/projects.interface";
 
-export default function Projects() {
+export default function Projects(props: ProjectInterface[]) {
+
   return (
     <div
       className={`mt-6 mr-8 ml-8 border-double border-4 border-sky-500 rounded-lg border-white min-w-min ${styles.neonBoxBody}`}
