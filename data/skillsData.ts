@@ -1,4 +1,4 @@
-export const skills = [
+export const skillsData = [
   { name: "React.Native" },
   { name: "React" },
   { name: "Next.JS" },
