@@ -2,6 +2,8 @@ import React from "react";
 import styles from "../../styles/Home.module.css";
 import { FooterInterface } from "../../interface/footer.interface";
 import Image from "next/image";
+import Link from "next/link";
+
 export default function Footer(props: FooterInterface) {
   return (
     <div
@@ -18,6 +20,11 @@ export default function Footer(props: FooterInterface) {
           <a href={props.linkedin?.link}>
             <Image src={props.linkedin?.image} alt="adfsasdf" />
           </a>
+        </li>
+        <li>
+          <Link href={props.cv?.cvlink}>
+            <Image src={props.cv?.pdficon} alt="adfsasdf" />
+          </Link>
         </li>
       </ul>
     </div>
