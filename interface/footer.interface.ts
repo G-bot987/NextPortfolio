@@ -8,10 +8,16 @@ export interface GithubInterface {
   link: string;
 }
 
+export interface CVInterface {
+  pdficon: any;
+  cvlink: string;
+}
+
 export interface FooterInterface {
   socials: string;
   linkedin: LinkedinInterface;
   git: GithubInterface;
+  cv: CVInterface;
 
   //   image: any;
   //   link: string;

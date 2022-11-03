@@ -1,5 +1,6 @@
 import linkedinIMG from "../public/images/icons/business/linkedin.png";
 import githubIMG from "../public/images/icons/business/octocat.png";
+import pdf from "../public/images/icons/business/pdf.png";
 
 const footerData = {
   socials: "My Socials",
@@ -10,6 +11,10 @@ const footerData = {
   git: {
     link: "https://github.com/G-bot987",
     image: githubIMG,
+  },
+  cv: {
+    pdficon: pdf,
+    cvlink: "images/CV/CV.pdf",
   },
 };
 
