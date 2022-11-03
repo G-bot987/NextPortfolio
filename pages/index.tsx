@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import styles from "../styles/Home.module.css";
 import Home from "./mainPages/Home";
 import Projects from "./mainPages/Projects";
-import CV from "./mainPages/Cv";
+import Technologies from "./mainPages/Technologies";
 import Contact from "./mainPages/Contact";
 import Header from "./components/Header";
 import NavLinks from "./components/hamburgerMenu/NavLinks";
@@ -26,7 +26,7 @@ export default function App() {
       return <Projects {...projectsData} />;
     }
     if (currentPage === "CV") {
-      return <CV {...skillsData} />;
+      return <Technologies {...skillsData} />;
     }
     return <Contact />;
   };

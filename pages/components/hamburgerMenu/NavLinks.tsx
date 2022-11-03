@@ -45,12 +45,12 @@ function NavTabs({ currentPage, handlePageChange }: Props) {
       </li>
       <li className="pl-4">
         <a
-          href="#CV"
+          href="#Technologies"
           onClick={() => handlePageChange("CV")}
           // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === "CV" ? "nav-link active" : "nav-link"}
         >
-          CV
+          Technologies
         </a>
       </li>
     </ul>
