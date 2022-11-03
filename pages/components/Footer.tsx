@@ -22,7 +22,7 @@ export default function Footer(props: FooterInterface) {
           </a>
         </li>
         <li>
-          <Link href={props.cv?.cvlink}>
+          <Link href={"images/CV/CV.pdf"}>
             <Image src={props.cv?.pdficon} alt="adfsasdf" />
           </Link>
         </li>
