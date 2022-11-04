@@ -1,3 +1,5 @@
+import githubIMG from "../public/images/icons/business/octocat.png";
+
 const projectsData = [
   {
     header: "Tech Blog",
@@ -7,7 +9,12 @@ const projectsData = [
       deployed: "https://dry-eyrie-85153.herokuapp.com/",
       repo: "https://github.com/G-bot987/TechBlog",
     },
-    img: { ref: "techBlogImg", alt: "techblog img" },
+    imgs: {
+      live: "techBlogImg",
+      alt: "techblog img",
+      git: githubIMG,
+      gitAlt: "git icon",
+    },
   },
   {
     header: "5StarLocal Group Project",
@@ -16,7 +23,12 @@ const projectsData = [
       deployed: "https://vast-journey-10843.herokuapp.com/login",
       repo: "https://github.com/G-bot987/My-5-Star-Local",
     },
-    img: { ref: "FiveStarLocal", alt: "5 star local img" },
+    imgs: {
+      live: "FiveStarLocal",
+      alt: "5 star local img",
+      git: githubIMG,
+      gitAlt: "git icon",
+    },
   },
   {
     header: "Employee Manager",
@@ -27,7 +39,12 @@ const projectsData = [
         "https://drive.google.com/file/d/16ZVj7zfFe_IYRHH2Utjb4Rl4dU076VWi/view",
       repo: "https://github.com/G-bot987/employee-manager-29.08.21",
     },
-    img: { ref: "EmployeeManager", alt: "employee manager img" },
+    imgs: {
+      live: "EmployeeManager",
+      alt: "employee manager img",
+      git: githubIMG,
+      gitAlt: "git icon",
+    },
   },
   {
     header: "Inquistive Group Project",
@@ -37,7 +54,12 @@ const projectsData = [
       deployed: "https://uk-inquizitive.herokuapp.com/",
       repo: "https://github.com/G-bot987/inQuizitive",
     },
-    img: { ref: "Inquistive", alt: "Inquistive img" },
+    imgs: {
+      live: "Inquistive",
+      alt: "Inquistive img",
+      git: githubIMG,
+      gitAlt: "git icon",
+    },
   },
   {
     header: "Password Generator",
@@ -46,7 +68,12 @@ const projectsData = [
       deployed: "https://g-bot987.github.io/20.06.21/",
       repo: "https://github.com/G-bot987/20.06.21",
     },
-    img: { ref: "Pwordgen", alt: "Pword Generator IMG" },
+    imgs: {
+      live: "Pwordgen",
+      alt: "Pword Generator IMG",
+      git: githubIMG,
+      gitAlt: "git icon",
+    },
   },
   {
     header: "Weatherdashboard",
@@ -56,7 +83,12 @@ const projectsData = [
       deployed: "https://g-bot987.github.io/weatherdashboard/",
       repo: "https://github.com/G-bot987/weatherdashboard",
     },
-    img: { ref: "Weatherdash", alt: "weather dashboard img" },
+    imgs: {
+      live: "Weatherdash",
+      alt: "weather dashboard img",
+      git: githubIMG,
+      gitAlt: "git icon",
+    },
   },
 ];
 

@@ -18,9 +18,4 @@ export interface FooterInterface {
   linkedin: LinkedinInterface;
   git: GithubInterface;
   cv: CVInterface;
-
-  //   image: any;
-  //   link: string;
-  //   gitimage: any;
-  //   gitlink: string;
 }

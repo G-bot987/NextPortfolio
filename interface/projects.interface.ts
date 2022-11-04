@@ -3,14 +3,16 @@ export interface LinkInterface {
   repo: string;
 }
 
-export interface ImgInterface {
-  ref: string;
+export interface ImgsInterface {
+  live: any;
   alt: string;
+  git: any;
+  gitAlt: string;
 }
 
 export interface ProjectInterface {
   header: string;
   description: string;
   links: LinkInterface;
-  img: ImgInterface;
+  imgs: ImgsInterface;
 }
