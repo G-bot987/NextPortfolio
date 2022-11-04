@@ -14,13 +14,14 @@ import footerData from "../data/footerData";
 import { headerData } from "../data/headerData";
 import projectsData from "../data/projectsData";
 import { skillsData } from "../data/skillsData";
+import { homeData } from "../data/homeData";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("Home");
   // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
   const renderPage = () => {
     if (currentPage === "Home") {
-      return <Home />;
+      return <Home {...homeData}/>;
     }
     if (currentPage === "Projects") {
       return <Projects {...projectsData} />;
