@@ -19,7 +19,6 @@ export default function Technologies(props: SkillInterface[]) {
           </div>
         ))}
       </ul>
-      Please click on the logo to view my CV
     </div>
   );
 }
