@@ -63,7 +63,7 @@ function NavTabs({ currentPage, handlePageChange }: Props) {
             // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
             className={currentPage === "CV" ? "nav-link active" : "nav-link"}
           >
-            Cv
+            CV
           </a>
         </Link>
       </li>
