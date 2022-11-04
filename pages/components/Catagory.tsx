@@ -1,7 +1,7 @@
 import React from "react";
-import { HomePageInterface } from "../../interface/home.interface";
+import { synopsisPropertiesInterface } from "../../interface/home.interface";
 
-export default function Catagory(props: HomePageInterface) {
+export default function Catagory(props: synopsisPropertiesInterface) {
   return (
     <li>
       {props.header}
