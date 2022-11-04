@@ -15,7 +15,7 @@ export default function Footer(props: FooterInterface) {
           <a href={props.git?.link}>
             <Image
               src={props.git?.image}
-              alt="octocat git icon"
+              alt={props.git?.alt}
               width={35}
               height={35}
             />
@@ -25,7 +25,7 @@ export default function Footer(props: FooterInterface) {
           <a href={props.linkedin?.link}>
             <Image
               src={props.linkedin?.image}
-              alt="linked in logo"
+              alt={props.linkedin?.alt}
               width={35}
               height={35}
             />
@@ -35,7 +35,7 @@ export default function Footer(props: FooterInterface) {
           <Link href={props.cv?.cvlink || "undefined"}>
             <Image
               src={props.cv?.pdficon}
-              alt="global pdf icon"
+              alt={props.cv?.alt}
               width={35}
               height={35}
             />

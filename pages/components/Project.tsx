@@ -30,7 +30,6 @@ export default function Project(props: ProjectInterface) {
             />
           </a>
         </li>
-        <li></li>
       </ul>
     </li>
   );
