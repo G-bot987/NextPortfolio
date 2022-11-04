@@ -25,8 +25,12 @@ export default function App() {
     if (currentPage === "Projects") {
       return <Projects {...projectsData} />;
     }
-    if (currentPage === "CV") {
+    if (currentPage === "Technologies") {
       return <Technologies {...skillsData} />;
+    }
+    if (currentPage === "Cv") {
+      // cv is returned through navtabs
+      return;
     }
     return <Contact />;
   };

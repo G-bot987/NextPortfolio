@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 interface Props {
@@ -46,12 +47,25 @@ function NavTabs({ currentPage, handlePageChange }: Props) {
       <li className="pl-4">
         <a
           href="#Technologies"
-          onClick={() => handlePageChange("CV")}
+          onClick={() => handlePageChange("Technologies")}
           // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === "CV" ? "nav-link active" : "nav-link"}
         >
           Technologies
         </a>
+      </li>
+
+      <li className="pl-4">
+        <Link href={"images/CV/CV.pdf"} legacyBehavior>
+          <a
+            href="#Cv"
+            onClick={() => handlePageChange("Cv")}
+            // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+            className={currentPage === "CV" ? "nav-link active" : "nav-link"}
+          >
+            Cv
+          </a>
+        </Link>
       </li>
     </ul>
   );
