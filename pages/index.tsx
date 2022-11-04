@@ -32,7 +32,7 @@ export default function App() {
     }
     if (currentPage === "Cv") {
       // cv is returned through navtabs
-      return;
+      return <Home {...homeData} />;
     }
     return <Contact {...contactData} />;
   };
