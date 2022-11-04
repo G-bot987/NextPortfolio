@@ -16,4 +16,6 @@ export const skillsData = [
   { name: "Express" },
   { name: "BootStrap" },
   { name: "Command Line" },
+  { name: "Familiar with Mac & windows OS" },
+  { name: "Android Studio" },
 ];
