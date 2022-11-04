@@ -13,17 +13,32 @@ export default function Footer(props: FooterInterface) {
         <li>{props.socials}</li>
         <li>
           <a href={props.git?.link}>
-            <Image src={props.git?.image} alt="adfsasdf" />
+            <Image
+              src={props.git?.image}
+              alt="octocat git icon"
+              width={35}
+              height={35}
+            />
           </a>
         </li>
         <li>
           <a href={props.linkedin?.link}>
-            <Image src={props.linkedin?.image} alt="adfsasdf" />
+            <Image
+              src={props.linkedin?.image}
+              alt="linked in logo"
+              width={35}
+              height={35}
+            />
           </a>
         </li>
         <li>
           <Link href={props.cv?.cvlink || "undefined"}>
-            <Image src={props.cv?.pdficon} alt="adfsasdf" />
+            <Image
+              src={props.cv?.pdficon}
+              alt="global pdf icon"
+              width={35}
+              height={35}
+            />
           </Link>
         </li>
       </ul>
