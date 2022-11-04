@@ -1,6 +1,6 @@
 import githubIMG from "../public/images/icons/business/octocat.png";
 import TechBlogIMG from "../public/images/projects/screenshottechblog.png";
-import fiveStarLocalIMG from "../public/images/projects/5StarLocal.png";
+import fiveStarLocalIMG from "../public/images/projects/5starlocal.png";
 import employeeManagerIMG from "../public/images/projects/employeemanager.png";
 import inquisitiveIMG from "../public/images/projects/inquisitive.png";
 import passwordGenIMG from "../public/images/projects/passwordgenerator.png";
