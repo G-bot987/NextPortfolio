@@ -4,6 +4,5 @@ export interface CatagoryInterface {
 }
 
 export interface HomePageInterface {
-  header: string;
   catagories: CatagoryInterface[];
 }
