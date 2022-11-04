@@ -10,9 +10,11 @@ export default function Project(props: ProjectInterface) {
         <li>{props.header}</li>
         <li>{props.description}</li>
         <li>
-          <Image src={props.imgs.git} alt={props.imgs.gitAlt} />
+          <Image src={props?.imgs?.git} alt={props?.imgs?.gitAlt} />
         </li>
-        <li></li>
+        <li>
+          <Image src={props?.imgs?.live} alt={props?.imgs?.alt} />
+        </li>
         <li></li>
       </ul>
     </li>

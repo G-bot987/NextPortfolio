@@ -1,5 +1,10 @@
 import githubIMG from "../public/images/icons/business/octocat.png";
-
+import TechBlogIMG from "../public/images/projects/screenshottechblog.png";
+import fiveStarLocalIMG from "../public/images/projects/5StarLocal.png";
+import employeeManagerIMG from "../public/images/projects/employeemanager.png";
+import inquisitiveIMG from "../public/images/projects/inquisitive.png";
+import passwordGenIMG from "../public/images/projects/passwordgenerator.png";
+import weatherDashIMG from "../public/images/projects/weatherdashboard.png";
 const projectsData = [
   {
     header: "Tech Blog",
@@ -10,7 +15,7 @@ const projectsData = [
       repo: "https://github.com/G-bot987/TechBlog",
     },
     imgs: {
-      live: "techBlogImg",
+      live: TechBlogIMG,
       alt: "techblog img",
       git: githubIMG,
       gitAlt: "git icon",
@@ -24,7 +29,7 @@ const projectsData = [
       repo: "https://github.com/G-bot987/My-5-Star-Local",
     },
     imgs: {
-      live: "FiveStarLocal",
+      live: fiveStarLocalIMG,
       alt: "5 star local img",
       git: githubIMG,
       gitAlt: "git icon",
@@ -40,7 +45,7 @@ const projectsData = [
       repo: "https://github.com/G-bot987/employee-manager-29.08.21",
     },
     imgs: {
-      live: "EmployeeManager",
+      live: employeeManagerIMG,
       alt: "employee manager img",
       git: githubIMG,
       gitAlt: "git icon",
@@ -55,7 +60,7 @@ const projectsData = [
       repo: "https://github.com/G-bot987/inQuizitive",
     },
     imgs: {
-      live: "Inquistive",
+      live: inquisitiveIMG,
       alt: "Inquistive img",
       git: githubIMG,
       gitAlt: "git icon",
@@ -69,7 +74,7 @@ const projectsData = [
       repo: "https://github.com/G-bot987/20.06.21",
     },
     imgs: {
-      live: "Pwordgen",
+      live: passwordGenIMG,
       alt: "Pword Generator IMG",
       git: githubIMG,
       gitAlt: "git icon",
@@ -84,7 +89,7 @@ const projectsData = [
       repo: "https://github.com/G-bot987/weatherdashboard",
     },
     imgs: {
-      live: "Weatherdash",
+      live: weatherDashIMG,
       alt: "weather dashboard img",
       git: githubIMG,
       gitAlt: "git icon",
