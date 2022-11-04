@@ -13,7 +13,6 @@ export default function Home(props: HomePageInterface[]) {
       <ul>
         {Object.keys(props).map((catagory: any, index: number) => (
           <div key={`${index}`}>
-            {/* {console.log("sfadf", catagories[catagory])} */}
             <Catagory {...props[catagory]} />
           </div>
         ))}
