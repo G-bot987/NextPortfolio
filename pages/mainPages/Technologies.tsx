@@ -1,23 +1,24 @@
 import React from "react";
 import styles from "../../styles/Home.module.css";
-import { SkillInterface } from "../../interface/skill.interface";
+import { TechnologiesInterface } from "../../interface/technologies.interface";
 import Skill from "../components/Skill";
 // import PDF from "../../img/pdf.png";
 // import CVlink from "../../img/cv/CV.pdf";
 
-export default function Technologies(props: SkillInterface[]) {
+export default function Technologies(props: TechnologiesInterface) {
+  const { skills } = props;
   return (
     <div
       className={`mt-6 mr-8 ml-8 border-double border-4 border-sky-500 rounded-lg border-white min-w-min ${styles.neonBoxBody}`}
     >
-      <h1>Technologies page</h1>
-      <h3>Proficent In:</h3>
+      <h3>{props.header}</h3>
       <ul>
-        {Object.keys(props).map((skill: any, index: number) => (
-          <div key={`${index}`}>
-            <Skill {...props[skill]} />
-          </div>
-        ))}
+        {skills &&
+          Object.keys(skills).map((skill: any, index: number) => (
+            <div key={`${index}`}>
+              <Skill {...skills[skill]} />
+            </div>
+          ))}
       </ul>
     </div>
   );
