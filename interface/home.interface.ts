@@ -1,8 +1,4 @@
-export interface CatagoryInterface {
+export interface HomePageInterface {
   header: string;
   txt: string;
-}
-
-export interface HomePageInterface {
-  catagories: CatagoryInterface[];
 }
