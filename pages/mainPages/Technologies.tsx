@@ -2,8 +2,6 @@ import React from "react";
 import styles from "../../styles/Home.module.css";
 import { TechnologiesInterface } from "../../interface/technologies.interface";
 import Skill from "../components/Skill";
-// import PDF from "../../img/pdf.png";
-// import CVlink from "../../img/cv/CV.pdf";
 
 export default function Technologies(props: TechnologiesInterface) {
   const { skills } = props;
