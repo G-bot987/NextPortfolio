@@ -70,7 +70,8 @@ const projectsData = [
     header: "Password Generator",
     description: "A javascript password generator, that works to user criteria",
     links: {
-      deployed: "https://g-bot987.github.io/20.06.21/",
+      deployed: "https://g-bot987.github.io/20.06.21-password-generator/",
+
       repo: "https://github.com/G-bot987/20.06.21",
     },
     imgs: {
