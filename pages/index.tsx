@@ -15,6 +15,7 @@ import { headerData } from "../data/headerData";
 import projectsData from "../data/projectsData";
 import { skillsData } from "../data/skillsData";
 import { homeData } from "../data/homeData";
+import { contactData } from "../data/contactData";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("Home");
@@ -33,7 +34,7 @@ export default function App() {
       // cv is returned through navtabs
       return;
     }
-    return <Contact />;
+    return <Contact {...contactData} />;
   };
 
   const handlePageChange = (page: any) => setCurrentPage(page);
