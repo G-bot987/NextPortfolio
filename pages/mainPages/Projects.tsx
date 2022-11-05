@@ -6,18 +6,13 @@ import Project from "../components/Project";
 export default function Projects(props: ProjectInterface[]) {
   return (
     <div
-      className={`mt-6 mr-8 ml-8 border-double border-4 border-sky-500 rounded-lg border-white min-w-min ${styles.neonBoxBody}`}
+      className={`mt-6 mr-8 ml-8 border-double border-4 border-sky-500 rounded-lg border-white min-w-min  flex-row${styles.neonBoxBody}`}
     >
-      <p>
-        WHEN I am presented with the Portfolio section THEN I see titled images
-        of six of the developer’s applications with links to both the deployed
-        applications and the corresponding GitHub repositories
-      </p>
-      <ul className={`flex-row`}>
+      <ul className={`flex-row flex justify-evenly flex-wrap`}>
         {Object.keys(props).map((project: any, index: number) => (
           <div
             key={`${index}`}
-            className={`mt-6 mr-8 ml-8 border-double border-4 border-sky-500 rounded-lg border-white min-w-min =`}
+            className={`mt-6 mb-6 border-double border-4 border-sky-500 rounded-lg border-white max-w-xs`}
           >
             <Project {...props[project]} />
           </div>

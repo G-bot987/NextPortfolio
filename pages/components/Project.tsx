@@ -8,7 +8,7 @@ export default function Project(props: ProjectInterface) {
   return (
     <li>
       <ul>
-        <li>{props.header}</li>
+        <li className="text-center">{props.header}</li>
         <li>{props.description}</li>
         <li>
           <a href={props.links?.repo}>
