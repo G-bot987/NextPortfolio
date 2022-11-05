@@ -5,7 +5,7 @@ import { HeaderInterface } from "../../interface/header.interface";
 export default function Header(props: HeaderInterface) {
   return (
     <div
-      className={`border-double border-4 border-sky-500 rounded-lg border-white min-w-min flex-wrap flex-col justify-center ${styles.neonBoxHeader}`}
+      className={`border-double border-4 border-sky-500 rounded-lg border-white min-w-min flex-wrap flex-col self-center ${styles.neonBoxHeader}`}
     >
       <h1 className={`text-6xl p-8 italic ${styles.neonText}`}>
         {props.mainHeader}
