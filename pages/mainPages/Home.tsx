@@ -16,6 +16,7 @@ export default function Home(props: HomePageInterface) {
         alt={props.portrait?.alt}
         width={250}
         height={250}
+        className="rounded-br-lg border-2"
       />
       <ul>
         {synopsisProperties &&
