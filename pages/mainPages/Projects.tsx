@@ -12,7 +12,7 @@ export default function Projects(props: ProjectInterface[]) {
         {Object.keys(props).map((project: any, index: number) => (
           <div
             key={`${index}`}
-            className={`mt-6 mb-6 border-double border-4 border-sky-500 rounded-lg border-white max-w-xs`}
+            className={`my-6  border-double border-4 border-sky-500 rounded-lg border-white max-w-xs`}
           >
             <Project {...props[project]} />
           </div>
