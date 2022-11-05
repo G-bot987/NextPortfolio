@@ -46,6 +46,12 @@
   0 6px 2px -2px #5271ff;
 }
 
+.Bio{
+  border-style: solid;
+  border: white;
+  border-width: thick;
+}
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;

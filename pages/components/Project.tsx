@@ -7,7 +7,7 @@ import { ProjectInterface } from "../../interface/projects.interface";
 export default function Project(props: ProjectInterface) {
   return (
     <li>
-      <ul>
+      <ul className={`text-base p-8 italic ${styles.neonText}`}>
         <li className="text-center">{props.header}</li>
         <li>{props.description}</li>
         <li>

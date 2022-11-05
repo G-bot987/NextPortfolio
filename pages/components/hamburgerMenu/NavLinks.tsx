@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import styles from "../../../styles/Home.module.css";
 
 interface Props {
   currentPage: any;
@@ -10,7 +11,7 @@ interface Props {
 // We assign them to their own variable names
 function NavTabs({ currentPage, handlePageChange }: Props) {
   return (
-    <ul className="inline-flex">
+    <ul className={`inline-flex text-base p-8 italic ${styles.neonText}`}>
       <li className="pl-4">
         <a
           href="#home"
