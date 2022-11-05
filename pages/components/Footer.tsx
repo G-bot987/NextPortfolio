@@ -6,10 +6,10 @@ import Link from "next/link";
 
 export default function Footer(props: FooterInterface) {
   return (
-    <div
-      className={`border-solid border-b-1 border-sky-500 border-white min-w-min m-auto mr-0 my-12 bg-transparent ${styles.neonLineFooter}`}
-    >
-      <ul>
+    <div className={`flex flex-row justify-end`}>
+      <ul
+        className={`border-solid border-b-1 border-sky-500 border-white bg-transparent inline-flex flex justify-evenly flex-wrap w-60 justify-self-end ${styles.neonLineFooter}`}
+      >
         <li>{props.socials}</li>
         <li>
           <a href={props.git?.link}>
