@@ -13,6 +13,7 @@ export const skillsData = {
     { name: "TailWind" },
     { name: "Node.JS" },
     { name: "MongoDB" },
+    { name: "Docker" },
     { name: "MySQL" },
     { name: "JQuery" },
     { name: "Express" },
