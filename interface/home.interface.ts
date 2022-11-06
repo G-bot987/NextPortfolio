@@ -1,6 +1,7 @@
 export interface synopsisPropertiesInterface {
   header: string;
   txt: string;
+  portrait?: portraitInterface;
 }
 export interface portraitInterface {
   IMG: any;
@@ -8,6 +9,5 @@ export interface portraitInterface {
 }
 
 export interface HomePageInterface {
-  portrait: portraitInterface;
   synopsisProperties: synopsisPropertiesInterface[];
 }
