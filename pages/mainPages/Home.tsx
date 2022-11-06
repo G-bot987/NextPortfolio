@@ -10,7 +10,7 @@ export default function Home(props: HomePageInterface) {
     <div
       className={`mt-6 mr-8 ml-8 border-double border-4  rounded-lg border-white min-w-min  flex  ${styles.neonBoxBody}`}
     >
-      <ul className=" flex flex-row flex justify-evenly flex-wrap">
+      <ul className=" flex sm:flex-row justify-evenly flex-wrap">
         {synopsisProperties &&
           Object.keys(synopsisProperties).map(
             (catagory: any, index: number) => (
