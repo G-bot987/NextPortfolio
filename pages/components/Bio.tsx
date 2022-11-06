@@ -17,10 +17,11 @@ export default function Catagory(props: synopsisPropertiesInterface) {
         height={250}
         className="rounded-br-lg border-r-2"
       />
-      <div className=" flex flex-col text-center">
-        <p className=" border-b-2 border-solid border-white">{header}</p>
-
-        <p>{txt}</p>
+      <div className=" flex flex-col text-center justify-around">
+        <p className=" border-b-2 border-solid border-white justify-center">
+          {header}
+        </p>
+        <p className=" self-center">{txt}</p>
       </div>
     </li>
   );
