@@ -7,9 +7,7 @@ import HeaderCatagories from "../components/HeaderCatagories";
 export default function Home(props: HomePageInterface) {
   const { synopsisProperties } = props;
   return (
-    <div
-      className={`mt-6 mr-8 ml-8 border-double border-4  rounded-lg border-white min-w-min  flex`}
-    >
+    <div className={`mt-6 mr-8 ml-8  min-w-min  flex`}>
       <ul className=" flex sm:flex-row justify-evenly flex-wrap">
         {synopsisProperties &&
           Object.keys(synopsisProperties).map(
