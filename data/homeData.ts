@@ -7,9 +7,18 @@ export const homeData = {
       header: "Bio",
       txt: " Experienced Full stack web developer. competent with; NextJS, React, React.Native for IOS and Android, TypeScript, JavaScript, Node.JS, MySQL, MongoDB, Docker, IORedis, Redux, Gitbash, Sublime Merge and Deis. My current role has allowed me to develop exceptional diagnostical skills coupled with my strong core programming princples; front end , back end and mobile development roles are well within my comfrot zone. My role as a support developer has given me experiene fixing bugs of varying complexity using technologies such as Insomnia, Redux Devtools and Android Studio.",
     },
-    { header: "strengths", txt: "this is strenghts txt" },
-    { header: "goals", txt: "i am goals text" },
-    { header: "based in", txt: "currently seeking text" },
-    { header: "currently seeking", txt: "currently seeking text" },
+    {
+      header: "Strengths",
+      txt: "deciphering code bases and diagnositical skills",
+    },
+    {
+      header: "Goals",
+      txt: "enhance my understanding of TDD and Intergrate more API's into React/Next projects",
+    },
+    { header: "Based In", txt: "Birmingham" },
+    {
+      header: "Currently Seeking",
+      txt: "I'm open to new roles, preferably full stack, agency work with a focus on bug fixing and security",
+    },
   ],
 };
