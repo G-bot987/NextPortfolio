@@ -8,20 +8,24 @@ export default function Catagory(props: synopsisPropertiesInterface) {
 
   return (
     <li
-      className={`text-base italic border-b-2 border-solid border-white shrink-0 sm:flex sm:flex-row ${styles.neonText}`}
+      className={`text-base italic border-b-2 border-solid border-black shrink-0 sm:flex sm:flex-row text-black`}
     >
       <Image
         src={portrait?.IMG}
         alt={portrait?.alt || "undefined"}
         width={250}
         height={250}
-        className="sm:rounded-br-lg sm:border-r-2 border-b-2 w-full"
+        className="sm:border-r-2 border-b-2 w-full"
       />
       <div className=" flex flex-col text-center justify-around">
-        <p className=" border-b-2 border-solid border-white justify-center uppercase">
+        <p
+          className={`border-b-2 border-solid border-black justify-center uppercase ${styles.neonText}`}
+        >
           {header}
         </p>
-        <p className=" self-center">{txt}</p>
+        <div className="grow bg-white text-justify flex flex-col justify-center px-4">
+          <p>{txt}</p>
+        </div>
       </div>
     </li>
   );

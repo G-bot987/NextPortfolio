@@ -8,7 +8,7 @@ export default function Home(props: HomePageInterface) {
   const { synopsisProperties } = props;
   return (
     <div
-      className={`mt-6 mr-8 ml-8 border-double border-4  rounded-lg border-white min-w-min  flex  ${styles.neonBoxBody}`}
+      className={`mt-6 mr-8 ml-8 border-double border-4  rounded-lg border-white min-w-min  flex`}
     >
       <ul className=" flex sm:flex-row justify-evenly flex-wrap">
         {synopsisProperties &&
@@ -16,9 +16,7 @@ export default function Home(props: HomePageInterface) {
             (catagory: any, index: number) => (
               <div key={`${index}`}>
                 {synopsisProperties[catagory].portrait && (
-                 
-                    <Bio {...synopsisProperties[catagory]} />
-                
+                  <Bio {...synopsisProperties[catagory]} />
                 )}
                 {!synopsisProperties[catagory].portrait && (
                   <HeaderCatagories {...synopsisProperties[catagory]} />
