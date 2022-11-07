@@ -8,7 +8,7 @@ export default function Home(props: HomePageInterface) {
   const { synopsisProperties } = props;
   return (
     <div className={`mt-6 mr-8 ml-8  min-w-min  flex`}>
-      <ul className=" flex sm:flex-row justify-evenly flex-wrap">
+      <ul className=" flex sm:flex-row justify-evenly flex-wrap border-double border-4 border-white rounded-lg sm:border-0  ">
         {synopsisProperties &&
           Object.keys(synopsisProperties).map(
             (catagory: any, index: number) => (
