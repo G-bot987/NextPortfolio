@@ -18,7 +18,7 @@ export default function Catagory(props: synopsisPropertiesInterface) {
         className="sm:rounded-br-lg sm:border-r-2 border-b-2 w-full"
       />
       <div className=" flex flex-col text-center justify-around">
-        <p className=" border-b-2 border-solid border-white justify-center">
+        <p className=" border-b-2 border-solid border-white justify-center uppercase">
           {header}
         </p>
         <p className=" self-center">{txt}</p>
