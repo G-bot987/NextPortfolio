@@ -18,7 +18,7 @@ export const homeData = {
     { header: "Based In", txt: "Birmingham" },
     {
       header: "Currently Seeking",
-      txt: "I'm open to new roles, preferably full stack, agency work with a focus on bug fixing and security",
+      txt: "I'm open to new roles and Freelance opportunities , preferably full stack, agency work with a focus on bug fixing and security",
     },
   ],
 };
