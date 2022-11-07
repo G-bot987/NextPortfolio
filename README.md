@@ -1,5 +1,10 @@
 Deployed: https://portfolio-g-bot987.vercel.app/
 
+pill btn on home drop down, 
+cara,
+hamburger, 
+project link text, hover. 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
