@@ -13,7 +13,7 @@ export const homeData = {
     },
     {
       header: "Goals",
-      txt: "enhance my understanding of TDD and Intergrate more API's into React/Next projects",
+      txt: "enhance my understanding of; TDD, IoRedis and Redux. Intergrate more API's into React/Next projects. implement a useReducer hook in my DnD project. Improve this portfolio. Find a new role as a Support Dev",
     },
     { header: "Based In", txt: "Birmingham" },
     {
