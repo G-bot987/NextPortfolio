@@ -15,7 +15,7 @@ export default function Technologies(props: TechnologiesInterface) {
       <ul className="flex-row flex justify-evenly flex-wrap">
         {skills &&
           Object.keys(skills).map((skill: any, index: number) => (
-            <div key={`${index}`} className="max-w-xs my-3 mx-3">
+            <div key={`${index}`} className="max-w-xs my-3 mx-3 text-white">
               <Skill {...skills[skill]} />
             </div>
           ))}
