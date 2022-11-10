@@ -5,6 +5,8 @@ import employeeManagerIMG from "../public/images/projects/employeemanager.png";
 import inquisitiveIMG from "../public/images/projects/inquisitive.png";
 import passwordGenIMG from "../public/images/projects/passwordgenerator.png";
 import weatherDashIMG from "../public/images/projects/weatherdashboard.png";
+import dndcharactermanager from "../public/images/projects/dndcharactermanager.png";
+
 const projectsData = [
   {
     header: "Tech Blog",
@@ -91,6 +93,22 @@ const projectsData = [
     },
     imgs: {
       live: weatherDashIMG,
+      alt: "weather dashboard img",
+      git: githubIMG,
+      gitAlt: "git icon",
+    },
+  },
+
+  {
+    header: "DnD Character Manager",
+    description:
+      "A user friendly platform that offers assistance for designing characters in digital table top games and saving for future use. Making use of TypeScripts type checking functionality and Redux for complicated state management. This project is currently in production but will be integrated with a backend for storing and managing user data.",
+    links: {
+      deployed: "https://g-bot987.github.io/dnd-character-manager/",
+      repo: "https://github.com/G-bot987/dnd-character-manager",
+    },
+    imgs: {
+      live: dndcharactermanager,
       alt: "weather dashboard img",
       git: githubIMG,
       gitAlt: "git icon",
