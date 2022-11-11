@@ -10,12 +10,7 @@ export default function Projects(props: ProjectInterface[]) {
     >
       <ul className={`flex-row flex justify-evenly flex-wrap`}>
         {Object.keys(props).map((project: any, index: number) => (
-          <div
-            key={`${index}`}
-            className={`my-6 border-double border-4 rounded-lg border-white max-w-xs max-h-min`}
-          >
-            <Project {...props[project]} />
-          </div>
+          <Project {...props[project]} key={`${index}`} />
         ))}
       </ul>
     </div>

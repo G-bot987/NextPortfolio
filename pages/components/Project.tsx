@@ -25,9 +25,11 @@ export default function Project(props: ProjectInterface) {
   };
 
   return (
-    <li>
+    <li
+      className={`my-6 border-double border-4 rounded-lg border-white max-w-xs max-h-min `}
+    >
       <ul
-        className={`text-base  italic flex flex-col text-center  justify-between`}
+        className={`text-base  italic flex flex-col text-center  justify-around grow min-h-full`}
       >
         <li
           className={`text-center border-b-2 border-white min-w-full ${styles.neonText}`}
@@ -35,7 +37,7 @@ export default function Project(props: ProjectInterface) {
           {props.header}
         </li>
         <li className="bg-white text-black">{props.description}</li>
-        <div className="flex flex-row justify-around items-center pt-3">
+        <div className="flex flex-row justify-around items-center grow">
           <div className="flex flex-col justify-center ">
             <li
               className={hover ? `${styles.glow} rounded-lg` : ``}
