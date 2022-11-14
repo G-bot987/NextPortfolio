@@ -13,8 +13,8 @@ const projectsData = [
     description:
       "A user friendly platform that offers assistance for designing characters in digital table top games and saving for future use. Making use of TypeScripts type checking functionality and Redux for complicated state management. This project is currently in production but will be integrated with a backend for storing and managing user data.",
     links: {
-      deployed: "https://g-bot987.github.io/dnd-character-manager/",
-      repo: "https://github.com/G-bot987/dnd-character-manager",
+      deployed: "https://next-dn-d-character-manager.vercel.app/",
+      repo: "https://github.com/G-bot987/NextDnDCharacterManager",
     },
     imgs: {
       live: dndcharactermanager,
