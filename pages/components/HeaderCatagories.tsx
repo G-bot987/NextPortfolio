@@ -7,10 +7,12 @@ export default function HeaderCatagories(props: synopsisPropertiesInterface) {
   const { header, txt } = props;
   return (
     <li
-      className={`text-base  italic text-center  max-w-xs  sm:rounded-b-lg sm:rounded-t-none bg-white p-4 text-black rounded-full `}
+      className={`text-base flex inline-flex  italic text-center  max-w-xs  sm:rounded-b-lg sm:rounded-t-none bg-white p-4 text-black rounded-full sm:max-w-min `}
     >
-      <p>{header}</p>
-      <p>{txt}</p>
+      <div className="">
+        <p className="text-bold underline font-bold">{header}</p>
+        <p>{txt}</p>
+      </div>
     </li>
   );
 }
