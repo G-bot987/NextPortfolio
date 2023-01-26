@@ -22,7 +22,7 @@ export const homeData = {
     { header: "Based In", txt: "Birmingham" },
     {
       header: "Currently Seeking",
-      txt: "Freelance opportunities, Penetration testing learning/development and insight into digital Marketing stratagies/ Further education to supplement my Marketing degree. I'm no longer looking for a fulltime role",
+      txt: " I'm currently looking for a fulltime role, contracting opportunities starting at 35,000 PA & Freelance opportunities. In terms of long term development I'm looking for Penetration testing learning/development, insight into digital Marketing stratagies/ Further education to supplement my Marketing degree.",
     },
   ],
 };
