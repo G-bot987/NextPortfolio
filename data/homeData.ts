@@ -1,6 +1,24 @@
 import portait from "../public/images/personal/portrait.jpg";
+import typescript from "../public/images/icons/competencies/TypeScript.png"
+import javascript from "../public/images/icons/competencies/javascript.png"
+import node from "../public/images/icons/competencies/Node.png"
+import react from "../public/images/icons/competencies/React.png"
+import reactNative from "../public/images/icons/competencies/reactNative.png"
+
+
+
+
+
 
 export const homeData = {
+  carouselslides: [
+    {img: typescript},
+    {img:javascript },
+    {img: node},
+    {img: react},
+    {img: reactNative}
+  ], 
+
   synopsisProperties: [
     {
       portrait: { IMG: portait, alt: "a portrait of me" },

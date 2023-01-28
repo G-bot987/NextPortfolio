@@ -1,5 +1,5 @@
 export const skillsData = {
-  header: "Proficent in",
+  header: "Proficent With",
   skills: [
     { name: "Angular" },
     { name: "React.Native" },
