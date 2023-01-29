@@ -8,7 +8,7 @@ import HeaderCatagories from "../components/HeaderCatagories";
 export default function Home(props: HomePageInterface) {
   const { synopsisProperties, carouselSlides } = props;
 
-  const slideArrLength = carouselSlides.length
+  const slideArrLength = carouselSlides?.length
   var [slide, SetSlide] = useState(0);
 
   useEffect(() => {
