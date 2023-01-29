@@ -12,11 +12,6 @@ export interface portraitInterface {
   alt: string;
 }
 
-export interface slideInterface {
-  img: StaticImageData
-}
-
 export interface HomePageInterface {
-  carouselSlides: slideInterface[];
   synopsisProperties: synopsisPropertiesInterface[];
 }
