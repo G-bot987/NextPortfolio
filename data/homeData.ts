@@ -11,7 +11,7 @@ import reactNative from "../public/images/icons/competencies/reactNative.png"
 
 
 export const homeData = {
-  carouselslides: [
+  carouselSlides: [
     {img: typescript},
     {img:javascript },
     {img: node},
