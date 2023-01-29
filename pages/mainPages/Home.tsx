@@ -27,7 +27,10 @@ export default function Home(props: HomePageInterface) {
 
   return (
     <div className={`mt-6 mr-8 ml-8  min-w-min  flex flex-col`}>
-      <CaroSlides {...carouselSlides[slide]} />
+      {carouselSlides &&
+
+        <CaroSlides {...carouselSlides[slide]} />
+      }
       <ul className=" flex sm:flex-row justify-evenly flex-wrap border-double border-4 border-white rounded-lg sm:border-0  ">
         {synopsisProperties &&
           Object.keys(synopsisProperties).map(
