@@ -7,13 +7,12 @@ export default function CaroSlides(props: slideInterface) {
     const { img, alt } = props
 
     return (
-        <div>
-
+        <li>
             <Image src={img}
                 alt={alt}
                 width={700}
                 height={700}
             />
-        </div>
+        </li>
     )
 }

@@ -28,8 +28,9 @@ export default function Home(props: HomePageInterface) {
   return (
     <div className={`mt-6 mr-8 ml-8  min-w-min  flex flex-col`}>
       {carouselSlides &&
-
-        <CaroSlides {...carouselSlides[slide]} />
+        <ul className="flex max-w-[50%] max-h-[25%] mx-4 my-10 ">
+          <CaroSlides {...carouselSlides[slide]} />
+        </ul>
       }
       <ul className=" flex sm:flex-row justify-evenly flex-wrap border-double border-4 border-white rounded-lg sm:border-0  ">
         {synopsisProperties &&
