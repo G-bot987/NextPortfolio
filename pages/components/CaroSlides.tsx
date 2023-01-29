@@ -1,26 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { slideInterface } from '../../interface/home.interface'
-// import Slide from './Slide';
+import Image from 'next/image';
 
 export default function CaroSlides(props: slideInterface) {
 
-
-    console.log('props')
-    console.log(props)
-    console.log(';----')
-
     return (
-        <ul>
+        <div>
 
-            {props &&
-                <div>
-
-                    {/* <Slide /> */}
-                </div>
-
-            }
-        </ul>
-
-
+            <Image src={props.img}
+                alt=''
+            />
+        </div>
     )
 }
