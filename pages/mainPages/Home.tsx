@@ -12,11 +12,28 @@ export default function Home(props: HomePageInterface) {
   var [slide, SetSlide] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => SetSlide(slide = slide + 1), 10000);
+    const interval = setInterval(() => {
+      if (slide > slideArrLength) {
+        slide = 0
+      } else {
+
+
+        SetSlide(slide = slide + 1)
+      }
+    }
+      ,
+
+
+
+      10000);
     return () => {
       clearInterval(interval);
     };
   }, [])
+
+
+
+  console.log(slide)
 
   return (
     <div className={`mt-6 mr-8 ml-8  min-w-min  flex flex-col`}>
