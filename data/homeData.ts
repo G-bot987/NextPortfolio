@@ -4,6 +4,7 @@ import javascript from "../public/images/icons/competencies/javascript.png";
 import node from "../public/images/icons/competencies/Node.png";
 import react from "../public/images/icons/competencies/React.png";
 import reactNative from "../public/images/icons/competencies/reactNative.png";
+import angular from "../public/images/icons/competencies/angular.png"
 
 export const homeData = {
   carouselSlides: [
@@ -18,6 +19,10 @@ export const homeData = {
     {
       img: node,
       alt: 'nodo logo'
+    },
+    {
+      img: angular,
+      alt: 'angular logo'
     },
     {
       img: react,
