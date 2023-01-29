@@ -2,7 +2,7 @@ import portait from "../public/images/personal/portrait.jpg";
 import typescript from "../public/images/icons/competencies/Typescript.png"
 import javascript from "../public/images/icons/competencies/javascript.png";
 import node from "../public/images/icons/competencies/Node.png";
-import react from "../public/images/icons/competencies/React.png";
+import react from "../public/images/icons/competencies/react.png";
 import reactNative from "../public/images/icons/competencies/reactNative.png";
 import angular from "../public/images/icons/competencies/angular.png"
 
