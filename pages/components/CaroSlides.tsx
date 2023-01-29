@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function CaroSlides(props: CarouselSlideInterface) {
     const { type, img, alt, experience, mainHeader, subHeader, technologiesTxt } = props
     return (
-        <li className='items-center flex flex-col min-w-full min-h-full'>
+        <li className='items-center flex flex-col'>
             {type === 'img' && img && alt &&
                 <div>
                     <h2 className='text-2xl	'>{experience}</h2>
@@ -19,7 +19,7 @@ export default function CaroSlides(props: CarouselSlideInterface) {
 
             {
                 type === 'txt' &&
-                <div className='min-w-full min-h-full'>
+                <div >
 
                     <h1 className={`text-6xl p-8 italic`}>{mainHeader}</h1>
 

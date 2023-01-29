@@ -40,7 +40,7 @@ export default function App() {
   const handlePageChange = (page: any) => setCurrentPage(page);
 
   return (
-    <div className="flex-col flex justify-evenly flex-wrap">
+    <div className="flex-col flex justify-evenly flex-wrap items-center">
       <ParticlesContainer />
 
       <NavLinks currentPage={currentPage} handlePageChange={handlePageChange} />
