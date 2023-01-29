@@ -13,7 +13,8 @@ export interface portraitInterface {
 }
 
 export interface slideInterface {
-  img: StaticImageData
+  img: StaticImageData;
+  alt: string;
 }
 
 export interface HomePageInterface {

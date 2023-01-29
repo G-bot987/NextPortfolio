@@ -7,11 +7,26 @@ import reactNative from "../public/images/icons/competencies/reactNative.png";
 
 export const homeData = {
   carouselSlides: [
-    { img: typescript },
-    { img: javascript },
-    { img: node },
-    { img: react },
-    { img: reactNative }
+    {
+      img: typescript,
+      alt: 'typescript logo'
+    },
+    {
+      img: javascript,
+      alt: 'javascript logo'
+    },
+    {
+      img: node,
+      alt: 'nodo logo'
+    },
+    {
+      img: react,
+      alt: 'react logo'
+    },
+    {
+      img: reactNative,
+      alt: 'react native logo'
+    }
   ],
 
   synopsisProperties: [
