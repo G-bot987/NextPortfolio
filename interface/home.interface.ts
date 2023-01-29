@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface synopsisPropertiesInterface {
   header: string;
   txt: string;
@@ -10,6 +12,11 @@ export interface portraitInterface {
   alt: string;
 }
 
+export interface slideInterface {
+  img: StaticImageData
+}
+
 export interface HomePageInterface {
+  carouselSlides: slideInterface[];
   synopsisProperties: synopsisPropertiesInterface[];
 }
