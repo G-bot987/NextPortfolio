@@ -6,32 +6,11 @@ import HeaderCatagories from "../components/HeaderCatagories";
 import CaroSlides from "../components/CaroSlides";
 
 export default function Home(props: HomePageInterface) {
-  const { synopsisProperties, carouselSlides } = props;
-  const preMinus = carouselSlides?.length
-  const slideArrLength = preMinus - 1
-
-  var [slide, SetSlide] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (slide > slideArrLength - 1) {
-        SetSlide(slide = 0)
-      } else {
-        SetSlide(slide = slide + 1)
-      }
-    }, 10000);
-    return () => {
-      clearInterval(interval);
-    };
-  }, [])
+  const { synopsisProperties } = props;
 
   return (
     <div className='mt-6 mr-8 ml-8  min-w-min  flex flex-col items-center'>
-      {carouselSlides &&
-        <ul className="flex max-w-[50%] max-h-[25%] mx-4 my-10 ">
-          <CaroSlides {...carouselSlides[slide]} />
-        </ul>
-      }
+
       <ul className=" flex sm:flex-row justify-evenly flex-wrap border-double border-4 border-white rounded-lg sm:border-0  ">
         {synopsisProperties &&
           Object.keys(synopsisProperties).map(
