@@ -3,7 +3,7 @@ import styles from "../../styles/Home.module.css";
 import { HomePageInterface } from "../../interface/home.interface";
 import Bio from "../components/Bio";
 import HeaderCatagories from "../components/HeaderCatagories";
-import CaroSlides from "../components/CaroSlides";
+// import CaroSlides from "../components/CaroSlides";
 
 export default function Home(props: HomePageInterface) {
   const { synopsisProperties, carouselSlides } = props;
@@ -16,24 +16,13 @@ export default function Home(props: HomePageInterface) {
       if (slide > slideArrLength) {
         slide = 0
       } else {
-
-
         SetSlide(slide = slide + 1)
       }
-    }
-      ,
-
-
-
-      10000);
+    }, 10000);
     return () => {
       clearInterval(interval);
     };
   }, [])
-
-
-
-  console.log(slide)
 
   return (
     <div className={`mt-6 mr-8 ml-8  min-w-min  flex flex-col`}>
