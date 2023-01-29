@@ -11,7 +11,7 @@ interface Props {
 // We assign them to their own variable names
 function NavTabs({ currentPage, handlePageChange }: Props) {
   return (
-    <ul className={`inline-flex text-base p-8 italic ${styles.neonText}`}>
+    <ul className={`inline-flex text-base p-8 italic self-end ${styles.neonText}`}>
       <li className="pl-4">
         <a
           href="#home"
