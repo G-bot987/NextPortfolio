@@ -11,11 +11,11 @@ import NavLinks from "./components/hamburgerMenu/NavLinks";
 import Footer from "./components/Footer";
 import ParticlesContainer from "./particles/ParticlesContainer";
 import footerData from "../data/footerData";
-import { headerData } from "../data/headerData";
 import projectsData from "../data/projectsData";
 import { skillsData } from "../data/skillsData";
 import { homeData } from "../data/homeData";
 import { contactData } from "../data/contactData";
+import { carouselData } from "../data/carouselData";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("Home");
@@ -44,10 +44,7 @@ export default function App() {
       <ParticlesContainer />
 
       <NavLinks currentPage={currentPage} handlePageChange={handlePageChange} />
-      <Header {...headerData} />
-      {/* We are passing the currentPage from state and the function to update it */}
-
-      {/* Here we are calling the renderPage method which will return a component  */}
+      <Header {...carouselData} />
       {renderPage()}
       <Footer {...footerData} />
     </div>
