@@ -49,19 +49,16 @@ export default function App() {
         <div className={`h-6  w-9 self-end my-4  flex flex-col  ${open ? `` : `justify-between`} `}>
           <div className={`h-1 w-6 bg-white rounded-full place-self-center  `}
             style={{
-              transform: open ? "rotate(140deg)" : "",
+              transform: open ? "rotate(45deg) translate(4px, 3px)" : "",
               transition: "transform 150ms ease",
             }}
           />
           <div className={`h-1 w-6 bg-white rounded-full place-self-center ${open ? `hidden` : ``} `}
-            style={{
-              transform: open ? "rotate(225deg)" : "",
-              transition: "transform 150ms ease",
-            }} />
+          />
 
           <div className="h-1 w-6 bg-white rounded-full place-self-center "
             style={{
-              transform: open ? "rotate(225deg)" : "",
+              transform: open ? "rotate(135deg) translate(0.5px)" : "",
               transition: "transform 150ms ease",
             }} />
         </div>
