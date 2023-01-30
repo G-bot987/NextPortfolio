@@ -44,16 +44,25 @@ export default function App() {
     <div className="flex-col flex justify-evenly flex-wrap items-center">
       <ParticlesContainer />
 
-      <button className='self-end flex flex-col' onClick={() => SetOpen(!open)}
+      <button className='self-end flex flex-row justify-between items-baseline my-2' onClick={() => SetOpen(!open)}
       >
-        <div className={`h-6  w-9 self-end my-4  flex flex-col  ${open ? `` : `justify-between`} `}>
+
+        {open &&
+          <NavLinks currentPage={currentPage} handlePageChange={handlePageChange} />
+        }
+        <div className={`h-6  w-9 flex flex-col self-center ${open ? `` : `justify-between`} `}>
           <div className={`h-1 w-6 bg-white rounded-full place-self-center  `}
             style={{
               transform: open ? "rotate(45deg) translate(4px, 3px)" : "",
               transition: "transform 150ms ease",
             }}
           />
-          <div className={`h-1 w-6 bg-white rounded-full place-self-center ${open ? `hidden` : ``} `}
+          <div className={`h-1 w-6 bg-white rounded-full place-self-center `}
+
+            style={{
+              display: open ? "none" : "",
+              transform: open ? "translateX(-60px)" : "translateX(0px)",
+            }}
           />
 
           <div className="h-1 w-6 bg-white rounded-full place-self-center "
@@ -62,9 +71,6 @@ export default function App() {
               transition: "transform 150ms ease",
             }} />
         </div>
-        {open &&
-          <NavLinks currentPage={currentPage} handlePageChange={handlePageChange} />
-        }
       </button>
       <Header {...carouselData} />
       {renderPage()}
