@@ -19,6 +19,7 @@ import { carouselData } from "../data/carouselData";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("Home");
+  const [open, SetOpen] = useState(false)
   // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
   const renderPage = () => {
     if (currentPage === "Home") {
@@ -43,7 +44,28 @@ export default function App() {
     <div className="flex-col flex justify-evenly flex-wrap items-center">
       <ParticlesContainer />
 
-      <NavLinks currentPage={currentPage} handlePageChange={handlePageChange} />
+      <button className='self-end flex flex-col' onClick={() => SetOpen(!open)}
+      >
+        <div className={`h-6  w-9 self-end my-4  flex flex-col  ${open ? `` : `justify-between`} `}>
+          <div className={`h-1 w-6 bg-white rounded-full place-self-center  `}
+            style={{
+              transform: open ? "rotate(45deg) translate(4px, 3px)" : "",
+              transition: "transform 150ms ease",
+            }}
+          />
+          <div className={`h-1 w-6 bg-white rounded-full place-self-center ${open ? `hidden` : ``} `}
+          />
+
+          <div className="h-1 w-6 bg-white rounded-full place-self-center "
+            style={{
+              transform: open ? "rotate(135deg) translate(0.5px)" : "",
+              transition: "transform 150ms ease",
+            }} />
+        </div>
+        {open &&
+          <NavLinks currentPage={currentPage} handlePageChange={handlePageChange} />
+        }
+      </button>
       <Header {...carouselData} />
       {renderPage()}
       <Footer {...footerData} />
