@@ -41,24 +41,6 @@
     0 0 151px #5271ff;
 }
 
-@keyframes slide {
-  0% {
-    right: -150%;
-  }
-
-  35% {
-    right: 50%;
-  }
-
-  65% {
-    right: 50%;
-  }
-
-  100% {
-    right: 150%;
-  }
-}
-
 .glow {
   box-shadow:
     0 0 7px #fff,
