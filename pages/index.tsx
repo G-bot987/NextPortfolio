@@ -20,7 +20,7 @@ import { carouselData } from "../data/carouselData";
 export default function App() {
   const [currentPage, setCurrentPage] = useState("Home");
   const [open, SetOpen] = useState(false)
-  // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
+
   const renderPage = () => {
     if (currentPage === "Home") {
       return <Home {...homeData} />;
@@ -32,7 +32,6 @@ export default function App() {
       return <Technologies {...skillsData} />;
     }
     if (currentPage === "Cv") {
-      // cv is returned through navtabs
       return <Home {...homeData} />;
     }
     return <Contact {...contactData} />;
