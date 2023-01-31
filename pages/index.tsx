@@ -44,13 +44,13 @@ export default function App() {
     <div className="flex-col flex justify-evenly flex-wrap items-center">
       <ParticlesContainer />
 
-      <button className='self-end flex flex-row justify-between items-baseline my-2' onClick={() => SetOpen(!open)}
+      <button className={`self-end flex flex-row justify-between items-baseline  bg-white ${open ? `rounded-tl-lg rounded-bl-lg` : `rounded-lg my-2`}`} onClick={() => SetOpen(!open)}
       >
 
         {open &&
           <NavLinks currentPage={currentPage} handlePageChange={handlePageChange} />
         }
-        <div className={`h-6  w-9 flex flex-col self-center ${open ? `` : `justify-between`} `}>
+        <div className={`h-6  w-9 flex flex-col self-center pt-1 bg-black ${open ? `rounded-tl-lg rounded-bl-lg` : `justify-between `} `}>
           <div className={`h-1 w-6 bg-white rounded-full place-self-center  `}
             style={{
               transform: open ? "rotate(45deg) translate(4px, 3px)" : "",
