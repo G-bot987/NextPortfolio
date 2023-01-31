@@ -43,7 +43,7 @@ export default function App() {
     <div className="flex-col flex justify-evenly flex-wrap items-center">
       <ParticlesContainer />
 
-      <button className={`self-end flex flex-row justify-between items-baseline  bg-white ${open ? `rounded-tl-lg rounded-bl-lg` : `rounded-lg my-2`}`} onClick={() => SetOpen(!open)}
+      <button className={`self-end flex flex-row justify-between items-baseline  bg-white mb-12 ${open ? `rounded-tl-lg rounded-bl-lg` : `rounded-lg my-2`}`} onClick={() => SetOpen(!open)}
       >
 
         {open &&
