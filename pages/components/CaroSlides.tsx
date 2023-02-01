@@ -7,12 +7,12 @@ export default function CaroSlides(props: CarouselSlideInterface) {
     return (
         <li className='items-center flex flex-col'>
             {type === 'img' && img && alt &&
-                <div className='min-w-[500px] min-h-[500px]'>
+                <div className='min-w-[200px] min-h-[350px]'>
                     <h2 className='text-2xl	'>{experience}</h2>
                     <Image src={img}
                         alt={alt}
-                        width={500}
-                        height={500}
+                        width={200}
+                        height={350}
                     />
                 </div>
             }
