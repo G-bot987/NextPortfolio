@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "../styles/Home.module.css";
 import Home from "./mainPages/Home";
 import Projects from "./mainPages/Projects";
@@ -18,8 +18,10 @@ import { contactData } from "../data/contactData";
 import { carouselData } from "../data/carouselData";
 
 export default function App() {
+
   const [currentPage, setCurrentPage] = useState("Home");
   const [open, SetOpen] = useState(false)
+  const ref = useRef<null | HTMLDivElement>(null);
 
   const renderPage = () => {
     if (currentPage === "Home") {
@@ -38,6 +40,10 @@ export default function App() {
   };
 
   const handlePageChange = (page: any) => setCurrentPage(page);
+
+  useEffect(() => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [currentPage])
 
   return (
     <div className="flex-col flex justify-evenly flex-wrap items-center">
@@ -72,7 +78,9 @@ export default function App() {
         </div>
       </button>
       <Header {...carouselData} />
-      {renderPage()}
+      <div ref={ref}>
+        {renderPage()}
+      </div>
       <Footer {...footerData} />
     </div>
   );
