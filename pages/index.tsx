@@ -1,5 +1,3 @@
-import Head from "next/head";
-import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "../styles/Home.module.css";
 import Home from "./mainPages/Home";
@@ -11,7 +9,7 @@ import NavLinks from "./components/hamburgerMenu/NavLinks";
 import Footer from "./components/Footer";
 import ParticlesContainer from "./particles/ParticlesContainer";
 import footerData from "../data/footerData";
-import projectsData from "../data/projectsData";
+import { projectsData } from "../data/projectsData";
 import { skillsData } from "../data/skillsData";
 import { homeData } from "../data/homeData";
 import { contactData } from "../data/contactData";
