@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../../styles/Home.module.css";
 
 interface Props {
@@ -8,9 +8,24 @@ interface Props {
 }
 
 function NavTabs({ currentPage, handlePageChange }: Props) {
+
+  const [hover, setHover] = useState(false);
+
+
+  const handleMouseOver = () => {
+    setHover(!hover);
+  };
+  const handleMouseOut = () => {
+    setHover(!hover);
+  };
+
+
   return (
     <ul className={`inline-flex text-base p-8 italic self-end ${styles.neonText}`}>
-      <li className="pl-4  bg-black rounded-tl-lg rounded-bl-lg">
+      <li className="pl-4  bg-black rounded-tl-lg rounded-bl-lg"
+        onMouseOver={handleMouseOver}
+        onMouseOut={handleMouseOut}
+      >
         <a
           href="#home"
           onClick={() => handlePageChange("Home")}
@@ -19,7 +34,10 @@ function NavTabs({ currentPage, handlePageChange }: Props) {
           Home/about me
         </a>
       </li>
-      <li className="pl-4  bg-black ">
+      <li className="pl-4  bg-black "
+        onMouseOver={handleMouseOver}
+        onMouseOut={handleMouseOut}
+      >
         <a
           href="#Projects"
           onClick={() => handlePageChange("Projects")}
@@ -30,7 +48,10 @@ function NavTabs({ currentPage, handlePageChange }: Props) {
           Projects
         </a>
       </li>
-      <li className="pl-4  bg-black ">
+      <li className="pl-4  bg-black "
+        onMouseOver={handleMouseOver}
+        onMouseOut={handleMouseOut}
+      >
         <a
           href="#contact"
           onClick={() => handlePageChange("Contact")}
@@ -39,7 +60,10 @@ function NavTabs({ currentPage, handlePageChange }: Props) {
           Contact
         </a>
       </li>
-      <li className="pl-4  bg-black ">
+      <li className="pl-4  bg-black "
+        onMouseOver={handleMouseOver}
+        onMouseOut={handleMouseOut}
+      >
         <a
           href="#Technologies"
           onClick={() => handlePageChange("Technologies")}
@@ -49,7 +73,10 @@ function NavTabs({ currentPage, handlePageChange }: Props) {
         </a>
       </li>
 
-      <li className="px-4   bg-black  rounded-br-lg rounded-tr-lg ">
+      <li className={`px-4   bg-black  rounded-br-lg rounded-tr-lg ${hover ? `bg-sky-500` : ``}`}
+        onMouseOver={handleMouseOver}
+        onMouseOut={handleMouseOut}
+      >
         <Link href={"images/CV/CV.pdf"} legacyBehavior>
           <a
             href="#Cv"
