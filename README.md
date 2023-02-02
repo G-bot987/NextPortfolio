@@ -1,5 +1,7 @@
 Deployed: https://portfolio-g-bot987.vercel.app/
 
+this is a test
+
 pill btn on home drop down, 
 cara,
 hamburger, 
