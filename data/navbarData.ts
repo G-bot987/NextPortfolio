@@ -1,7 +1,7 @@
 export const NavbarData = [
-    'About Me',
+    'Home',
     'Projects',
-    'Contact',
+    'contact',
     'Technologies',
     'CV'
 ]
