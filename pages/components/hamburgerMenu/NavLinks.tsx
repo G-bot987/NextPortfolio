@@ -1,13 +1,18 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import styles from "../../../styles/Home.module.css";
+import NavLink from "./Navlink";
 
 interface Props {
   currentPage: any;
   handlePageChange: any;
 }
 
-function NavTabs({ currentPage, handlePageChange }: Props) {
+function NavTabs(Props: any) {
+  console.log('props')
+  console.log(Props)
+
+  const { handlePageChange, currentPage, NavbarData } = Props
 
   const [hover, setHover] = useState(false);
 
@@ -22,6 +27,13 @@ function NavTabs({ currentPage, handlePageChange }: Props) {
 
   return (
     <ul className={`inline-flex text-base p-8 italic self-end ${styles.neonText}`}>
+      {
+        NavbarData.map((link: any) => (
+
+          <NavLink {...{ link, handlePageChange, currentPage }} />
+        ))
+
+      }
       <li className="pl-4  bg-black rounded-tl-lg rounded-bl-lg"
         onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOut}
