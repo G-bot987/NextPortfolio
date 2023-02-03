@@ -28,9 +28,8 @@ function NavTabs(Props: any) {
   return (
     <ul className={`inline-flex text-base p-8 italic self-end ${styles.neonText}`}>
       {
-        NavbarData.map((link: any) => (
-
-          <NavLink {...{ link, handlePageChange, currentPage }} />
+        NavbarData.map((link: any, index: number) => (
+          <NavLink {...{ link, handlePageChange, currentPage }} key={`${index}`} />
         ))
 
       }
