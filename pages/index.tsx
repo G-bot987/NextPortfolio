@@ -8,12 +8,13 @@ import Header from "./components/Header";
 import NavLinks from "./components/hamburgerMenu/NavLinks";
 import Footer from "./components/Footer";
 import ParticlesContainer from "./particles/ParticlesContainer";
-import footerData from "../data/footerData";
+import { footerData } from "../data/footerData";
 import { projectsData } from "../data/projectsData";
 import { skillsData } from "../data/skillsData";
 import { homeData } from "../data/homeData";
 import { contactData } from "../data/contactData";
 import { carouselData } from "../data/carouselData";
+import { NavbarData } from "../data/navbarData";
 
 export default function App() {
 
@@ -51,7 +52,7 @@ export default function App() {
       >
 
         {open &&
-          <NavLinks currentPage={currentPage} handlePageChange={handlePageChange} />
+          <NavLinks {...{ NavbarData, currentPage, handlePageChange }} />
         }
         <div className={`h-6  w-9 flex flex-col self-center pt-1 bg-black ${open ? `rounded-tl-lg rounded-bl-lg` : `justify-between `} `} onClick={() => SetOpen(!open)}>
           <div className={`h-1 w-6 bg-white rounded-full place-self-center  `}
