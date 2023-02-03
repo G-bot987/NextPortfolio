@@ -2,7 +2,7 @@ import linkedinIMG from "../public/images/icons/business/linkedin.png";
 import githubIMG from "../public/images/icons/business/octocat.png";
 import pdf from "../public/images/icons/business/pdf.png";
 
-const footerData = {
+export const footerData = {
   socials: "My Socials",
   linkedin: {
     image: linkedinIMG,
@@ -20,5 +20,3 @@ const footerData = {
     alt: "pdf icon",
   },
 };
-
-export default footerData;
