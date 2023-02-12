@@ -212,8 +212,6 @@
   transition: 0.5s;
   transform: translate(-1%, -1%);
   color: black;
-  font-size: 24px;
-  text-transform: uppercase;
   background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
   background-size: 400%;
   z-index: 1;
