@@ -18,7 +18,7 @@ export default function Header(props: CarouselInterface) {
       } else {
         SetSlide(slide = slide + 1)
       }
-    }, 10000);
+    }, 5000);
     return () => {
       clearInterval(interval);
     };
