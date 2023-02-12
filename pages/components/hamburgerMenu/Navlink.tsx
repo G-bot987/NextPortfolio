@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import Link from "next/link";
 import styles from "../../../styles/Home.module.css";
+import { NavLinkInterface } from '../../../interface/navbar.interface';
 
 
 
-export default function NavLink(Props: any) {
+
+export default function NavLink(Props: NavLinkInterface) {
+
     const { link, handlePageChange, currentPage, index } = Props
     const [hover, setHover] = useState(false);
 

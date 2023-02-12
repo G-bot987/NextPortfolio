@@ -1,12 +1,10 @@
 import React from "react";
+import { NavlinksInterface } from "../../../interface/navbar.interface";
 import styles from "../../../styles/Home.module.css";
 import NavLink from "./Navlink";
 
-interface NavlinksInterface {
-  NavbarData: String[],
-}
 
-function NavTabs(Props: any) {
+function NavTabs(Props: NavlinksInterface) {
 
   const { handlePageChange, currentPage, NavbarData } = Props
 
