@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Link from "next/link";
+import styles from "../../../styles/Home.module.css";
 
 
 
@@ -16,7 +17,7 @@ export default function NavLink(Props: any) {
     };
 
     return (
-        <li className={`px-2  bg-black ${index === 0 ? `rounded-tl-lg rounded-bl-lg` : ``} ${index === 4 ? `rounded-tr-lg rounded-br-lg` : ``}  ${hover ? `bg-sky-500` : ``}`}
+        <li className={`px-2  bg-black rounded-full ${styles.rainbowglow}  ${hover ? `` : ``}`}
         >
 
             {link !== 'CV' && <a
