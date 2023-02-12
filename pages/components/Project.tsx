@@ -5,7 +5,7 @@ import styles from "../../styles/Home.module.css";
 import { ProjectInterface } from "../../interface/projects.interface";
 
 export default function Project(props: ProjectInterface) {
-  // use state sequence for git
+
   const [hover, setHover] = useState(false);
 
   const handleMouseOver = () => {
@@ -14,7 +14,7 @@ export default function Project(props: ProjectInterface) {
   const handleMouseOut = () => {
     setHover(false);
   };
-  // use state sequence for img
+
   const [hoverImg, setHoverImg] = useState(false);
 
   const handleMouseOverImg = () => {
