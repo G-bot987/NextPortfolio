@@ -56,13 +56,13 @@ export default function App() {
     <div className="flex-col flex justify-evenly flex-wrap items-center">
       <ParticlesContainer />
 
-      <button className={`self-end flex flex-row justify-between items-baseline  bg-white mb-12  ${open ? `rounded-tl-lg rounded-bl-lg` : `rounded-lg my-2 bg-transparent`}`}
+      <button className={`self-end flex flex-row justify-between items-baseline  bg-white mb-12  ${open ? `rounded-tl-lg rounded-bl-lg min-w-[35%]` : `rounded-lg my-2 bg-transparent`}`}
       >
 
         {open &&
           <NavLinks {...{ NavbarData, currentPage, handlePageChange }} />
         }
-        <div className={`h-6  w-9 flex flex-col self-center pt-1 rounded-tl-lg rounded-bl-lg  ${styles.rainbowglow} ${open ? `` : `justify-between `} ${hover ? `` : ``} `} onClick={() => SetOpen(!open)}
+        <div className={`h-6  w-9 flex flex-col self-center  rounded-tl-lg rounded-bl-lg  ${styles.rainbowglow} ${open ? `pt-1.5` : `justify-between py-1`} ${hover ? `` : ``} `} onClick={() => SetOpen(!open)}
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}
         >
