@@ -56,23 +56,23 @@ export default function App() {
     <div className="flex-col flex justify-evenly flex-wrap items-center">
       <ParticlesContainer />
 
-      <button className={`self-end flex flex-row justify-between items-baseline  bg-white mb-12 ${open ? `rounded-tl-lg rounded-bl-lg` : `rounded-lg my-2`}`}
+      <button className={`self-end flex flex-row justify-between items-baseline  bg-white mb-12  ${open ? `rounded-tl-lg rounded-bl-lg` : `rounded-lg my-2 bg-transparent`}`}
       >
 
         {open &&
           <NavLinks {...{ NavbarData, currentPage, handlePageChange }} />
         }
-        <div className={`h-6  w-9 flex flex-col self-center pt-1 bg-black rounded-tl-lg rounded-bl-lg ${open ? `` : `justify-between `} ${hover ? `bg-sky-500` : ``} `} onClick={() => SetOpen(!open)}
+        <div className={`h-6  w-9 flex flex-col self-center pt-1 rounded-tl-lg rounded-bl-lg  ${styles.rainbowglow} ${open ? `` : `justify-between `} ${hover ? `` : ``} `} onClick={() => SetOpen(!open)}
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}
         >
-          <div className={`h-1 w-6 bg-white rounded-full place-self-center  `}
+          <div className={`h-1 w-6 rounded-full place-self-center ${open ? `bg-black` : `bg-white`} `}
             style={{
               transform: open ? "rotate(45deg) translate(4px, 3px)" : "",
               transition: "transform 150ms ease",
             }}
           />
-          <div className={`h-1 w-6 bg-white rounded-full place-self-center `}
+          <div className={`h-1 w-6 rounded-full place-self-center ${open ? `bg-black` : `bg-white`}`}
 
             style={{
               display: open ? "none" : "",
@@ -80,7 +80,7 @@ export default function App() {
             }}
           />
 
-          <div className="h-1 w-6 bg-white rounded-full place-self-center "
+          <div className={`h-1 w-6  rounded-full place-self-center ${open ? `bg-black` : `bg-white`} `}
             style={{
               transform: open ? "rotate(135deg) translate(0.5px)" : "",
               transition: "transform 150ms ease",
