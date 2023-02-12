@@ -62,7 +62,7 @@ export default function App() {
         {open &&
           <NavLinks {...{ NavbarData, currentPage, handlePageChange }} />
         }
-        <div className={`h-6  w-9 flex flex-col self-center pt-1 rounded-tl-lg rounded-bl-lg  ${styles.rainbowglow} ${open ? `` : `justify-between `} ${hover ? `` : ``} `} onClick={() => SetOpen(!open)}
+        <div className={`h-6  w-9 flex flex-col self-center  rounded-tl-lg rounded-bl-lg  ${styles.rainbowglow} ${open ? `pt-1.5` : `justify-between py-1`} ${hover ? `` : ``} `} onClick={() => SetOpen(!open)}
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}
         >
