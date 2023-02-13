@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import Link from "next/link";
 import styles from "../../../styles/Home.module.css";
+import { NavLinkInterface } from '../../../interface/navbar.interface';
 
 
 
-export default function NavLink(Props: any) {
+
+export default function NavLink(Props: NavLinkInterface) {
+
     const { link, handlePageChange, currentPage, index } = Props
     const [hover, setHover] = useState(false);
 
@@ -17,7 +20,7 @@ export default function NavLink(Props: any) {
     };
 
     return (
-        <li className={`px-2  bg-black rounded-none text-2xl uppercase max-w-fit ${styles.rainbowglow} ${index === 0 ? `rounded-tl-lg rounded-bl-lg` : ``} ${index === 4 ? `rounded-tr-lg rounded-br-lg` : ``} ${hover ? `` : ``}`}
+        <li className={`px-2  bg-black rounded-none text-2xl uppercase max-w-fit text-black z-[1] ${styles.rainbowglow} ${index === 0 ? `rounded-tl-lg rounded-bl-lg` : ``} ${index === 4 ? `rounded-tr-lg rounded-br-lg` : ``} ${hover ? `` : ``}`}
         >
 
             {link !== 'CV' && <a
