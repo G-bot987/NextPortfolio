@@ -20,7 +20,7 @@ export default function NavLink(Props: NavLinkInterface) {
     };
 
     return (
-        <li className={`px-2  bg-black rounded-none text-2xl uppercase max-w-fit ${styles.rainbowglow} ${index === 0 ? `rounded-tl-lg rounded-bl-lg` : ``} ${index === 4 ? `rounded-tr-lg rounded-br-lg` : ``} ${hover ? `` : ``}`}
+        <li className={`px-2  bg-black rounded-none text-2xl uppercase max-w-fit text-black z-[1] ${styles.rainbowglow} ${index === 0 ? `rounded-tl-lg rounded-bl-lg` : ``} ${index === 4 ? `rounded-tr-lg rounded-br-lg` : ``} ${hover ? `` : ``}`}
         >
 
             {link !== 'CV' && <a
