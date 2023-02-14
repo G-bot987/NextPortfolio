@@ -23,8 +23,8 @@ export default function Catagory(props: synopsisPropertiesInterface) {
         >
           {header}
         </p>
-        <div className="grow sm:text-white text-justify flex flex-col justify-center  sm:rounded-br-lg sm:border-y-4  border-r-4 border-double  text-black w-full">
-          <div className="px-4 flex flex-col text-justify sm:bg-transparent bg-white ">
+        <div className="grow sm:text-white text-justify flex flex-col justify-around sm:rounded-br-lg sm:border-y-4  border-r-4 border-double  text-black w-full">
+          <div className="px-4 flex flex-col text-justify sm:bg-transparent bg-white  ">
             <p>{txt}</p>
           </div>
           <div className=" border-t-2 border-white sm:text-white flex flex-col sm:bg-transparent text-black  w-full">
