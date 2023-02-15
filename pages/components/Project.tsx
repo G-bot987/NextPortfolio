@@ -17,8 +17,6 @@ export default function Project(props: ProjectInterface) {
   const hasSelectedTec: boolean[] = []
   useEffect(() => {
 
-    console.log('trigger')
-
     technologies.forEach((technology) => {
       store.forEach((selectedTec: number) => {
 
@@ -34,7 +32,7 @@ export default function Project(props: ProjectInterface) {
 
     })
 
-    const render = hasSelectedTec.filter((value) => {
+    const renderArr = hasSelectedTec.filter((value) => {
       if (value === true) {
 
         return true
@@ -42,11 +40,20 @@ export default function Project(props: ProjectInterface) {
         return false
       }
     })
+    const render = (() => {
+      if (renderArr.length > 0) {
+        return renderArr?.reduce(
+          (accumulator, currentValue) => accumulator || currentValue
+        );
+      }
+    })();
 
-    if (render[0] === true) {
-      SetShow(
-        show = true
-      )
+
+
+    if (render === true) {
+      SetShow(show = true)
+    } else {
+      SetShow(show = false)
     }
 
   }, [store])
