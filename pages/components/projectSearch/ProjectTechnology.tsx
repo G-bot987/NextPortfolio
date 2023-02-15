@@ -10,10 +10,6 @@ export default function ProjectTechnology(props: any) {
 
     const { technology } = props
 
-    console.log('tec')
-    console.log(props)
-    console.log('--')
-
     useEffect(() => {
         const reduxPayload = technology?.key
         if (select) {
