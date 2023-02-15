@@ -52,13 +52,15 @@ export default function Project(props: ProjectInterface) {
   }, [store])
 
 
-  return (
-    <li>
-      {
-        show &&
+  if (show) {
+    return (
+      <li >
         <RenderProject {...props} />
-      }
 
-    </li>
-  );
+
+      </li>
+    );
+  } else {
+    return null
+  }
 }
