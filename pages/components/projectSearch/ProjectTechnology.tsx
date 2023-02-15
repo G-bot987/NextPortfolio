@@ -9,7 +9,7 @@ export default function ProjectTechnology(props: any) {
     const dispatch = useDispatch();
 
     const { technology } = props
-    const { tec, key } = technology
+    const { key } = technology
 
     useEffect(() => {
         const reduxPayload = key
@@ -29,7 +29,7 @@ export default function ProjectTechnology(props: any) {
                     color: select ? "black" : "",
                     border: select ? "solid" : "",
                 }}>
-                {tec}
+                {technology?.tec}
             </button>
         </li>
     )
