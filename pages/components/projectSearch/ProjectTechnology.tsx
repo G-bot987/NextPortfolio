@@ -21,7 +21,7 @@ export default function ProjectTechnology(props: any) {
 
     return (
         <li >
-            {technology.tec &&
+            {technology?.tec &&
                 <button className="max-w-fit rounded-full border-2 border-white p-2 my-2"
                     onClick={() => SetSelect(!select)}
                     style={{
