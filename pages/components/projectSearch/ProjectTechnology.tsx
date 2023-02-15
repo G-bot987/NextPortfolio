@@ -21,15 +21,17 @@ export default function ProjectTechnology(props: any) {
 
     return (
         <li >
-            <button className="max-w-fit rounded-full border-2 border-white p-2 my-2"
-                onClick={() => SetSelect(!select)}
-                style={{
-                    background: select ? "white" : "",
-                    color: select ? "black" : "",
-                    border: select ? "solid" : "",
-                }}>
-                {technology?.tec}
-            </button>
+            {technology?.tec &&
+                <button className="max-w-fit rounded-full border-2 border-white p-2 my-2"
+                    onClick={() => SetSelect(!select)}
+                    style={{
+                        background: select ? "white" : "",
+                        color: select ? "black" : "",
+                        border: select ? "solid" : "",
+                    }}>
+                    {technology?.tec}
+                </button>
+            }
         </li>
     )
 }
