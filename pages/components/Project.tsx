@@ -54,10 +54,8 @@ export default function Project(props: ProjectInterface) {
 
   if (show) {
     return (
-      <li >
+      <li className="mx-2" >
         <RenderProject {...props} />
-
-
       </li>
     );
   } else {
