@@ -13,7 +13,7 @@ export default function Projects(props: ProjectsDataInterface) {
       <p className="text-center">Search for project by technology</p>
       <ul className="flex flex-row justify-around border-double border-y-4 border-white">
         {technologies?.map((technology, index) => (
-          <ProjectTechnology {...technology} key={`${index}`} />
+          <ProjectTechnology {...{ technology }} key={`${index}`} />
         ))}
       </ul>
       <div

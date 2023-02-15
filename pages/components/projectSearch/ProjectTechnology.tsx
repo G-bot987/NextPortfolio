@@ -10,6 +10,10 @@ export default function ProjectTechnology(props: any) {
 
     const { technology } = props
 
+    console.log('tec')
+    console.log(props)
+    console.log('--')
+
     useEffect(() => {
         const reduxPayload = technology?.key
         if (select) {
@@ -21,17 +25,17 @@ export default function ProjectTechnology(props: any) {
 
     return (
         <li >
-            {technology?.tec &&
-                <button className="max-w-fit rounded-full border-2 border-white p-2 my-2"
-                    onClick={() => SetSelect(!select)}
-                    style={{
-                        background: select ? "white" : "",
-                        color: select ? "black" : "",
-                        border: select ? "solid" : "",
-                    }}>
-                    {technology?.tec}
-                </button>
-            }
+
+            <button className="max-w-fit rounded-full border-2 border-white p-2 my-2"
+                onClick={() => SetSelect(!select)}
+                style={{
+                    background: select ? "white" : "",
+                    color: select ? "black" : "",
+                    border: select ? "solid" : "",
+                }}>
+                {technology?.tec}
+            </button>
+
         </li>
     )
 }
