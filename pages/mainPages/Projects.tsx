@@ -12,10 +12,8 @@ export default function Projects(props: ProjectsDataInterface) {
     <div className="mt-6 mr-8 ml-8 border-double border-4 rounded-lg border-white min-w-min flex flex-col">
       <p className="text-center">Search for project by technology</p>
       <ul className="flex flex-row justify-around border-double border-y-4 border-white">
-        {technologies.map((technology, index) => (
-          <div>
-            <ProjectTechnology {...{ technology }} key={index} />
-          </div>
+        {technologies?.map((technology, index) => (
+          <ProjectTechnology {...technology} key={`${index}`} />
         ))}
       </ul>
       <div
