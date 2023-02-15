@@ -9,10 +9,9 @@ export default function ProjectTechnology(props: any) {
     const dispatch = useDispatch();
 
     const { technology } = props
-    const { key } = technology
 
     useEffect(() => {
-        const reduxPayload = key
+        const reduxPayload = technology?.key
         if (select) {
             dispatch(choosenTech(reduxPayload))
         } else {
