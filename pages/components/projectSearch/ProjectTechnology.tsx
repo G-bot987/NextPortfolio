@@ -20,7 +20,7 @@ export default function ProjectTechnology(props: any) {
     }, [select])
 
     return (
-        <li >
+        <li className='mx-2' >
 
             <button className="max-w-fit rounded-full border-2 border-white p-2 my-2"
                 onClick={() => SetSelect(!select)}
