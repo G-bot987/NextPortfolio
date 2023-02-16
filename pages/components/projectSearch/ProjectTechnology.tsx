@@ -4,11 +4,12 @@ import { TechnologyInterface } from '../../../interface/projects.interface'
 import { choosenTech, removeTech } from '../../../slices/projectSlice'
 
 export default function ProjectTechnology(props: any) {
+    
+    const { technology } = props
+    
     const [select, SetSelect] = useState(false)
-
     const dispatch = useDispatch();
 
-    const { technology } = props
 
     useEffect(() => {
         const reduxPayload = technology?.key
