@@ -5,12 +5,14 @@ import { projectRootState } from '../../slices/projectSlice'
 import { ProjectInterface } from "../../interface/projects.interface";
 import { useSelector } from "react-redux";
 import RenderProject from "./RenderProject";
+import { overRideRootState } from "../../slices/overRideSlice";
 
 export default function Project(props: ProjectInterface) {
 
   const { technologies } = props
 
   const store = useSelector(projectRootState)
+  const OverRideStore = useSelector(overRideRootState)
 
   var [show, SetShow] = useState(false)
 
@@ -50,13 +52,13 @@ export default function Project(props: ProjectInterface) {
 
 
 
-    if (render === true) {
+    if (render || OverRideStore[0] === true) {
       SetShow(show = true)
     } else {
       SetShow(show = false)
     }
 
-  }, [store])
+  }, [store, OverRideStore])
 
 
   if (show) {
