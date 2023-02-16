@@ -24,18 +24,18 @@ export default function Catagory(props: synopsisPropertiesInterface) {
           {header}
         </p>
         <div className="grow sm:text-white text-justify flex flex-col justify-around sm:rounded-br-lg sm:border-y-4  border-r-4 border-double  text-black w-full">
-          <div className="px-4 flex flex-col text-justify sm:bg-transparent bg-white  ">
+          <div className="px-4 flex flex-col text-justify sm:bg-transparent bg-white min-h-[50%] justify-center">
             <p>{txt}</p>
           </div>
-          <div className=" border-t-2 border-white sm:text-white flex flex-col sm:bg-transparent text-black  w-full">
-            <div className="border-b-2 border-t-2 sm:border-t-0 sm:border-white border-black uppercase">
+          <div className=" border-t-2 border-white sm:text-white flex flex-col sm:bg-transparent text-black  w-full min-h-[50%] ">
+            <div className="border-b-2 border-t-2 sm:border-t-0 sm:border-white border-black uppercase ">
               <p
                 className={`justify-center uppercase  text-center ${styles.neonText}`}
               >
                 {hobbiesHeader}
               </p>
             </div>
-            <div className="px-4 flex flex-col text-justify sm:bg-transparent bg-white ">
+            <div className="px-4 flex flex-col text-justify sm:bg-transparent bg-white justify-center min-h-[100%]">
               <p>{hobbiesTxt}</p>
             </div>
           </div>
