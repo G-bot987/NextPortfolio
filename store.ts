@@ -1,11 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-
 import { projectReducer } from "./slices/projectSlice";
+import { overRideReducer } from "./slices/overRideSlice";
 
 
 export const store = configureStore({
     reducer: {
         projectReducer,
+        overRideReducer
     },
 });
 
