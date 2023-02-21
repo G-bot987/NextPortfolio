@@ -14,7 +14,7 @@ export const carouselData = {
             type: 'txt',
             mainHeader: "Georgia Hobson",
             subHeader: "A Portfolio",
-            technologiesTxt: "Powered by Next.JS, TypeScript, Redux & Tailwind ",
+            technologiesTxt: "Powered by Next.JS, TypeScript & Tailwind ",
         },
 
         {

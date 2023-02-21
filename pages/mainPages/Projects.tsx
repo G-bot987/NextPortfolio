@@ -1,58 +1,61 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { ProjectsDataInterface } from "../../interface/projects.interface";
-import { overRide, resetOverRide } from "../../slices/overRideSlice";
-import { projectRootState } from "../../slices/projectSlice";
-import styles from "../../styles/Home.module.css";
-import Project from "../components/Project";
-import ProjectTechnology from "../components/projectSearch/ProjectTechnology";
+import React, { useMemo, useState } from "react";
+import { ProjectInterface, ProjectsDataInterface, TechnologyInterface } from "../../interface/projects.interface";
+import RenderProject from "../components/RenderProject";
 
 export default function Projects(props: ProjectsDataInterface) {
 
-  const { projects, technologies } = props
+  const { technologies, projects } = props
 
-  const store = useSelector(projectRootState)
-  const [showProjects, SetShowProjects] = useState(false)
-  var [border, SetBorder] = useState(false)
-  const dispatch = useDispatch();
+  const [selectedTechnologies, setSelectedTechnologies]: any = useState([]);
 
-  useEffect(() => {
-    if (store.length > 0) {
-      SetBorder(border = true)
+
+
+  const filterTechnologie = (techId: number) => {
+    if (selectedTechnologies.includes(techId)) {
+      setSelectedTechnologies((prev: any): any => prev.filter((p: any) => p !== techId))
     } else {
-      SetBorder(border = false)
+      setSelectedTechnologies((prev: any): any => [...prev, techId])
     }
+  }
 
-    const reduxPayload = showProjects
+  const projectsFound: any = useMemo(() => {
+    const p = projects?.filter((project: any) => {
+      return selectedTechnologies.every((id: any) => project.technologies.includes(id));
+    })
+    console.log(p);
+    return p;
+  }, [selectedTechnologies.length]);
 
-    if (showProjects === true) {
-      dispatch(overRide(reduxPayload))
-    } else {
-      dispatch(resetOverRide(reduxPayload))
-    }
-  }, [store, showProjects])
+
+
 
   return (
-    <div className="mt-6 mr-8 ml-8 border-double border-4 rounded-lg border-white min-w-min flex flex-col">
-      <p className="text-center">Search for project by technology</p>
-      <div className="border-double border-t-4 border-white flex flex-col">
-        {!showProjects && <ul className="flex flex-row justify-around ">
-          {technologies?.map((technology, index) => (
-            <ProjectTechnology {...{ technology }} key={`${index}`} />
-          ))}
-        </ul>}
-        <div className=" flex flex-row justify-center	min-w-full border-t-4 border-double border-white ">
-          <button onClick={() => SetShowProjects(!showProjects)} className={`my-2 border-2 rounded-full border-white p-2 ${showProjects === true ? 'bg-white text-black' : ''}`}>show all projects</button>
-        </div>
-      </div>
-      <div
-        className={`  flex-row border-double border-white ${border === true ? ` border-t-4` : ``} `}>
-        <ul className={`flex-row flex justify-evenly flex-wrap`}>
-          {projects?.map((project: any, index: number) => (
-            <Project {...project} key={`${index}`} />
-          ))}
-        </ul>
-      </div>
+    <div className="flex flex-col">
+      <ul className="flex flex-row justify-center	">
+
+        {technologies && technologies.map((tech: TechnologyInterface,) => (
+          <li className="m-2" key={tech.key}
+          >
+            <button className="max-w-fit rounded-full border-2 border-white p-2 my-2"
+              onClick={(event) => {
+                event.preventDefault()
+                filterTechnologie(tech.key)
+              }}
+              style={{
+                background: selectedTechnologies?.includes(tech.key) ? "white" : "",
+                color: selectedTechnologies?.includes(tech.key) ? "black" : "",
+                border: selectedTechnologies?.includes(tech.key) ? "solid" : "",
+              }}
+            >{tech.tec}</button>
+          </li>
+        ))}
+      </ul>
+      <ul className="flex-row flex justify-evenly flex-wrap">
+
+        {projectsFound && projectsFound.map((p: ProjectInterface, index: number) => (
+          <RenderProject {...p} key={index} />
+        ))}
+      </ul>
     </div>
   );
 }
