@@ -1,65 +1,21 @@
-import Link from "next/link";
 import React from "react";
+import { NavlinksInterface } from "../../../interface/navbar.interface";
 import styles from "../../../styles/Home.module.css";
+import NavLink from "./Navlink";
 
-interface Props {
-  currentPage: any;
-  handlePageChange: any;
-}
 
-function NavTabs({ currentPage, handlePageChange }: Props) {
+function NavTabs(Props: NavlinksInterface) {
+
+  const { handlePageChange, currentPage, NavbarData } = Props
+
   return (
-    <ul className={`inline-flex text-base p-8 italic self-end ${styles.neonText}`}>
-      <li className="pl-4  bg-black rounded-tl-lg rounded-bl-lg">
-        <a
-          href="#home"
-          onClick={() => handlePageChange("Home")}
-          className={currentPage === "Home" ? "nav-link active" : "nav-link"}
-        >
-          Home/about me
-        </a>
-      </li>
-      <li className="pl-4  bg-black ">
-        <a
-          href="#Projects"
-          onClick={() => handlePageChange("Projects")}
-          className={
-            currentPage === "Projects" ? "nav-link active" : "nav-link"
-          }
-        >
-          Projects
-        </a>
-      </li>
-      <li className="pl-4  bg-black ">
-        <a
-          href="#contact"
-          onClick={() => handlePageChange("Contact")}
-          className={currentPage === "Contact" ? "nav-link active" : "nav-link"}
-        >
-          Contact
-        </a>
-      </li>
-      <li className="pl-4  bg-black ">
-        <a
-          href="#Technologies"
-          onClick={() => handlePageChange("Technologies")}
-          className={currentPage === "CV" ? "nav-link active" : "nav-link"}
-        >
-          Technologies
-        </a>
-      </li>
+    <ul className={`inline-flex text-base p-4 italic self-end justify-between min-w-[90%]`}>
+      {
+        NavbarData?.map((link: any, index: number) => (
+          <NavLink {...{ link, index, handlePageChange, currentPage }} key={`${index}`} />
+        ))
 
-      <li className="px-4   bg-black  rounded-br-lg rounded-tr-lg ">
-        <Link href={"images/CV/CV.pdf"} legacyBehavior>
-          <a
-            href="#Cv"
-            onClick={() => handlePageChange("Cv")}
-            className={currentPage === "CV" ? "nav-link active" : "nav-link"}
-          >
-            CV
-          </a>
-        </Link>
-      </li>
+      }
     </ul>
   );
 }

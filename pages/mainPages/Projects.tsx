@@ -1,18 +1,59 @@
-import React from "react";
-import { ProjectsDataInterface } from "../../interface/projects.interface";
-import styles from "../../styles/Home.module.css";
-import Project from "../components/Project";
+import React, { useMemo, useState } from "react";
+import { ProjectInterface, ProjectsDataInterface, TechnologyInterface } from "../../interface/projects.interface";
+import RenderProject from "../components/RenderProject";
 
 export default function Projects(props: ProjectsDataInterface) {
-  const { projects } = props
+
+  const { technologies, projects } = props
+
+  const [selectedTechnologies, setSelectedTechnologies]: any = useState([]);
+
+
+
+  const filterTechnologie = (techId: number) => {
+    if (selectedTechnologies.includes(techId)) {
+      setSelectedTechnologies((prev: any): any => prev.filter((p: any) => p !== techId))
+    } else {
+      setSelectedTechnologies((prev: any): any => [...prev, techId])
+    }
+  }
+
+  const projectsFound: any = useMemo(() => {
+    const p = projects?.filter((project: any) => {
+      return selectedTechnologies.every((id: any) => project.technologies.includes(id));
+    })
+    console.log(p);
+    return p;
+  }, [selectedTechnologies.length]);
+
+
+
 
   return (
-    <div
-      className={`mt-6 mr-8 ml-8 border-double border-4 rounded-lg border-white min-w-min  flex-row`}
-    >
-      <ul className={`flex-row flex justify-evenly flex-wrap`}>
-        {projects?.map((project: any, index: number) => (
-          <Project {...project} key={`${index}`} />
+    <div className="flex flex-col">
+      <ul className="flex flex-row justify-center	">
+
+        {technologies && technologies.map((tech: TechnologyInterface,) => (
+          <li className="m-2" key={tech.key}
+          >
+            <button className="max-w-fit rounded-full border-2 border-white p-2 my-2"
+              onClick={(event) => {
+                event.preventDefault()
+                filterTechnologie(tech.key)
+              }}
+              style={{
+                background: selectedTechnologies?.includes(tech.key) ? "white" : "",
+                color: selectedTechnologies?.includes(tech.key) ? "black" : "",
+                border: selectedTechnologies?.includes(tech.key) ? "solid" : "",
+              }}
+            >{tech.tec}</button>
+          </li>
+        ))}
+      </ul>
+      <ul className="flex-row flex justify-evenly flex-wrap">
+
+        {projectsFound && projectsFound.map((p: ProjectInterface, index: number) => (
+          <RenderProject {...p} key={index} />
         ))}
       </ul>
     </div>
