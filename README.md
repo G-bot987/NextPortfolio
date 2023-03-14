@@ -1,41 +1,31 @@
-Deployed: https://portfolio-g-bot987.vercel.app/
+# Hello and Welcome to my Professional Portfolio
 
-pill btn on home drop down, 
-cara,
-hamburger, 
-project link text, hover. 
+## Deployment 
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This app is deployed with Vercel, at:  [deployed](https://portfolio-g-bot987.vercel.app/ "https://portfolio-g-bot987.vercel.app/")
 
-## Getting Started
+## About
 
-First, run the development server:
+This Platform showcases some of my frontend development skills whilst also showcasing some of projects, career highlights, skills and a little bit about me personally.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## How to Reach Me
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Please contact me on [LinkedIn](https://www.linkedin.com/in/georgia-h-b48434150/ "https://www.linkedin.com/in/georgia-h-b48434150/")
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Technologies
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- Next
+- TypeScript
+- Tailwind
+- TSparticles
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Running locally
 
-## Learn More
+- npm i
+- npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+## Socials
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[MyGit](https://github.com/G-bot987 "https://github.com/G-bot987")
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[My LinkedIn](https://www.linkedin.com/in/georgia-h-b48434150/ "https://www.linkedin.com/in/georgia-h-b48434150/")
