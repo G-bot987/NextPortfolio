@@ -18,12 +18,12 @@ export const homeData = {
     },
     {
       header: "Goals",
-      txt: "Enhance my understanding of; TDD, IoRedis and Redux. Intergrate more API's into React/Next projects. implement a useReducer hook in my DnD project. Improve this portfolio.",
+      txt: "Enhance my understanding of; TDD, IoRedis and Redux. Intergrate a MongoDB to my DnD character manager.",
     },
     { header: "Based In", txt: "Birmingham" },
     {
       header: "Currently Seeking",
-      txt: " I'm currently looking for a fulltime role, contracting opportunities starting at 35,000 PA & Freelance opportunities. In terms of long term development I'm looking for Penetration testing learning/development, insight into digital Marketing stratagies/ Further education to supplement my Marketing degree.",
+      txt: " Not actively searching for a full time role, open to part-time contracting & Freelance opportunities Day rate of 250. In terms of long term development I'm looking for Penetration testing learning/development, insight into digital Marketing stratagies/ Further education to supplement my Marketing degree.",
     },
   ],
 };
