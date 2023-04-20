@@ -13,12 +13,12 @@ export const projectsData = {
 
   projects: [
     {
-
+      
       header: "DnD Character Manager",
       showCase: true,
       technologies: [2, 3, 5, 6, 9],
       description:
-        "A user friendly platform that offers assistance for designing characters in digital table top games and saving for future use. Making use of TypeScripts type checking functionality and Redux for complicated state management. This project is currently in production but will be integrated with a backend for storing and managing user data.",
+        "Using a Dungeons and Dragons 5E character card as a template, this application offers a intuitive interface for player character creation. This project is currently in production but will be integrated with a backend for storing and managing user data.",
       links: {
         deployed: "https://next-dn-d-character-manager.vercel.app/",
         repo: "https://github.com/G-bot987/NextDnDCharacterManager",
