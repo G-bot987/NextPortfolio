@@ -18,12 +18,12 @@ export const homeData = {
     },
     {
       header: "Goals",
-      txt: "Enhance my understanding of; TDD, IoRedis and Redux. Intergrate a MongoDB to my DnD character manager.",
+      txt: "self teaching PHP. Enhancing my understanding of; TDD & IoRedis. Developing functionality on my DND character manager integrating; weapons and login functionality ",
     },
     { header: "Based In", txt: "Birmingham" },
     {
       header: "Currently Seeking",
-      txt: " Not actively searching for a full time role, open to part-time contracting & Freelance opportunities Day rate of 250. In terms of long term development I'm looking for Penetration testing learning/development, insight into digital Marketing stratagies/ Further education to supplement my Marketing degree.",
+      txt: " A full time role, can contract outside of IR35 day rate  250 minium contract 3months. Will colaborate with charities and LGBT+ groups at a significantly discounted rate, this development will be done in my owntime and around my employment commitments.",
     },
   ],
 };
