@@ -11,16 +11,16 @@ export default function Home(props: HomePageInterface) {
   return (
     <div className='mt-6 mr-8 ml-8  min-w-min  flex flex-col items-center'>
       <ul className=" flex  justify-evenly flex-wrap border-double border-4 border-white rounded-lg sm:border-0  ">
-        <div >
+        {synopsisProperties && <div >
           <Bio {...synopsisProperties[0]} />
-        </div>
+        </div>}
         <div className="flex max-[600px]:flex-col   max-[600px]:content-center grow  max-[600px]:items-center min-[600px]:justify-around">
           {synopsisProperties &&
             Object.keys(synopsisProperties).map(
               (catagory: any, index: number) => (
-                <div className=" flex flex-row max-[600px]:flex-col max-[600px]:place-content-center min-[600px]:justify-evenly min-[600px]:max-h-fit flex-shrink" >
+                <div className=" flex flex-row max-[600px]:flex-col max-[600px]:place-content-center min-[600px]:justify-evenly min-[600px]:max-h-fit flex-shrink" key={`${index}`}>
                   {!synopsisProperties[catagory].portrait && (
-                    <HeaderCatagories {...synopsisProperties[catagory]} key={`${index}`} />
+                    <HeaderCatagories {...synopsisProperties[catagory]} />
                   )}
                 </div>
               )
