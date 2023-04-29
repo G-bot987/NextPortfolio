@@ -14,21 +14,21 @@ export default function Home(props: HomePageInterface) {
         {synopsisProperties && <div >
           <Bio {...synopsisProperties[0]} />
         </div>}
-        <div className="flex max-[601px]:flex-col   max-[600px]:content-center grow  max-[600px]:items-center min-[601px]:justify-around min-[700px]:max-h-[400px]">
-          {synopsisProperties &&
-            Object.keys(synopsisProperties).map(
-              (catagory: any, index: number) => (
-                <div className=" flex flex-row max-[600px]:flex-col max-[600px]:place-content-center min-[600px]:justify-evenly min-[700px]:max-h-[400px] flex-shrink" key={`${index}`}>
-                  {!synopsisProperties[catagory].portrait && (
-                    <HeaderCatagories {...synopsisProperties[catagory]} />
-                  )}
-                </div>
-              )
-
-            )
-          }
-        </div>
       </ul>
+      <div className="flex max-[601px]:flex-col   max-[600px]:content-center grow  max-[600px]:items-center min-[601px]:justify-around min-[700px]:max-h-[400px]">
+        {synopsisProperties &&
+          Object.keys(synopsisProperties).map(
+            (catagory: any, index: number) => (
+              <div className=" flex flex-row max-[600px]:flex-col max-[600px]:place-content-center min-[600px]:justify-evenly min-[700px]:max-h-[400px] flex-shrink" key={`${index}`}>
+                {!synopsisProperties[catagory].portrait && (
+                  <HeaderCatagories {...synopsisProperties[catagory]} />
+                )}
+              </div>
+            )
+
+          )
+        }
+      </div>
     </div>
   );
 }
