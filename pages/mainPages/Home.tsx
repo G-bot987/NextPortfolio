@@ -9,7 +9,7 @@ export default function Home(props: HomePageInterface) {
   const { synopsisProperties } = props;
 
   return (
-    <div className='mt-6 mr-8 ml-8  min-w-min  flex flex-col items-center'>
+    <div className='mt-6 mr-8 ml-8  min-w-min  flex flex-col items-center min-h-screen	mb-8'>
       <ul className=" flex  justify-evenly flex-wrap border-double border-4 border-white rounded-lg sm:border-0  ">
         {synopsisProperties && <div >
           <Bio {...synopsisProperties[0]} />
