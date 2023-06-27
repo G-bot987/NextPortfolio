@@ -6,10 +6,13 @@ import inquisitiveIMG from "../public/images/projects/inquisitive.png";
 import passwordGenIMG from "../public/images/projects/passwordgenerator.png";
 import weatherDashIMG from "../public/images/projects/weatherdashboard.png";
 import dndcharactermanager from "../public/images/projects/dndcharactermanager.png";
+import adaptable from "../public/images/projects/adaptable.png";
+import cake from "../public/images/projects/cake.png"
+
 
 export const projectsData = {
 
-  technologies: [{ key: 1, tec: 'react' }, { key: 2, tec: 'next' }, { key: 3, tec: 'mongodb' }, { key: 4, tec: 'javascript' }, { key: 5, tec: 'typescript' }, { key: 6, tec: 'redux' }, { key: 7, tec: 'node' }, { key: 8, tec: 'mysql' }, { key: 9, tec: 'tailwind' }, { key: 10, tec: 'express' }, { key: 11, tec: 'sequelize' }],
+  technologies: [{ key: 1, tec: 'react' }, { key: 2, tec: 'next' }, { key: 3, tec: 'mongodb' }, { key: 4, tec: 'javascript' }, { key: 5, tec: 'typescript' }, { key: 6, tec: 'redux' }, { key: 7, tec: 'node' }, { key: 8, tec: 'mysql' }, { key: 9, tec: 'tailwind' }, { key: 10, tec: 'express' }, { key: 11, tec: 'sequelize' }, { key: 12, tec: 'Tec Test' }, { key: 13, tec: 'SCSS' }, { key: 14, tec: 'API' }, { key: 15, tec: 'GraphQL' }],
 
   projects: [
     {
@@ -26,11 +29,54 @@ export const projectsData = {
       },
       imgs: {
         live: dndcharactermanager,
-        alt: "weather dashboard img",
+        alt: "dnd character manager image",
         git: githubIMG,
         gitAlt: "git icon",
       },
     },
+
+    {
+      
+      header: "Autism Society, Front End Tec Test Showcase",
+      showCase: true,
+      technologies: [2, 5, 12, 13],
+      description:
+        "A demonstration of my front end work taken from a figma using BEM methodology and SCSS",
+      links: {
+        deployed: "https://adaptable-three.vercel.app/",
+        repo: "https://github.com/G-bot987/adaptable",
+        notes: 'under construction, please see the readme for sprint details and updates'
+      },
+      imgs: {
+        live: adaptable,
+        alt: "Autism Service image",
+        git: githubIMG,
+        gitAlt: "git icon",
+      },
+    },
+
+
+    {
+      
+      header: "Shopify Tec Test, A GraphQL API Showcase",
+      showCase: true,
+      technologies: [5, 7,12, 14, 15],
+      description:
+        "Two Scripts one for reading data from a Shopify store and another for mutating the stores data",
+      links: {
+        deployed: "https://drive.google.com/file/d/15txAIc4Z2BPdBKAf3sJxDxTj62HhlTK2/view",
+        repo: "https://github.com/G-bot987/cake",
+        notes: 'under construction, please see the readme for sprint details and updates'
+      },
+      imgs: {
+        live: cake,
+        alt: "node script execution",
+        git: githubIMG,
+        gitAlt: "git icon",
+      },
+    },
+
+
     {
       header: "Tech Blog",
       technologies: [4, 7, 11, 8],
