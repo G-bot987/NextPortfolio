@@ -18,7 +18,7 @@ export interface TechnologyInterface {
 
 export interface ProjectInterface {
   header: string;
-  showCase?: boolean;
+  showCase: boolean;
   technologies: Number[];
   description: string;
   links: LinkInterface;
