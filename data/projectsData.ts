@@ -80,7 +80,7 @@ export const projectsData = {
     {
       header: "Tech Blog",
       technologies: [4, 7, 11, 8],
-
+      showCase: false,
       description:
         "A difficult and time consuming project, with both a working front and backend and login logic using, sequlizes, handlebars, cookies and api calls",
       links: {
@@ -97,6 +97,7 @@ export const projectsData = {
     {
       header: "5StarLocal Group Project",
       technologies: [4],
+      showCase: false,
       description: "A group project with  similar functionality to TechBlog",
       links: {
         deployed: "https://vast-journey-10843.herokuapp.com/login",
@@ -113,7 +114,7 @@ export const projectsData = {
     {
       header: "Employee Manager",
       technologies: [4, 7],
-
+      showCase: false,
       description:
         "A backend commandline application with employee management application",
       links: {
@@ -131,7 +132,7 @@ export const projectsData = {
     {
       header: "Inquistive Group Project",
       technologies: [1, 4, 9, 3],
-
+      showCase: false,
       description:
         "The most complicated application that I have worked on, A full stack quiz application",
       links: {
@@ -149,7 +150,7 @@ export const projectsData = {
     {
       header: "Password Generator",
       technologies: [4, 7],
-
+      showCase: false,
       description: "A javascript password generator, that works to user criteria",
       links: {
         deployed: "https://g-bot987.github.io/20.06.21-password-generator/",
@@ -166,6 +167,7 @@ export const projectsData = {
     {
       header: "Weatherdashboard",
       technologies: [4, 7],
+      showCase: false,
       description:
         "Shows you weather conditions for a selected location, using api calls",
       links: {
