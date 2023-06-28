@@ -118,7 +118,7 @@ export const projectsData = {
         "A backend commandline application with employee management application",
       links: {
         deployed:
-          "https://drive.google.com/file/d/16ZVj7zfFe_IYRHH2Utjb4Rl4dU076VWi/view",
+          "https://drive.google.com/file/d/1zAtJ0c0blNmOAZOsznD9EaEEG_WLm1n3/view",
         repo: "https://github.com/G-bot987/employee-manager-29.08.21",
       },
       imgs: {
