@@ -13,5 +13,6 @@ export interface CarouselSlideInterface {
     experience?: string;
     img?: StaticImageData;
     alt?: string;
+    link?:any
 
 }

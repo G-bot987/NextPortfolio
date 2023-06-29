@@ -56,7 +56,12 @@ export const carouselData = {
             experience: '6 months',
             img: reactNative,
             alt: 'react native logo'
-        }
+        },
+        
+        {
+            type: 'txt',
+            mainHeader: 'Showcase Projects!'
+        },
 
     ]
 
