@@ -9,7 +9,7 @@ export const homeData = {
       txt: " Experienced Full stack web developer. competent with; NextJS, React, React.Native for IOS and Android, TypeScript, JavaScript, Node.JS, MySQL, MongoDB, Docker, IORedis, Redux, Gitbash, Sublime Merge and Deis. My current role has allowed me to develop exceptional diagnostical skills coupled with my strong core programming princples; front end , back end and mobile development roles are well within my comfrot zone. My role as a support developer has given me experiene fixing bugs of varying complexity using technologies such as Insomnia, Redux Devtools and Android Studio.",
       hobbiesHeader: "Outside of Work",
       hobbiesTxt:
-        "I like to keep active and run between 20-30km a week, train brazilian jiu jitsu a couple of times a week, play board games such as Dungeons & Dragons, learning Vegan and Vegatarian recipies and write high fantasy fiction.",
+        "I like to keep active and run 40Km a week, train brazilian jiu jitsu a couple of times a week, play board games such as Dungeons & Dragons, learning Vegan and Vegatarian recipies and write high fantasy fiction.",
     },
 
     {
