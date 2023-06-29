@@ -15,10 +15,13 @@ import { homeData } from "../data/homeData";
 import { contactData } from "../data/contactData";
 import { carouselData } from "../data/carouselData";
 import { NavbarData } from "../data/navbarData";
+import { CarouselSlideInterface } from "../interface/carousel.interface";
 
 export default function App() {
+  const { projects } = projectsData;
+  const [caraArr, setCaraArr] = useState<CarouselSlideInterface[]>([]); // Initialize with an empty array
 
-  const [open, SetOpen] = useState(false)
+  const [open, SetOpen] = useState(false);
   const [hover, setHover] = useState(false);
   const [currentPage, setCurrentPage] = useState("Home");
   const ref = useRef<null | HTMLDivElement>(null);
@@ -49,48 +52,104 @@ export default function App() {
   const handlePageChange = (page: any) => setCurrentPage(page);
 
   useEffect(() => {
-    ref.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [currentPage])
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  }, [currentPage]);
+
+  useEffect(() => {
+    const updatedCaraArr = [...caraArr];
+
+    carouselData.slides.forEach(function (slide) {
+      updatedCaraArr.push(slide);
+    });
+
+    setCaraArr(updatedCaraArr);
+    console.log(caraArr);
+  }, []);
+
+  useEffect(() => {
+    setCaraArr((prevCaraArr) => {
+      const updatedCaraArr = [...prevCaraArr];
+
+      projects.forEach((project) => {
+        const { showCase, links, imgs, header } = project;
+        if (showCase) {
+          const { deployed } = links;
+          const { live, alt } = imgs;
+          const showCaseSlide = {
+            type: "showCase",
+            mainHeader: header,
+            img: live,
+            alt,
+            link: deployed,
+          };
+          const isDuplicate = updatedCaraArr.some(
+            (slide) => slide.mainHeader === header
+          );
+
+          if (!isDuplicate) {
+            updatedCaraArr.push(showCaseSlide);
+          }
+        }
+      });
+
+      return updatedCaraArr;
+    });
+  }, []);
 
   return (
     <div className="flex-col flex justify-evenly flex-wrap items-center">
       <ParticlesContainer />
 
-      <button className={`self-end flex flex-row justify-between items-baseline  bg-white mb-12  ${open ? `rounded-tl-lg rounded-bl-lg min-w-[35%]` : `rounded-lg my-2 bg-transparent`}`}
+      <button
+        className={`self-end flex flex-row justify-between items-baseline  bg-white mb-12  ${
+          open
+            ? `rounded-tl-lg rounded-bl-lg min-w-[35%]`
+            : `rounded-lg my-2 bg-transparent`
+        }`}
       >
-
-        {open &&
+        {open && (
           <NavLinks {...{ NavbarData, currentPage, handlePageChange }} />
-        }
-        <div className={`h-6  w-9 flex flex-col self-center  rounded-tl-lg rounded-bl-lg  ${styles.rainbowglow} ${open ? `pt-1.5` : `justify-between py-1`} ${hover ? `` : ``} `} onClick={() => SetOpen(!open)}
+        )}
+        <div
+          className={`h-6  w-9 flex flex-col self-center  rounded-tl-lg rounded-bl-lg  ${
+            styles.rainbowglow
+          } ${open ? `pt-1.5` : `justify-between py-1`} ${hover ? `` : ``} `}
+          onClick={() => SetOpen(!open)}
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}
         >
-          <div className={`h-1 w-6 rounded-full place-self-center ${open ? `bg-black` : `bg-white`} `}
+          <div
+            className={`h-1 w-6 rounded-full place-self-center ${
+              open ? `bg-black` : `bg-white`
+            } `}
             style={{
               transform: open ? "rotate(45deg) translate(4px, 3px)" : "",
               transition: "transform 150ms ease",
             }}
           />
-          <div className={`h-1 w-6 rounded-full place-self-center ${open ? `bg-black` : `bg-white`}`}
-
+          <div
+            className={`h-1 w-6 rounded-full place-self-center ${
+              open ? `bg-black` : `bg-white`
+            }`}
             style={{
               display: open ? "none" : "",
               transform: open ? "translateX(-60px)" : "translateX(0px)",
             }}
           />
 
-          <div className={`h-1 w-6  rounded-full place-self-center ${open ? `bg-black` : `bg-white`} `}
+          <div
+            className={`h-1 w-6  rounded-full place-self-center ${
+              open ? `bg-black` : `bg-white`
+            } `}
             style={{
               transform: open ? "rotate(135deg) translate(0.5px)" : "",
               transition: "transform 150ms ease",
-            }} />
+            }}
+          />
         </div>
       </button>
-      <Header {...carouselData} />
-      <div ref={ref}>
-        {renderPage()}
-      </div>
+      <Header slides={[]} {...caraArr} />
+      <div ref={ref}>{renderPage()}</div>
       <Footer {...footerData} />
     </div>
   );
