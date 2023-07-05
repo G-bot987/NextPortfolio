@@ -7,12 +7,14 @@ import passwordGenIMG from "../public/images/projects/passwordgenerator.png";
 import weatherDashIMG from "../public/images/projects/weatherdashboard.png";
 import dndcharactermanager from "../public/images/projects/dndcharactermanager.png";
 import adaptable from "../public/images/projects/adaptable.png";
-import cake from "../public/images/projects/cake.png"
+import cake from "../public/images/projects/cake.png";
+import pokedex from "../public/images/projects/pokedex.png"
 
 
 export const projectsData = {
 
-  technologies: [{ key: 1, tec: 'react' }, { key: 2, tec: 'next' }, { key: 3, tec: 'mongodb' }, { key: 4, tec: 'javascript' }, { key: 5, tec: 'typescript' }, { key: 6, tec: 'redux' }, { key: 7, tec: 'node' }, { key: 8, tec: 'mysql' }, { key: 9, tec: 'tailwind' }, { key: 10, tec: 'express' }, { key: 11, tec: 'sequelize' }, { key: 12, tec: 'Tec Test' }, { key: 13, tec: 'SCSS' }, { key: 14, tec: 'API' }, { key: 15, tec: 'GraphQL' }],
+  technologies: [{ key: 1, tec: 'react' }, { key: 2, tec: 'next' }, { key: 3, tec: 'mongodb' }, { key: 4, tec: 'javascript' }, { key: 5, tec: 'typescript' }, { key: 6, tec: 'redux' }, { key: 7, tec: 'node' }, { key: 8, tec: 'mysql' }, { key: 9, tec: 'tailwind' }, { key: 10, tec: 'express' }, { key: 11, tec: 'sequelize' }, 
+  { key: 12, tec: 'Tec Test' }, { key: 13, tec: 'SCSS' }, { key: 14, tec: 'API' }, { key: 15, tec: 'GraphQL' }, {key:16, tec: 'PHP'}, {key:17, tec: 'Laravel'}, {key:18, tec: 'heroku'}, {key:19, tec: 'bootstrap'}],
 
   projects: [
     {
@@ -30,6 +32,25 @@ export const projectsData = {
       imgs: {
         live: dndcharactermanager,
         alt: "dnd character manager image",
+        git: githubIMG,
+        gitAlt: "git icon",
+      },
+    },
+
+    {
+      
+      header: "Pokedex",
+      showCase: false,
+      technologies: [12, 14, 16, 17, 18,19, 8],
+      description:
+        "My first Laravel application with a MySQL database for storing user and pokemon data. This application demonstrates; Authentication, route guarding, API usuage specifically create and read, database storage and data filtering. This project directs users to a login page after creating a user they can then log in a view a Pokedex with all pokemon data. Users can then view specific Pokemon and search for Pokemon based on type. Future iterations will have a more sophisticated filter functionality as well as the ability to favourite pokemon and add private notes to specific Pokemon",
+      links: {
+        deployed: "http://alluring-kings-canyon-06696-e97f27ca535a.herokuapp.com",
+        repo: "https://github.com/G-bot987/Pokedex",
+      },
+      imgs: {
+        live: pokedex,
+        alt: "PokeDex",
         git: githubIMG,
         gitAlt: "git icon",
       },
@@ -79,7 +100,7 @@ export const projectsData = {
 
     {
       header: "Tech Blog",
-      technologies: [4, 7, 11, 8],
+      technologies: [4, 7, 11, 8, 18],
       showCase: false,
       description:
         "A difficult and time consuming project, with both a working front and backend and login logic using, sequlizes, handlebars, cookies and api calls",
