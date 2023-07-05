@@ -3,8 +3,9 @@ import javascript from "../public/images/icons/competencies/javascript.png";
 import node from "../public/images/icons/competencies/Node.png";
 import react from "../public/images/icons/competencies/react.png";
 import reactNative from "../public/images/icons/competencies/reactNative.png";
-import angular from "../public/images/icons/competencies/angular.png"
-
+import angular from "../public/images/icons/competencies/angular.png";
+import PHP from '../public/images/icons/competencies/PHP.png'
+import Laravel from '../public/images/icons/competencies/Laravel.png'
 
 export const carouselData = {
 
@@ -35,6 +36,12 @@ export const carouselData = {
         },
         {
             type: 'img',
+            experience: 'Self taught!',
+            img: PHP,
+            alt: 'PHP logo'
+        },
+        {
+            type: 'img',
             experience: '2 years',
             img: node,
             alt: 'nodo logo'
@@ -57,7 +64,12 @@ export const carouselData = {
             img: reactNative,
             alt: 'react native logo'
         },
-        
+        {
+            type: 'img',
+            experience: 'Self taught!',
+            img: Laravel,
+            alt: 'Laravel logo'
+        },
         {
             type: 'txt',
             mainHeader: 'Showcase Projects!'
