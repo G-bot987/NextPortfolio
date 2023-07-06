@@ -11,9 +11,9 @@ export interface ImgsInterface {
   gitAlt: string;
 }
 
-export interface TechnologyInterface {
+export interface PropertyInterface {
   key: number;
-  tec: string;
+  option: string;
 }
 
 export interface ProjectInterface {
@@ -26,6 +26,16 @@ export interface ProjectInterface {
 }
 
 export interface ProjectsDataInterface {
-  technologies: TechnologyInterface[];
+  projectSearch:  ProjectSearchInterface;
+  technologies: PropertyInterface[];
+  recentProject: PropertyInterface[] ;
+  projectType: PropertyInterface[];
   projects: ProjectInterface[]
 }
+
+export interface ProjectSearchInterface{
+  txt: string;
+  params: string[];
+}
+
+
