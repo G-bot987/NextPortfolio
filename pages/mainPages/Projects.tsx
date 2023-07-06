@@ -41,92 +41,101 @@ export default function Projects(props: ProjectsDataInterface) {
               <li key={index} className="flex flex-col max-w-lg items-center">
                 <h3 className="max-w-min">{paramHeader}</h3>
 
-                <ul className="flex flex-row flex-wrap p-4 justify-evenly">
-                  {paramHeader === "Technology" &&
-                    technologies &&
-                    technologies.map((tech: PropertyInterface) => (
-                      <li className="m-2" key={tech.key}>
-                        <button
-                          className="max-w-fit rounded-full border-2 border-white p-2 my-2"
-                          onClick={(event) => {
-                            event.preventDefault();
-                            filterTechnologie(tech.key);
-                          }}
-                          style={{
-                            background: selectedTechnologies?.includes(tech.key)
-                              ? "white"
-                              : "",
-                            color: selectedTechnologies?.includes(tech.key)
-                              ? "black"
-                              : "",
-                            border: selectedTechnologies?.includes(tech.key)
-                              ? "solid"
-                              : "",
-                          }}
-                        >
-                          {tech.option}
-                        </button>
-                      </li>
-                    ))}
-                </ul>
+                {paramHeader === "Technology" && (
+                  <ul className="flex flex-row flex-wrap p-4 justify-evenly">
+                    {technologies &&
+                      technologies.map((tech: PropertyInterface) => (
+                        <li className="m-2" key={tech.key}>
+                          <button
+                            className="max-w-fit rounded-full border-2 border-white p-2 my-2"
+                            onClick={(event) => {
+                              event.preventDefault();
+                              filterTechnologie(tech.key);
+                            }}
+                            style={{
+                              background: selectedTechnologies?.includes(
+                                tech.key
+                              )
+                                ? "white"
+                                : "",
+                              color: selectedTechnologies?.includes(tech.key)
+                                ? "black"
+                                : "",
+                              border: selectedTechnologies?.includes(tech.key)
+                                ? "solid"
+                                : "",
+                            }}
+                          >
+                            {tech.option}
+                          </button>
+                        </li>
+                      ))}
+                  </ul>
+                )}
 
-                <ul className="flex flex-row flex-wrap p-4 justify-evenly">
-                  {paramHeader === "Recent Projects" &&
-                    recentProject &&
-                    recentProject.map((tech: PropertyInterface) => (
-                      <li className="m-2" key={tech.key}>
-                        <button
-                          className="max-w-fit rounded-full border-2 border-white p-2 my-2"
-                          onClick={(event) => {
-                            event.preventDefault();
-                            filterTechnologie(tech.key);
-                          }}
-                          style={{
-                            background: selectedTechnologies?.includes(tech.key)
-                              ? "white"
-                              : "",
-                            color: selectedTechnologies?.includes(tech.key)
-                              ? "black"
-                              : "",
-                            border: selectedTechnologies?.includes(tech.key)
-                              ? "solid"
-                              : "",
-                          }}
-                        >
-                          {tech.option}
-                        </button>
-                      </li>
-                    ))}
-                </ul>
+                {paramHeader === "Recent Projects" && (
+                  <ul className="flex flex-row flex-wrap p-4 justify-evenly">
+                    {recentProject &&
+                      recentProject.map((tech: PropertyInterface) => (
+                        <li className="m-2" key={tech.key}>
+                          <button
+                            className="max-w-fit rounded-full border-2 border-white p-2 my-2"
+                            onClick={(event) => {
+                              event.preventDefault();
+                              filterTechnologie(tech.key);
+                            }}
+                            style={{
+                              background: selectedTechnologies?.includes(
+                                tech.key
+                              )
+                                ? "white"
+                                : "",
+                              color: selectedTechnologies?.includes(tech.key)
+                                ? "black"
+                                : "",
+                              border: selectedTechnologies?.includes(tech.key)
+                                ? "solid"
+                                : "",
+                            }}
+                          >
+                            {tech.option}
+                          </button>
+                        </li>
+                      ))}
+                  </ul>
+                )}
 
-                <ul className="flex flex-row flex-wrap p-4 justify-evenly">
-                  {paramHeader === "Project Types" &&
-                    projectType &&
-                    projectType.map((tech: PropertyInterface) => (
-                      <li className="m-2" key={tech.key}>
-                        <button
-                          className="max-w-fit rounded-full border-2 border-white p-2 my-2"
-                          onClick={(event) => {
-                            event.preventDefault();
-                            filterTechnologie(tech.key);
-                          }}
-                          style={{
-                            background: selectedTechnologies?.includes(tech.key)
-                              ? "white"
-                              : "",
-                            color: selectedTechnologies?.includes(tech.key)
-                              ? "black"
-                              : "",
-                            border: selectedTechnologies?.includes(tech.key)
-                              ? "solid"
-                              : "",
-                          }}
-                        >
-                          {tech.option}
-                        </button>
-                      </li>
-                    ))}
-                </ul>
+                {paramHeader === "Project Types" && (
+                  <ul className="flex flex-row flex-wrap p-4 justify-evenly">
+                    {projectType &&
+                      projectType.map((tech: PropertyInterface) => (
+                        <li className="m-2" key={tech.key}>
+                          <button
+                            className="max-w-fit rounded-full border-2 border-white p-2 my-2"
+                            onClick={(event) => {
+                              event.preventDefault();
+                              filterTechnologie(tech.key);
+                            }}
+                            style={{
+                              background: selectedTechnologies?.includes(
+                                tech.key
+                              )
+                                ? "white"
+                                : "",
+                              color: selectedTechnologies?.includes(tech.key)
+                                ? "black"
+                                : "",
+                              border: selectedTechnologies?.includes(tech.key)
+                                ? "solid"
+                                : "",
+                            }}
+                          >
+                            {tech.option}
+                          </button>
+                        </li>
+                      ))}
+                  </ul>
+                )}
               </li>
             ))}
         </li>
