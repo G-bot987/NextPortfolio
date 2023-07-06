@@ -13,8 +13,15 @@ import pokedex from "../public/images/projects/pokedex.png"
 
 export const projectsData = {
 
-  technologies: [{ key: 1, tec: 'react' }, { key: 2, tec: 'next' }, { key: 3, tec: 'mongodb' }, { key: 4, tec: 'javascript' }, { key: 5, tec: 'typescript' }, { key: 6, tec: 'redux' }, { key: 7, tec: 'node' }, { key: 8, tec: 'mysql' }, { key: 9, tec: 'tailwind' }, { key: 10, tec: 'express' }, { key: 11, tec: 'sequelize' }, 
-  { key: 12, tec: 'Tec Test' }, { key: 13, tec: 'SCSS' }, { key: 14, tec: 'API' }, { key: 15, tec: 'GraphQL' }, {key:16, tec: 'PHP'}, {key:17, tec: 'Laravel'}, {key:18, tec: 'heroku'}, {key:19, tec: 'bootstrap'}],
+  projectSearch:{ txt: 'Project search options', params: ['Technology', 'Recent Projects', 'Project Types']},
+
+
+  technologies: [{ key: 1, option: 'react' }, { key: 2, option: 'next' }, { key: 3, option: 'mongodb' }, { key: 4, option: 'javascript' }, { key: 5, option: 'typescript' }, { key: 6, option: 'redux' }, { key: 7, option: 'node' }, { key: 8, option: 'mysql' }, { key: 9, option: 'tailwind' }, { key: 10, option: 'express' }, { key: 11, option: 'sequelize' }, 
+   { key: 13, option: 'SCSS' },  { key: 15, option: 'GraphQL' }, {key:16, option: 'PHP'}, {key:17, option: 'Laravel'}, {key:18, option: 'heroku'}, {key:19, option: 'bootstrap'}, { key: 26, option: 'Shopify' }],
+
+  recentProject: [{key: 20, option: 'Yes'}],
+
+  projectType:[{ key: 21, option: 'Front End' }, { key: 22, option: 'Back End' }, { key: 23, option: 'Full Stack' }, { key: 24, option: 'UX' }, { key: 25, option: 'Built from Figma Design' }, { key: 14, option: 'API' }, { key: 12, option: 'Tec Test' }, { key: 27, option: 'Passion Project' }, { key: 28, option: 'Hosted' }, { key: 29, option: 'Demo Video' }],
 
   projects: [
     {
