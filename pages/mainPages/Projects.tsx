@@ -7,7 +7,8 @@ import {
 import RenderProject from "../components/RenderProject";
 
 export default function Projects(props: ProjectsDataInterface) {
-  const { technologies, projects } = props;
+  const { technologies, projects, projectSearch, recentProject, projectType } =
+    props;
 
   const [selectedTechnologies, setSelectedTechnologies]: any = useState([]);
 
@@ -27,36 +28,103 @@ export default function Projects(props: ProjectsDataInterface) {
         project.technologies.includes(id)
       );
     });
-    console.log(p);
     return p;
   }, [selectedTechnologies.length]);
 
   return (
     <div className="flex flex-col">
       <ul className="flex flex-row justify-center	">
-        {technologies &&
-          technologies.map((tech: PropertyInterface) => (
-            <li className="m-2" key={tech.key}>
-              <button
-                className="max-w-fit rounded-full border-2 border-white p-2 my-2"
-                onClick={(event) => {
-                  event.preventDefault();
-                  filterTechnologie(tech.key);
-                }}
-                style={{
-                  background: selectedTechnologies?.includes(tech.key)
-                    ? "white"
-                    : "",
-                  color: selectedTechnologies?.includes(tech.key)
-                    ? "black"
-                    : "",
-                  border: selectedTechnologies?.includes(tech.key)
-                    ? "solid"
-                    : "",
-                }}
-              >
-                {tech.option}
-              </button>
+        {projectSearch.txt}
+        {projectSearch &&
+          projectSearch.params.map((paramHeader: string, index: number) => (
+            <li key={index}>
+              {paramHeader}
+              <ul>
+                {paramHeader === "Technology" &&
+                  technologies &&
+                  technologies.map((tech: PropertyInterface) => (
+                    <li className="m-2" key={tech.key}>
+                      <button
+                        className="max-w-fit rounded-full border-2 border-white p-2 my-2"
+                        onClick={(event) => {
+                          event.preventDefault();
+                          filterTechnologie(tech.key);
+                        }}
+                        style={{
+                          background: selectedTechnologies?.includes(tech.key)
+                            ? "white"
+                            : "",
+                          color: selectedTechnologies?.includes(tech.key)
+                            ? "black"
+                            : "",
+                          border: selectedTechnologies?.includes(tech.key)
+                            ? "solid"
+                            : "",
+                        }}
+                      >
+                        {tech.option}
+                      </button>
+                    </li>
+                  ))}
+              </ul>
+
+              <ul>
+                {paramHeader === "Recent Projects" &&
+                  recentProject &&
+                  recentProject.map((tech: PropertyInterface) => (
+                    <li className="m-2" key={tech.key}>
+                      <button
+                        className="max-w-fit rounded-full border-2 border-white p-2 my-2"
+                        onClick={(event) => {
+                          event.preventDefault();
+                          filterTechnologie(tech.key);
+                        }}
+                        style={{
+                          background: selectedTechnologies?.includes(tech.key)
+                            ? "white"
+                            : "",
+                          color: selectedTechnologies?.includes(tech.key)
+                            ? "black"
+                            : "",
+                          border: selectedTechnologies?.includes(tech.key)
+                            ? "solid"
+                            : "",
+                        }}
+                      >
+                        {tech.option}
+                      </button>
+                    </li>
+                  ))}
+              </ul>
+
+              <ul>
+                {paramHeader === "Project Types" &&
+                  projectType &&
+                  projectType.map((tech: PropertyInterface) => (
+                    <li className="m-2" key={tech.key}>
+                      <button
+                        className="max-w-fit rounded-full border-2 border-white p-2 my-2"
+                        onClick={(event) => {
+                          event.preventDefault();
+                          filterTechnologie(tech.key);
+                        }}
+                        style={{
+                          background: selectedTechnologies?.includes(tech.key)
+                            ? "white"
+                            : "",
+                          color: selectedTechnologies?.includes(tech.key)
+                            ? "black"
+                            : "",
+                          border: selectedTechnologies?.includes(tech.key)
+                            ? "solid"
+                            : "",
+                        }}
+                      >
+                        {tech.option}
+                      </button>
+                    </li>
+                  ))}
+              </ul>
             </li>
           ))}
       </ul>
