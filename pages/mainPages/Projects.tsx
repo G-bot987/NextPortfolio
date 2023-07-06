@@ -33,14 +33,15 @@ export default function Projects(props: ProjectsDataInterface) {
 
   return (
     <div className="flex flex-col">
-      <ul className="flex flex-col justify-center  max-w-100%	">
-        {projectSearch.txt}
-        <section className="flex flex-row max-w-100%">
+      <ul className="flex flex-col items-center">
+        <li>{projectSearch.txt}</li>
+        <li className="flex flex-row">
           {projectSearch &&
             projectSearch.params.map((paramHeader: string, index: number) => (
-              <li key={index} className="flex flex-col max-w-md ">
-                {paramHeader}
-                <ul className="flex flex-row flex-wrap">
+              <li key={index} className="flex flex-col max-w-lg items-center">
+                <h3 className="max-w-min">{paramHeader}</h3>
+
+                <ul className="flex flex-row flex-wrap p-4 justify-evenly">
                   {paramHeader === "Technology" &&
                     technologies &&
                     technologies.map((tech: PropertyInterface) => (
@@ -69,7 +70,7 @@ export default function Projects(props: ProjectsDataInterface) {
                     ))}
                 </ul>
 
-                <ul className="flex flex-row">
+                <ul className="flex flex-row flex-wrap p-4 justify-evenly">
                   {paramHeader === "Recent Projects" &&
                     recentProject &&
                     recentProject.map((tech: PropertyInterface) => (
@@ -98,7 +99,7 @@ export default function Projects(props: ProjectsDataInterface) {
                     ))}
                 </ul>
 
-                <ul className="flex flex-row">
+                <ul className="flex flex-row flex-wrap p-4 justify-evenly">
                   {paramHeader === "Project Types" &&
                     projectType &&
                     projectType.map((tech: PropertyInterface) => (
@@ -128,7 +129,7 @@ export default function Projects(props: ProjectsDataInterface) {
                 </ul>
               </li>
             ))}
-        </section>
+        </li>
       </ul>
       <ul className="flex-row flex justify-evenly flex-wrap">
         {projectsFound &&
