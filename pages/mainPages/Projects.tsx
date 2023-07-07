@@ -34,7 +34,7 @@ export default function Projects(props: ProjectsDataInterface) {
   return (
     <div className="flex flex-col">
       <ul className="flex flex-col items-center">
-        <li>{projectSearch.txt}</li>
+        <h2>{projectSearch?.txt}</h2>
         <li className="flex flex-row">
           {projectSearch &&
             projectSearch.params.map((paramHeader: string, index: number) => (
