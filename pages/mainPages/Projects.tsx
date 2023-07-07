@@ -33,7 +33,7 @@ export default function Projects(props: ProjectsDataInterface) {
 
   return (
     <div className="flex flex-col">
-      <ul className="flex flex-col items-center">
+      <ul className="flex flex-col items-center max-md:hidden">
         <h2>{projectSearch?.txt}</h2>
         <li className="flex flex-row">
           {projectSearch &&
