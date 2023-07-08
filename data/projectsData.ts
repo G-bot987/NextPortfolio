@@ -69,7 +69,7 @@ export const projectsData = {
       showCase: true,
       technologies: [2, 5, 12, 13, 30, 20, 21, 24, 25, 28, 32],
       description:
-        "A demonstration of my front end work taken from a figma using BEM methodology and SCSS",
+        "A demonstration of my front end work taken from a Figma using SCSS, the BEM Methodoly and built to AA accessibility standards",
       links: {
         deployed: "https://adaptable-three.vercel.app/",
         repo: "https://github.com/G-bot987/adaptable",
