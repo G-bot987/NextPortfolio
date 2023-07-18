@@ -14,21 +14,21 @@ export default function CaroSlides(props: CarouselSlideInterface) {
     link,
   } = props;
   return (
-    <li className="items-center flex flex-col">
+    <li className="items-center flex flex-col uppercase font-tektur">
       {type === "img" && img && alt && (
         <div className="min-w-[200px] min-h-[350px] flex flex-col justify-evenly">
-          <h2 className="text-2xl">{experience}</h2>
+          <h2 className="text-2xl ">{experience}</h2>
           <Image src={img} alt={alt} width={200} height={350} />
         </div>
       )}
 
       {type === "txt" && (
         <div className="min-w-[500px] min-h-[500px] flex flex-col justify-evenly">
-          <h1 className={`text-6xl p-8 italic`}>{mainHeader}</h1>
+          <h1 className={`text-6xl p-8 `}>{mainHeader}</h1>
 
-          <h2 className={`italic`}>{subHeader}</h2>
+          <h2>{subHeader}</h2>
 
-          <p className={`italic`}>{technologiesTxt}</p>
+          <p>{technologiesTxt}</p>
         </div>
       )}
       {type === "showCase" && img && alt && (
