@@ -45,8 +45,16 @@ export default function RenderProject(props: ProjectInterface) {
               onMouseOver={handleMouseOver}
               onMouseOut={handleMouseOut}
             >
-              <h3>{repoTxt}</h3>
               <a href={repo}>
+                <h3
+                  className={
+                    hover
+                      ? `text-center border-b-2 border-white min-w-full ${styles.neonText} `
+                      : `hidden`
+                  }
+                >
+                  {repoTxt}
+                </h3>
                 <Image
                   src={props.imgs?.git}
                   alt={props.imgs?.gitAlt}
@@ -61,8 +69,16 @@ export default function RenderProject(props: ProjectInterface) {
             onMouseOver={handleMouseOverImg}
             onMouseOut={handleMouseOutImg}
           >
-            <h3>{deployedTxt}</h3>
             <a href={deployed}>
+              <h3
+                className={
+                  hoverImg
+                    ? `text-center border-b-2 border-white min-w-full ${styles.neonText} `
+                    : `hidden`
+                }
+              >
+                {deployedTxt}
+              </h3>
               <Image
                 src={props.imgs?.live}
                 alt={props.imgs?.alt}
