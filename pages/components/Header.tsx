@@ -28,7 +28,7 @@ export default function Header(props: CarouselInterface) {
   }, [slideArrLength]);
   return (
     <ul
-      className={`border-double border-4 rounded-lg border-white flex-col my-6 mr-8 ml-8 min-w-[75%] max-h-[25%] items-center shrink-0 ${styles.neonBoxHeader}`}
+      className={`border border-4 rounded-lg border-white flex-col my-6 mr-8 ml-8 min-w-[75%] max-h-[25%] items-center shrink-0 ${styles.neonBoxHeader}`}
     >
       {slides && <CaroSlides {...slides[slide]} />}
     </ul>

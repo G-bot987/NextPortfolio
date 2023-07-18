@@ -8,7 +8,7 @@ export default function Catagory(props: synopsisPropertiesInterface) {
 
   return (
     <li
-      className={`text-base italic border-b-2 border-solid border-black shrink-0 sm:flex sm:flex-row text-black`}
+      className={`text-base font-tektur border-b-2 border-solid border-black shrink-0 sm:flex sm:flex-row text-black`}
     >
       <Image
         src={portrait?.IMG}
@@ -19,7 +19,7 @@ export default function Catagory(props: synopsisPropertiesInterface) {
       />
       <div className=" flex flex-col text-center justify-around ">
         <p
-          className={`justify-center uppercase sm:border-double border-t-4 sm:border-r-4  sm:rounded-tr-lg border-white ${styles.neonText}`}
+          className={`justify-center uppercase sm:border-double border-t-4 sm:border-r-4  sm:rounded-tr-lg border-white text-2xl ${styles.neonText} `}
         >
           {header}
         </p>
@@ -30,12 +30,12 @@ export default function Catagory(props: synopsisPropertiesInterface) {
           <div className=" border-t-2 border-white sm:text-white flex flex-col sm:bg-transparent text-black  w-full 2xl:min-h-[50%] ">
             <div className="border-b-2 border-t-2 sm:border-t-0 sm:border-white border-black uppercase ">
               <p
-                className={`justify-center uppercase  text-center ${styles.neonText}`}
+                className={`justify-center uppercase  text-center text-2xl  ${styles.neonText}`}
               >
                 {hobbiesHeader}
               </p>
             </div>
-            <div className="px-4 flex flex-col text-justify sm:bg-transparent bg-white justify-center 2xl:min-h-[100%]">
+            <div className="px-4 flex flex-col text-justify sm:bg-transparent bg-white justify-center 2xl:min-h-[100%] ">
               <p>{hobbiesTxt}</p>
             </div>
           </div>
