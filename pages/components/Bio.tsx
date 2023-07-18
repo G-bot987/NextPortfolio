@@ -19,23 +19,23 @@ export default function Catagory(props: synopsisPropertiesInterface) {
       />
       <div className=" flex flex-col text-center justify-around ">
         <p
-          className={`justify-center uppercase sm:border-double border-t-4 sm:border-r-4  sm:rounded-tr-lg border-white text-2xl ${styles.neonText} `}
+          className={`justify-center uppercase sm:border  border-x-2 sm:border-l-0  sm:rounded-tr-lg border-white text-2xl ${styles.neonText} `}
         >
           {header}
         </p>
-        <div className="grow sm:text-white text-justify flex flex-col justify-around sm:rounded-br-lg sm:border-y-4  border-r-4 border-double  text-black w-full">
-          <div className="px-4 flex flex-col text-justify sm:bg-transparent bg-white 2xl:min-h-[50%] justify-center">
+        <div className="grow sm:text-white text-justify flex flex-col justify-around   text-black w-full">
+          <div className="px-4 flex flex-col text-justify bg-white 2xl:min-h-[50%] justify-center text-black ">
             <p>{txt}</p>
           </div>
-          <div className=" border-t-2 border-white sm:text-white flex flex-col sm:bg-transparent text-black  w-full 2xl:min-h-[50%] ">
-            <div className="border-b-2 border-t-2 sm:border-t-0 sm:border-white border-black uppercase ">
+          <div className="sm:text-white flex flex-col sm:bg-transparent text-black  w-full 2xl:min-h-[50%] ">
+            <div className="sm:border-t-0 sm:border-white border-black uppercase ">
               <p
-                className={`justify-center uppercase  text-center text-2xl  ${styles.neonText}`}
+                className={`justify-center uppercase  text-center text-2xl border-x-2  sm:border-l-0 ${styles.neonText}`}
               >
                 {hobbiesHeader}
               </p>
             </div>
-            <div className="px-4 flex flex-col text-justify sm:bg-transparent bg-white justify-center 2xl:min-h-[100%] ">
+            <div className="px-4 flex flex-col text-justify text-black  bg-white justify-center min-h-[70%] rounded-br-lg  max-sm:rounded-bl-lg grow">
               <p>{hobbiesTxt}</p>
             </div>
           </div>
