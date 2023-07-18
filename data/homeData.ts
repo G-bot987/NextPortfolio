@@ -20,10 +20,10 @@ export const homeData = {
       header: "Goals",
       txt: "self teaching PHP. Enhancing my understanding of; TDD & IoRedis. Developing functionality on my DND character manager integrating; weapons and login functionality ",
     },
-    { header: "Based In", txt: "Birmingham" },
+    { header: "Based In", txt: "Stratford Upon Avon & London" },
     {
       header: "Currently Seeking",
-      txt: " A full time role, can contract outside of IR35 day rate  250 minium contract 3months. Will colaborate with charities and LGBT+ groups at a significantly discounted rate, this development will be done in my owntime and around my employment commitments.",
+      txt: " Freelance work with flexibility around my current role. Day rate of 250, negotiable if outside of IR 35, Will colaborate with charities & LGBT+ groups at a significantly discounted rate. Keen to work with Shopify.",
     },
   ],
 };
