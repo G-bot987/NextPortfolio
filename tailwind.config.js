@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     extend: { fontFamily: {
       'tektur': ['"Tektur"', 'cursive'],
+      'bd-retrocentric': ['bd-retrocentric']
     },},
   },
   plugins: [],

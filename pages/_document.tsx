@@ -22,6 +22,10 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Tektur&display=swap"
             rel="stylesheet"
           ></link>
+          <link
+            rel="stylesheet"
+            href="https://use.typekit.net/iol0nnc.css"
+          ></link>
           <link rel="icon" href="images/icons/flavicon/roboflav.png" />
         </Head>
         <body>
