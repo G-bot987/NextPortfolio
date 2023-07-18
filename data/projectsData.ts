@@ -99,7 +99,7 @@ export const projectsData = {
       links: {
         deployed: "https://drive.google.com/file/d/15txAIc4Z2BPdBKAf3sJxDxTj62HhlTK2/view",
         repo: "https://github.com/G-bot987/cake",
-        deployedTxt: 'Deployed app!',
+        deployedTxt: 'Demo Video!',
         repoTxt: 'Git repo!'
       },
       imgs: {
@@ -138,7 +138,7 @@ export const projectsData = {
       links: {
         deployed: "https://vast-journey-10843.herokuapp.com/login",
         repo: "https://github.com/G-bot987/My-5-Star-Local",
-        deployedTxt: 'deployment closed, was hosted on heroku while free hosting offered. Redeployment pending!',
+        deployedTxt: 'deployment closed',
         repoTxt: 'Git repo!',
         
       },
@@ -159,7 +159,7 @@ export const projectsData = {
         deployed:
           "https://drive.google.com/file/d/16ZVj7zfFe_IYRHH2Utjb4Rl4dU076VWi/view",
         repo: "https://github.com/G-bot987/employee-manager-29.08.21",
-        deployedTxt: 'Deployed app!',
+        deployedTxt: 'Demo Video!',
         repoTxt: 'Git repo!'
       },
       imgs: {
@@ -178,7 +178,7 @@ export const projectsData = {
       links: {
         deployed: "https://uk-inquizitive.herokuapp.com/",
         repo: "https://github.com/G-bot987/inQuizitive",
-        deployedTxt: 'deployment closed, was hosted on heroku while free hosting offered. Redeployment pending!',
+        deployedTxt: 'deployment closed!',
         repoTxt: 'Git repo!',
       },
       imgs: {
