@@ -18,7 +18,17 @@ export default function CaroSlides(props: CarouselSlideInterface) {
       {type === "img" && img && alt && (
         <div className="min-w-[200px] min-h-[350px] flex flex-col justify-evenly">
           <h2 className="text-2xl ">{experience}</h2>
-          <Image src={img} alt={alt} width={200} height={350} />
+          <div className="relative w-[200px] h-[200px]">
+            <Image
+              src={img}
+              alt={alt}
+              style={{ objectFit: "fill" }}
+              fill={true}
+              quality={100}
+              loading="lazy"
+              className="rounded-lg"
+            />
+          </div>
         </div>
       )}
 
@@ -35,7 +45,17 @@ export default function CaroSlides(props: CarouselSlideInterface) {
         <div className="min-w-[200px] min-h-[350px] flex flex-col justify-evenly">
           <h2 className="text-2xl">{mainHeader}</h2>
           <a className="flex justify-center" href={link}>
-            <Image src={img} alt={alt} width={200} height={350} />
+            <div className="relative w-[150px] h-[150px]">
+              <Image
+                src={img}
+                alt={alt}
+                style={{ objectFit: "fill" }}
+                fill={true}
+                quality={100}
+                loading="lazy"
+                className="rounded-lg"
+              />
+            </div>
           </a>
         </div>
       )}
