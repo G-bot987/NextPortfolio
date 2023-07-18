@@ -24,7 +24,7 @@ export default function Catagory(props: synopsisPropertiesInterface) {
           {header}
         </p>
         <div className="grow sm:text-white text-justify flex flex-col justify-around   text-black w-full">
-          <div className="px-4 flex flex-col text-justify bg-white 2xl:min-h-[50%] justify-center text-black grow ">
+          <div className="px-4 flex flex-col text-justify bg-white  justify-center text-black grow ">
             <p>{txt}</p>
           </div>
           <div className="sm:text-white flex flex-col sm:bg-transparent text-black  w-full 2xl:min-h-[50%] ">
