@@ -34,7 +34,9 @@ export const projectsData = {
       links: {
         deployed: "https://next-dn-d-character-manager.vercel.app/",
         repo: "https://github.com/G-bot987/NextDnDCharacterManager",
-        notes: 'under construction, please see the readme for sprint details and updates'
+        notes: 'under construction, please see the readme for sprint details and updates',
+        deployedTxt: 'Deployed app!',
+        repoTxt: 'Git repo!'
       },
       imgs: {
         live: dndcharactermanager,
@@ -54,6 +56,8 @@ export const projectsData = {
       links: {
         deployed: "http://alluring-kings-canyon-06696-e97f27ca535a.herokuapp.com",
         repo: "https://github.com/G-bot987/Pokedex",
+        deployedTxt: 'Deployed app!',
+        repoTxt: 'Git repo!'
       },
       imgs: {
         live: pokedex,
@@ -73,7 +77,8 @@ export const projectsData = {
       links: {
         deployed: "https://adaptable-three.vercel.app/",
         repo: "https://github.com/G-bot987/adaptable",
-        notes: 'under construction, please see the readme for sprint details and updates'
+        deployedTxt: 'Deployed app!',
+        repoTxt: 'Git repo!'
       },
       imgs: {
         live: adaptable,
@@ -94,7 +99,8 @@ export const projectsData = {
       links: {
         deployed: "https://drive.google.com/file/d/15txAIc4Z2BPdBKAf3sJxDxTj62HhlTK2/view",
         repo: "https://github.com/G-bot987/cake",
-        notes: 'under construction, please see the readme for sprint details and updates'
+        deployedTxt: 'Deployed app!',
+        repoTxt: 'Git repo!'
       },
       imgs: {
         live: cake,
@@ -114,6 +120,8 @@ export const projectsData = {
       links: {
         deployed: "https://dry-eyrie-85153.herokuapp.com/",
         repo: "https://github.com/G-bot987/TechBlog",
+        deployedTxt: 'Deployed app!',
+        repoTxt: 'Git repo!'
       },
       imgs: {
         live: TechBlogIMG,
@@ -130,7 +138,9 @@ export const projectsData = {
       links: {
         deployed: "https://vast-journey-10843.herokuapp.com/login",
         repo: "https://github.com/G-bot987/My-5-Star-Local",
-        notes: 'deployment closed, was hosted on heroku while free hosting offered. Redeployment pending!'
+        deployedTxt: 'deployment closed, was hosted on heroku while free hosting offered. Redeployment pending!',
+        repoTxt: 'Git repo!',
+        
       },
       imgs: {
         live: fiveStarLocalIMG,
@@ -149,6 +159,8 @@ export const projectsData = {
         deployed:
           "https://drive.google.com/file/d/16ZVj7zfFe_IYRHH2Utjb4Rl4dU076VWi/view",
         repo: "https://github.com/G-bot987/employee-manager-29.08.21",
+        deployedTxt: 'Deployed app!',
+        repoTxt: 'Git repo!'
       },
       imgs: {
         live: employeeManagerIMG,
@@ -166,7 +178,8 @@ export const projectsData = {
       links: {
         deployed: "https://uk-inquizitive.herokuapp.com/",
         repo: "https://github.com/G-bot987/inQuizitive",
-        notes: 'deployment closed, was hosted on heroku while free hosting offered. Redeployment pending!'
+        deployedTxt: 'deployment closed, was hosted on heroku while free hosting offered. Redeployment pending!',
+        repoTxt: 'Git repo!',
       },
       imgs: {
         live: inquisitiveIMG,
@@ -182,8 +195,9 @@ export const projectsData = {
       description: "A javascript password generator, that works to user criteria",
       links: {
         deployed: "https://g-bot987.github.io/20.06.21-password-generator/",
-
         repo: "https://github.com/G-bot987/20.06.21",
+        deployedTxt: 'Deployed app!',
+        repoTxt: 'Git repo!'
       },
       imgs: {
         live: passwordGenIMG,
@@ -201,6 +215,8 @@ export const projectsData = {
       links: {
         deployed: "https://g-bot987.github.io/weatherdashboard/",
         repo: "https://github.com/G-bot987/weatherdashboard",
+        deployedTxt: 'Deployed app!',
+        repoTxt: 'Git repo!'
       },
       imgs: {
         live: weatherDashIMG,

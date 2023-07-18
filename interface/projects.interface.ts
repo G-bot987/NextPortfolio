@@ -2,6 +2,8 @@ export interface LinkInterface {
   deployed: string;
   repo: string;
   notes?: string;
+  deployedTxt: string;
+  repoTxt: string;
 }
 
 export interface ImgsInterface {
