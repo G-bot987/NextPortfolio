@@ -6,7 +6,9 @@ import Link from "next/link";
 
 export default function Footer(props: FooterInterface) {
   return (
-    <div className={`flex flex-row mt-16 justify-end py-5 self-end`}>
+    <div
+      className={`flex flex-row mt-16 justify-end py-5 self-end text-white font-tektur`}
+    >
       <ul
         className={`border-solid border-b-1 border-sky-500 border-white bg-transparent inline-flex flex justify-evenly flex-wrap w-60 justify-self-end ${styles.neonLineFooter}`}
       >
