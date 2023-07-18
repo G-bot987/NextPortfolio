@@ -31,7 +31,7 @@ export default function RenderProject(props: ProjectInterface) {
       className={`my-6 border border-4 rounded-lg border-white max-w-sm max-h-min `}
     >
       <ul
-        className={`text-base  italic flex flex-col text-center  justify-around grow min-h-full`}
+        className={`text-base flex flex-col text-center  justify-around grow min-h-full`}
       >
         <li
           className={`text-center border-b-2 border-white min-w-full ${styles.neonText}`}
