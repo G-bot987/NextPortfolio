@@ -15,7 +15,7 @@ export default function Home(props: HomePageInterface) {
           <Bio {...synopsisProperties[0]} />
         </div>}
       </ul>
-      <div className="flex max-[601px]:flex-col   max-[600px]:content-center grow  max-[600px]:items-center min-[601px]:justify-around min-[700px]:max-h-[400px]">
+      <div className="flex max-[601px]:flex-col max-[600px]:content-center grow  max-[600px]:items-center min-[601px]:justify-around min-[700px]:max-h-[400px]">
         {synopsisProperties &&
           Object.keys(synopsisProperties).map(
             (catagory: any, index: number) => (
