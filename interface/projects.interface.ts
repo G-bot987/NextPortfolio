@@ -22,6 +22,7 @@ export interface ProjectInterface {
   header: string;
   showCase: boolean;
   technologies: Number[];
+  summary: string;
   description: string;
   links: LinkInterface;
   imgs: ImgsInterface;

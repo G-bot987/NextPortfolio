@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import styles from "../../styles/Home.module.css";
-import { ProjectInterface } from "../../interface/projects.interface";
+import styles from "../../../styles/Home.module.css";
+import { ProjectInterface } from "../../../interface/projects.interface";
+import Description from "./Description";
 
 export default function RenderProject(props: ProjectInterface) {
-  const { links, header, description, imgs } = props;
+  const { links, header, summary, imgs, description } = props;
   const { deployedTxt, repoTxt, repo, deployed } = links ?? {};
   const { git, gitAlt, live, alt } = imgs ?? {};
 
@@ -26,7 +27,10 @@ export default function RenderProject(props: ProjectInterface) {
     setHoverImg(false);
   };
 
-  const link = Object.keys(props)[4];
+  const link = Object.keys(props)[5];
+  const descriptionTxt = Object.keys(props)[4];
+
+  const [open, setOpen] = useState(false);
 
   return (
     <section
@@ -40,7 +44,7 @@ export default function RenderProject(props: ProjectInterface) {
         >
           {header}
         </li>
-        <li className="bg-white text-black">{description}</li>
+        <li className="bg-white text-black">{summary}</li>
         <li className="bg-white text-black uppercase font-bd-retrocentric underline mt-10">
           {link}
         </li>
@@ -108,6 +112,39 @@ export default function RenderProject(props: ProjectInterface) {
             </a>
           </li>
         </section>
+        <button
+          className="max-h-min mt-10"
+          onClick={() => {
+            setOpen(!open);
+          }}
+        >
+          <li className="bg-white text-black uppercase font-bd-retrocentric underline flex flex-col justify-around  items-center">
+            <div className="flex flex-row justify-around  min-w-full">
+              <div className="pt-4">
+                <div
+                  className={`inline-block w-6 h-6 border-t-4 border-r-4 border-black transform transition-transform ${
+                    open ? " rotate-[135deg]" : "-rotate-45"
+                  }`}
+                ></div>
+              </div>
+              <p className="pt-3">{descriptionTxt}</p>
+              <div className="pt-4">
+                <div
+                  className={`inline-block w-6 h-6 border-t-4 border-r-4 border-black transform transition-transform ${
+                    open ? " rotate-[135deg]" : "-rotate-45"
+                  }`}
+                ></div>
+              </div>
+            </div>
+          </li>
+          <div
+            className={`transform transition-opacity duration-1000  ${
+              open ? " opacity-100" : "opacity-0"
+            }`}
+          >
+            <li>{open && <Description {...{ description }} />}</li>
+          </div>
+        </button>
       </ul>
     </section>
   );
