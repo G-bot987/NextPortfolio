@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import styles from "../../styles/Home.module.css";
-import { projectsData } from "../../data/projectsData";
-import { CarouselInterface } from "../../interface/carousel.interface";
-import { ProjectInterface } from "../../interface/projects.interface";
+import styles from "../../../styles/Home.module.css";
+import { projectsData } from "../../../data/projectsData";
+import { CarouselInterface } from "../../../interface/carousel.interface";
+import { ProjectInterface } from "../../../interface/projects.interface";
 import CaroSlides from "./CaroSlides";
 
 export default function Header(props: CarouselInterface) {

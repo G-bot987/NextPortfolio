@@ -1,6 +1,6 @@
 import React from "react";
-import { CarouselSlideInterface } from "../../interface/carousel.interface";
 import Image from "next/image";
+import { CarouselSlideInterface } from "../../../interface/carousel.interface";
 
 export default function CaroSlides(props: CarouselSlideInterface) {
   const {

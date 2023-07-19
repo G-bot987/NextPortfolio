@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "../../styles/Home.module.css";
 import { HomePageInterface } from "../../interface/home.interface";
-import Bio from "../components/Bio";
-import HeaderCatagories from "../components/HeaderCatagories";
-import CaroSlides from "../components/CaroSlides";
+import Bio from "../components/homePgComps/Bio";
+import HeaderCatagories from "../components/homePgComps/HeaderCatagories";
 
 export default function Home(props: HomePageInterface) {
   const { synopsisProperties } = props;
