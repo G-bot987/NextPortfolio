@@ -12,7 +12,7 @@ export default function Projects(props: ProjectsDataInterface) {
 
   const [selectedTechnologies, setSelectedTechnologies]: any = useState([]);
 
-  const filterTechnologie = (techId: number) => {
+  const filterTechnology = (techId: number) => {
     if (selectedTechnologies.includes(techId)) {
       setSelectedTechnologies((prev: any): any =>
         prev.filter((p: any) => p !== techId)
@@ -34,7 +34,9 @@ export default function Projects(props: ProjectsDataInterface) {
   return (
     <section className="flex flex-col text-white font-tektur">
       <ul className="flex flex-col items-center max-md:hidden ">
-        <h2 className="font-bd-retrocentric uppercase">{projectSearch?.txt}</h2>
+        <h2 className="font-bd-retrocentric uppercase underline">
+          {projectSearch?.txt}
+        </h2>
         <li className="flex flex-row">
           {projectSearch &&
             projectSearch.params.map((paramHeader: string, index: number) => (
@@ -52,7 +54,7 @@ export default function Projects(props: ProjectsDataInterface) {
                             className="max-w-fit rounded-full border-2 border-white p-2 my-2 uppercase"
                             onClick={(event) => {
                               event.preventDefault();
-                              filterTechnologie(tech.key);
+                              filterTechnology(tech.key);
                             }}
                             style={{
                               background: selectedTechnologies?.includes(
@@ -84,7 +86,7 @@ export default function Projects(props: ProjectsDataInterface) {
                             className="max-w-fit rounded-full border-2 border-white p-2 my-2 uppercase"
                             onClick={(event) => {
                               event.preventDefault();
-                              filterTechnologie(tech.key);
+                              filterTechnology(tech.key);
                             }}
                             style={{
                               background: selectedTechnologies?.includes(
@@ -116,7 +118,7 @@ export default function Projects(props: ProjectsDataInterface) {
                             className="max-w-fit rounded-full border-2 border-white p-2 my-2 uppercase"
                             onClick={(event) => {
                               event.preventDefault();
-                              filterTechnologie(tech.key);
+                              filterTechnology(tech.key);
                             }}
                             style={{
                               background: selectedTechnologies?.includes(

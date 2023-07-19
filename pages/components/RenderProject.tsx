@@ -26,12 +26,14 @@ export default function RenderProject(props: ProjectInterface) {
     setHoverImg(false);
   };
 
+  const link = Object.keys(props)[4];
+
   return (
     <section
       className={`my-6 border border-4 rounded-lg border-white max-w-sm max-h-min `}
     >
       <ul
-        className={`text-base flex flex-col text-center  justify-around grow min-h-full`}
+        className={`text-base flex flex-col text-center justify-around grow min-h-full`}
       >
         <li
           className={`text-center border-b-2 border-white min-w-full uppercase font-bd-retrocentric ${styles.neonText}`}
@@ -39,6 +41,9 @@ export default function RenderProject(props: ProjectInterface) {
           {header}
         </li>
         <li className="bg-white text-black">{description}</li>
+        <li className="bg-white text-black uppercase font-bd-retrocentric underline mt-10">
+          {link}
+        </li>
         <section className="flex flex-row justify-around items-center grow px-6 py-2">
           <article className="flex flex-col justify-center ">
             <li
