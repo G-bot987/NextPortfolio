@@ -18,22 +18,22 @@ export default function Catagory(props: synopsisPropertiesInterface) {
         className="sm:border-r-2 sm:border-b-2 rounded-tl-lg rounded-tr-lg sm:rounded-tr-none border-black sm:rounded-bl-lg w-full"
       />
       <div className=" flex flex-col text-center justify-around ">
-        <p
-          className={`justify-center uppercase sm:border  border-x-2 sm:border-l-0  sm:rounded-tr-lg border-white text-2xl ${styles.neonText} `}
+        <h2
+          className={`justify-center font-bd-retrocentric uppercase sm:border  border-x-2 sm:border-l-0  sm:rounded-tr-lg border-white text-2xl ${styles.neonText} `}
         >
           {header}
-        </p>
+        </h2>
         <div className="grow sm:text-white text-justify flex flex-col justify-around   text-black w-full">
           <div className="px-4 flex flex-col text-justify bg-white  justify-center text-black grow ">
             <p>{txt}</p>
           </div>
           <div className="sm:text-white flex flex-col sm:bg-transparent text-black  w-full 2xl:min-h-[50%] ">
             <div className="sm:border-t-0 sm:border-white border-black uppercase ">
-              <p
-                className={`justify-center uppercase  text-center text-2xl border-x-2  sm:border-l-0 ${styles.neonText}`}
+              <h2
+                className={`justify-center uppercase font-bd-retrocentric text-center text-2xl border-x-2  sm:border-l-0 ${styles.neonText}`}
               >
                 {hobbiesHeader}
-              </p>
+              </h2>
             </div>
             <div className="px-4 flex flex-col text-justify text-black  bg-white justify-center min-h-[70%] rounded-br-lg  max-sm:rounded-bl-lg grow">
               <p>{hobbiesTxt}</p>
