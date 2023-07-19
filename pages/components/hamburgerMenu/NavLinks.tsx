@@ -8,7 +8,7 @@ function NavTabs(Props: NavlinksInterface) {
 
   return (
     <ul
-      className={`inline-flex text-base p-4 uppercase font-bold self-end justify-between min-w-[90%] font-tektur`}
+      className={`inline-flex text-base p-4 uppercase font-bd-retrocentric self-end justify-between min-w-[90%] font-tektur`}
     >
       {NavbarData?.map((link: any, index: number) => (
         <NavLink

@@ -14,7 +14,7 @@ export default function CaroSlides(props: CarouselSlideInterface) {
     link,
   } = props;
   return (
-    <li className="items-center flex flex-col uppercase font-tektur">
+    <li className="items-center flex flex-col uppercase font-bd-retrocentric">
       {type === "img" && img && alt && (
         <div className="min-w-[200px] min-h-[350px] flex flex-col justify-evenly">
           <h2 className="text-2xl ">{experience}</h2>
