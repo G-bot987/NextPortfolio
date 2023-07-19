@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../styles/Home.module.css";
 import { TechnologiesInterface } from "../../interface/technologies.interface";
-import Skill from "../components/Skill";
+import Skill from "../components/skillPgComps/Skill";
 
 export default function Technologies(props: TechnologiesInterface) {
   const { skills } = props;
