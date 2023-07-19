@@ -1,5 +1,5 @@
 export interface LinkInterface {
-  deployed: string;
+  deployed?: string;
   repo: string;
   notes?: string;
   deployedTxt: string;

@@ -136,7 +136,6 @@ export const projectsData = {
       showCase: false,
       description: "A group project with  similar functionality to TechBlog",
       links: {
-        deployed: "https://vast-journey-10843.herokuapp.com/login",
         repo: "https://github.com/G-bot987/My-5-Star-Local",
         deployedTxt: 'No app',
         repoTxt: 'Git repo!',
@@ -176,7 +175,6 @@ export const projectsData = {
       description:
         "The most complicated application that I have worked on, A full stack quiz application",
       links: {
-        deployed: "https://uk-inquizitive.herokuapp.com/",
         repo: "https://github.com/G-bot987/inQuizitive",
         deployedTxt: 'No app',
         repoTxt: 'Git repo!',
