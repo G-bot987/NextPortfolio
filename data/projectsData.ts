@@ -35,7 +35,7 @@ export const projectsData = {
         deployed: "https://next-dn-d-character-manager.vercel.app/",
         repo: "https://github.com/G-bot987/NextDnDCharacterManager",
         notes: 'under construction, please see the readme for sprint details and updates',
-        deployedTxt: 'Deployed app!',
+        deployedTxt: 'deployment',
         repoTxt: 'Git repo!'
       },
       imgs: {
@@ -56,7 +56,7 @@ export const projectsData = {
       links: {
         deployed: "http://alluring-kings-canyon-06696-e97f27ca535a.herokuapp.com",
         repo: "https://github.com/G-bot987/Pokedex",
-        deployedTxt: 'Deployed app!',
+        deployedTxt: 'deployment',
         repoTxt: 'Git repo!'
       },
       imgs: {
@@ -77,7 +77,7 @@ export const projectsData = {
       links: {
         deployed: "https://adaptable-three.vercel.app/",
         repo: "https://github.com/G-bot987/adaptable",
-        deployedTxt: 'Deployed app!',
+        deployedTxt: 'deployment',
         repoTxt: 'Git repo!'
       },
       imgs: {
@@ -99,7 +99,7 @@ export const projectsData = {
       links: {
         deployed: "https://drive.google.com/file/d/15txAIc4Z2BPdBKAf3sJxDxTj62HhlTK2/view",
         repo: "https://github.com/G-bot987/cake",
-        deployedTxt: 'Demo Video!',
+        deployedTxt: 'Demo Video',
         repoTxt: 'Git repo!'
       },
       imgs: {
@@ -120,7 +120,7 @@ export const projectsData = {
       links: {
         deployed: "https://dry-eyrie-85153.herokuapp.com/",
         repo: "https://github.com/G-bot987/TechBlog",
-        deployedTxt: 'Deployed app!',
+        deployedTxt: 'deployment',
         repoTxt: 'Git repo!'
       },
       imgs: {
@@ -138,7 +138,7 @@ export const projectsData = {
       links: {
         deployed: "https://vast-journey-10843.herokuapp.com/login",
         repo: "https://github.com/G-bot987/My-5-Star-Local",
-        deployedTxt: 'deployment closed',
+        deployedTxt: 'No app',
         repoTxt: 'Git repo!',
         
       },
@@ -159,7 +159,7 @@ export const projectsData = {
         deployed:
           "https://drive.google.com/file/d/16ZVj7zfFe_IYRHH2Utjb4Rl4dU076VWi/view",
         repo: "https://github.com/G-bot987/employee-manager-29.08.21",
-        deployedTxt: 'Demo Video!',
+        deployedTxt: 'Demo Video',
         repoTxt: 'Git repo!'
       },
       imgs: {
@@ -178,7 +178,7 @@ export const projectsData = {
       links: {
         deployed: "https://uk-inquizitive.herokuapp.com/",
         repo: "https://github.com/G-bot987/inQuizitive",
-        deployedTxt: 'deployment closed!',
+        deployedTxt: 'No app',
         repoTxt: 'Git repo!',
       },
       imgs: {
@@ -196,7 +196,7 @@ export const projectsData = {
       links: {
         deployed: "https://g-bot987.github.io/20.06.21-password-generator/",
         repo: "https://github.com/G-bot987/20.06.21",
-        deployedTxt: 'Deployed app!',
+        deployedTxt: 'deployment',
         repoTxt: 'Git repo!'
       },
       imgs: {
@@ -215,7 +215,7 @@ export const projectsData = {
       links: {
         deployed: "https://g-bot987.github.io/weatherdashboard/",
         repo: "https://github.com/G-bot987/weatherdashboard",
-        deployedTxt: 'Deployed app!',
+        deployedTxt: 'deployment',
         repoTxt: 'Git repo!'
       },
       imgs: {
