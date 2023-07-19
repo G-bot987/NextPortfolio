@@ -4,7 +4,7 @@ import {
   ProjectsDataInterface,
   PropertyInterface,
 } from "../../interface/projects.interface";
-import RenderProject from "../components/RenderProject";
+import RenderProject from "../components/projectComponents/RenderProject";
 
 export default function Projects(props: ProjectsDataInterface) {
   const { technologies, projects, projectSearch, recentProject, projectType } =
