@@ -131,7 +131,7 @@ export const projectsData = {
       },
     },
     {
-      header: "5StarLocal Group Project",
+      header: "5 Star Local Group Project",
       technologies: [4, 31, 14,23],
       showCase: false,
       description: "A group project with  similar functionality to TechBlog",
@@ -205,7 +205,7 @@ export const projectsData = {
       },
     },
     {
-      header: "Weatherdashboard",
+      header: "Weather dashboard",
       technologies: [4, 7,14,28],
       showCase: false,
       description:
