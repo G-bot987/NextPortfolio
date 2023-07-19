@@ -39,7 +39,7 @@ export default function Projects(props: ProjectsDataInterface) {
           {projectSearch &&
             projectSearch.params.map((paramHeader: string, index: number) => (
               <li key={index} className="flex flex-col max-w-lg items-center">
-                <h3 className="max-w-min font-bd-retrocentric">
+                <h3 className="max-w-min font-bd-retrocentric uppercase">
                   {paramHeader}
                 </h3>
 
@@ -142,7 +142,7 @@ export default function Projects(props: ProjectsDataInterface) {
             ))}
         </li>
       </ul>
-      <ul className="flex-row flex justify-evenly flex-wrap">
+      <ul className="flex-col flex min-[800px]:flex-row max-[799px]:items-center justify-evenly flex-wrap">
         {projectsFound &&
           projectsFound.map((p: ProjectInterface, index: number) => (
             <RenderProject {...p} key={index} />
