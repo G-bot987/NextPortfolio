@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "../../styles/Home.module.css";
-import { HomePageInterface } from "../../interface/home.interface";
+import {
+  HomePageInterface,
+  synopsisPropertiesInterface,
+} from "../../interface/home.interface";
 import Bio from "../components/homePgComps/Bio";
 import HeaderCatagories from "../components/homePgComps/HeaderCatagories";
 
@@ -16,19 +19,24 @@ export default function Home(props: HomePageInterface) {
           </div>
         )}
       </ul>
-      <ul className="flex max-[601px]:flex-col max-[600px]:content-center grow  max-[600px]:items-center min-[601px]:justify-around min-[700px]:max-h-[400px]">
+      <ul className="flex max-[601px]:flex-col max-[600px]:content-center grow  max-[600px]:items-center min-[601px]:justify-around min-[700px]:max-h-[400px] min-w-full">
         {synopsisProperties &&
-          Object.keys(synopsisProperties).map(
-            (catagory: any, index: number) => (
-              <li
-                className=" flex flex-row max-[600px]:flex-col max-[600px]:place-content-center min-[600px]:justify-evenly min-[700px]:max-h-[400px] flex-shrink"
-                key={`${index}`}
-              >
-                {!synopsisProperties[catagory].portrait && (
-                  <HeaderCatagories {...synopsisProperties[catagory]} />
-                )}
-              </li>
-            )
+          Object.entries(synopsisProperties).map(
+            ([category, properties], index) => {
+              const { portrait, ...rest }: synopsisPropertiesInterface =
+                properties;
+              if (!portrait) {
+                return (
+                  <li
+                    className="flex flex-row max-[600px]:flex-col max-[600px]:place-content-center min-[600px]:justify-evenly min-[700px]:max-h-[400px] flex-shrink"
+                    key={`${index}`}
+                  >
+                    <HeaderCatagories {...rest} />
+                  </li>
+                );
+              }
+              return null;
+            }
           )}
       </ul>
     </section>
