@@ -27,20 +27,20 @@ export default function RenderProject(props: ProjectInterface) {
   };
 
   return (
-    <div
+    <section
       className={`my-6 border border-4 rounded-lg border-white max-w-sm max-h-min `}
     >
       <ul
         className={`text-base flex flex-col text-center  justify-around grow min-h-full`}
       >
         <li
-          className={`text-center border-b-2 border-white min-w-full ${styles.neonText}`}
+          className={`text-center border-b-2 border-white min-w-full uppercase font-bd-retrocentric ${styles.neonText}`}
         >
           {header}
         </li>
         <li className="bg-white text-black">{description}</li>
-        <div className="flex flex-row justify-around items-center grow px-6 py-2">
-          <div className="flex flex-col justify-center ">
+        <section className="flex flex-row justify-around items-center grow px-6 py-2">
+          <article className="flex flex-col justify-center ">
             <li
               className={hover ? `${styles.glow} rounded-lg mr-1` : `mr-1`}
               onMouseOver={handleMouseOver}
@@ -48,11 +48,13 @@ export default function RenderProject(props: ProjectInterface) {
             >
               <a href={repo}>
                 <h3
-                  className={
+                  className={` font-bd-retrocentric uppercase
+                  ${
                     hover
                       ? `text-center  min-w-full ${styles.neonText} `
                       : `hidden`
                   }
+                  `}
                 >
                   {repoTxt}
                 </h3>
@@ -70,7 +72,7 @@ export default function RenderProject(props: ProjectInterface) {
                 </div>
               </a>
             </li>
-          </div>
+          </article>
           <li
             className={hoverImg ? `${styles.glow}  rounded-lg ml-1` : `ml-1`}
             onMouseOver={handleMouseOverImg}
@@ -78,11 +80,12 @@ export default function RenderProject(props: ProjectInterface) {
           >
             <a href={deployed}>
               <h3
-                className={
-                  hoverImg
-                    ? `text-center min-w-full ${styles.neonText} `
-                    : `hidden`
-                }
+                className={` font-bd-retrocentric uppercase
+                 ${
+                   hoverImg
+                     ? `text-center min-w-full ${styles.neonText} `
+                     : `hidden`
+                 }`}
               >
                 {deployedTxt}
               </h3>
@@ -99,8 +102,8 @@ export default function RenderProject(props: ProjectInterface) {
               </div>
             </a>
           </li>
-        </div>
+        </section>
       </ul>
-    </div>
+    </section>
   );
 }

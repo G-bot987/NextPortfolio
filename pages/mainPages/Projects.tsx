@@ -32,14 +32,16 @@ export default function Projects(props: ProjectsDataInterface) {
   }, [selectedTechnologies.length]);
 
   return (
-    <div className="flex flex-col text-white font-tektur">
-      <ul className="flex flex-col items-center max-md:hidden">
-        <h2>{projectSearch?.txt}</h2>
+    <section className="flex flex-col text-white font-tektur">
+      <ul className="flex flex-col items-center max-md:hidden ">
+        <h2 className="font-bd-retrocentric uppercase">{projectSearch?.txt}</h2>
         <li className="flex flex-row">
           {projectSearch &&
             projectSearch.params.map((paramHeader: string, index: number) => (
               <li key={index} className="flex flex-col max-w-lg items-center">
-                <h3 className="max-w-min">{paramHeader}</h3>
+                <h3 className="max-w-min font-bd-retrocentric">
+                  {paramHeader}
+                </h3>
 
                 {paramHeader === "Technology" && (
                   <ul className="flex flex-row flex-wrap p-4 justify-evenly">
@@ -47,7 +49,7 @@ export default function Projects(props: ProjectsDataInterface) {
                       technologies.map((tech: PropertyInterface) => (
                         <li className="m-2" key={tech.key}>
                           <button
-                            className="max-w-fit rounded-full border-2 border-white p-2 my-2"
+                            className="max-w-fit rounded-full border-2 border-white p-2 my-2 uppercase"
                             onClick={(event) => {
                               event.preventDefault();
                               filterTechnologie(tech.key);
@@ -79,7 +81,7 @@ export default function Projects(props: ProjectsDataInterface) {
                       recentProject.map((tech: PropertyInterface) => (
                         <li className="m-2" key={tech.key}>
                           <button
-                            className="max-w-fit rounded-full border-2 border-white p-2 my-2"
+                            className="max-w-fit rounded-full border-2 border-white p-2 my-2 uppercase"
                             onClick={(event) => {
                               event.preventDefault();
                               filterTechnologie(tech.key);
@@ -111,7 +113,7 @@ export default function Projects(props: ProjectsDataInterface) {
                       projectType.map((tech: PropertyInterface) => (
                         <li className="m-2" key={tech.key}>
                           <button
-                            className="max-w-fit rounded-full border-2 border-white p-2 my-2"
+                            className="max-w-fit rounded-full border-2 border-white p-2 my-2 uppercase"
                             onClick={(event) => {
                               event.preventDefault();
                               filterTechnologie(tech.key);
@@ -146,6 +148,6 @@ export default function Projects(props: ProjectsDataInterface) {
             <RenderProject {...p} key={index} />
           ))}
       </ul>
-    </div>
+    </section>
   );
 }
