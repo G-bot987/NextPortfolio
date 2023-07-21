@@ -26,4 +26,38 @@ export const homeData = {
       txt: " Freelance work with flexibility around my current role. Day rate of 250, negotiable if outside of IR 35, Will colaborate with charities & LGBT+ groups at a significantly discounted rate. Keen to work with Shopify.",
     },
   ],
+
+  experience: [
+    {
+      company: 'squarcle',
+      dates: 'march23-june23',
+      leave: 'placeholder',
+      jobtitle: 'full stack developer',
+      tec: ['next.js','typescript', 'mongodb','tailwind', 'aws', 'node'],
+      description: 'placeholder'
+    },
+    {      
+      company: 'pyscle interactive',
+      dates: 'november22-january22',
+      leave: 'placeholder',
+      jobtitle: 'full stack developer',
+      tec: ['angular','typescript', 'python','less'],
+      description: 'placeholder'
+    },
+    {      
+      company: 'univers labs',
+      dates: 'may22-November22',
+      leave: 'company declared insolvent',
+      jobtitle: 'support developer',
+      tec: ['react with and without hooks','typescript', 'mysql','react.native', 'node', 'scss'],
+      description: 'placeholder',
+    },
+  ],
+
+  supplementaryArticles :[
+    {title:'goals', body: 'place holder'},
+    {title:'pursuits and motivations', body: 'place holder'},
+    {title:'why development', body: 'place holder'},
+    {title:'strengths', body:'place holder'}
+  ]
 };
