@@ -52,7 +52,7 @@ export const projectsData = {
       showCase: false,
       technologies: [12, 14, 16, 17, 18, 19, 8, 28, 12, 14, 23, 20],
       summary:
-        "This project marks my first foray into Laravel and PHP development. It served as a technical test for my current role. Despite having no prior experience with PHP, I dedicated one week to complete this project, showcasing my aptitude and eagerness to explore new areas of development. I am pleased with the result I achieved within such a short timeframe!",
+        "This project marks my first foray into Laravel and PHP development. It served as a technical test for my current role. Despite having no prior experience with PHP, I dedicated one week to complete this project, showcasing my aptitude and eagerness to explore new areas of development. I am pleased with the result achieved within such a short timeframe!",
         description: "This application showcases various functionalities, including authentication, route guarding, API usage (specifically for creating and reading data), database storage, and data filtering. Upon accessing the application, users are directed to a login page. After creating a user account, they can log in and access a Pokedex containing comprehensive Pokemon data. Users have the ability to view specific Pokemon and search for Pokemon based on their types. In future iterations, the application will include more advanced filtering options and additional features such as favoriting Pokemon and adding private notes to specific Pokemon.",
 
         links: {

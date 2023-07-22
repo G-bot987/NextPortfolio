@@ -1,24 +1,68 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import styles from "../../../styles/Home.module.css";
-import { ProjectInterface } from "../../../interface/projects.interface";
+import {
+  ProjectInterface,
+  PropertyInterface,
+} from "../../../interface/projects.interface";
 import Description from "./Description";
+import ProjectTechnologies from "./ProjectTechnologies";
 
-export default function RenderProject(props: ProjectInterface) {
-  const { links, header, summary, imgs, description } = props;
+interface RenderProjectsInterface {
+  project: ProjectInterface;
+  allTechnologies: PropertyInterface[];
+}
+
+export default function RenderProject(props: RenderProjectsInterface) {
+  const { project, allTechnologies } = props;
+
+  // Check if p and technologies are defined before destructuring
+  const { links, header, summary, imgs, description, technologies } =
+    project ?? {};
   const { deployedTxt, repoTxt, repo, deployed } = links ?? {};
   const { git, gitAlt, live, alt } = imgs ?? {};
 
-  const [hover, setHover] = useState(false);
+  // taking project tecs array and mapping over to find the name of each tec from technologies prop passed, flat map as some project tecs arent tecs joining nested arrays
+  const tecsToMap = allTechnologies || [];
+  const projectTecs = (
+    technologies: Number[] | undefined,
+    tecsToMap: PropertyInterface[]
+  ) => {
+    if (!Array.isArray(technologies)) {
+      return [];
+    }
 
+    return technologies.flatMap((tec: Number) => {
+      const tecName = tecsToMap.filter(
+        (tecDetails: PropertyInterface) => tecDetails.key === tec
+      );
+      return tecName;
+    });
+  };
+
+  const usedTechnologies = (() => {
+    if (!technologies && !tecsToMap) {
+      return [];
+    } else {
+      return projectTecs(technologies, tecsToMap);
+    }
+  })();
+
+  // hover for links
+  const [hover, setHover] = useState(false);
+  const [hoverImg, setHoverImg] = useState(false);
+  //description open tab
+  const [open, setOpen] = useState(false);
+  //technologies open tab
+  const [openTecs, setOpenTecs] = useState(false);
+
+  // implementation of hovers
   const handleMouseOver = () => {
     setHover(true);
   };
   const handleMouseOut = () => {
     setHover(false);
   };
-
-  const [hoverImg, setHoverImg] = useState(false);
 
   const handleMouseOverImg = () => {
     setHoverImg(true);
@@ -27,10 +71,13 @@ export default function RenderProject(props: ProjectInterface) {
     setHoverImg(false);
   };
 
-  const link = Object.keys(props)[5];
-  const descriptionTxt = Object.keys(props)[4];
-
-  const [open, setOpen] = useState(false);
+  // using property name for txt
+  const link = Object.keys(props.project || {})[5] || "";
+  const descriptionTxt = Object.keys(props.project || {})[4] || "";
+  const TechnologiesTxt =
+    Object.keys(project || {}).find(
+      (property) => property === "technologies"
+    ) || "";
 
   return (
     <section
@@ -45,6 +92,47 @@ export default function RenderProject(props: ProjectInterface) {
           {header}
         </li>
         <li className="bg-white text-black">{summary}</li>
+
+        <button
+          className="max-h-min mt-10"
+          onClick={() => {
+            setOpenTecs(!openTecs);
+          }}
+        >
+          <li className="bg-white text-black uppercase font-bd-retrocentric underline flex flex-col justify-around  items-center">
+            <div className="flex flex-row justify-around  min-w-full">
+              <div className="pt-4">
+                <div
+                  className={`inline-block w-6 h-6 border-t-4 border-r-4 border-black transform transition-transform ${
+                    openTecs ? " rotate-[135deg]" : "-rotate-45"
+                  }`}
+                ></div>
+              </div>
+              <p className="pt-3">{TechnologiesTxt}</p>
+              <div className="pt-4">
+                <div
+                  className={`inline-block w-6 h-6 border-t-4 border-r-4 border-black transform transition-transform ${
+                    openTecs ? " rotate-[135deg]" : "-rotate-45"
+                  }`}
+                ></div>
+              </div>
+            </div>
+          </li>
+          <ul
+            className={`transform transition-opacity duration-1000  ${
+              openTecs ? " opacity-100" : "opacity-0"
+            }`}
+          >
+            {usedTechnologies !== undefined &&
+              usedTechnologies.map((projectTec: PropertyInterface) => {
+                return (
+                  // Use the 'openTecs' condition to render the component conditionally.
+                  openTecs && <ProjectTechnologies {...projectTec} />
+                );
+              })}
+          </ul>
+        </button>
+
         <li className="bg-white text-black uppercase font-bd-retrocentric underline mt-10">
           {link}
         </li>
@@ -137,13 +225,13 @@ export default function RenderProject(props: ProjectInterface) {
               </div>
             </div>
           </li>
-          <div
+          <section
             className={`transform transition-opacity duration-1000  ${
               open ? " opacity-100" : "opacity-0"
             }`}
           >
-            <li>{open && <Description {...{ description }} />}</li>
-          </div>
+            {open && <Description {...{ description }} />}
+          </section>
         </button>
       </ul>
     </section>
