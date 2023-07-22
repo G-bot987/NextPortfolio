@@ -146,8 +146,8 @@ export default function Projects(props: ProjectsDataInterface) {
       </ul>
       <ul className="flex-col flex min-[800px]:flex-row max-[799px]:items-center justify-evenly flex-wrap">
         {projectsFound &&
-          projectsFound.map((p: ProjectInterface, index: number) => (
-            <RenderProject {...{ ...{ p }, ...{ technologies } }} key={index} />
+          projectsFound.map((project: ProjectInterface, index: number) => (
+            <RenderProject project={project} allTechnologies={technologies} key={index} />
           ))}
       </ul>
     </section>
