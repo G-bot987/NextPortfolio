@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import styles from "../../../styles/Home.module.css";
 import {
@@ -9,24 +9,44 @@ import Description from "./Description";
 import ProjectTechnologies from "./ProjectTechnologies";
 
 interface RenderProjectsInterface {
-  p: ProjectInterface;
-  technologies: PropertyInterface[];
+  project: ProjectInterface;
+  allTechnologies: PropertyInterface[];
 }
 
 export default function RenderProject(props: RenderProjectsInterface) {
-  console.log(props);
-  const { links, header, summary, imgs, description, technologies } = props.p;
+  const { project, allTechnologies } = props;
+
+  // Check if p and technologies are defined before destructuring
+  const { links, header, summary, imgs, description, technologies } =
+    project ?? {};
   const { deployedTxt, repoTxt, repo, deployed } = links ?? {};
   const { git, gitAlt, live, alt } = imgs ?? {};
 
   // taking project tecs array and mapping over to find the name of each tec from technologies prop passed, flat map as some project tecs arent tecs joining nested arrays
-  const tecsToMap = props.technologies;
-  const projectTecs = technologies.flatMap((tec: Number) => {
-    const tecName = tecsToMap.filter(
-      (tecDetails: PropertyInterface) => tecDetails.key === tec
-    );
-    return tecName;
-  });
+  const tecsToMap = allTechnologies || [];
+  const projectTecs = (
+    technologies: Number[] | undefined,
+    tecsToMap: PropertyInterface[]
+  ) => {
+    if (!Array.isArray(technologies)) {
+      return [];
+    }
+
+    return technologies.flatMap((tec: Number) => {
+      const tecName = tecsToMap.filter(
+        (tecDetails: PropertyInterface) => tecDetails.key === tec
+      );
+      return tecName;
+    });
+  };
+
+  const usedTechnologies = (() => {
+    if (!technologies && !tecsToMap) {
+      return [];
+    } else {
+      return projectTecs(technologies, tecsToMap);
+    }
+  })();
 
   // hover for links
   const [hover, setHover] = useState(false);
@@ -52,9 +72,12 @@ export default function RenderProject(props: RenderProjectsInterface) {
   };
 
   // using property name for txt
-  const link = Object.keys(props.p)[5];
-  const descriptionTxt = Object.keys(props.p)[4];
-  const TechnologiesTxt = Object.keys(props)[1];
+  const link = Object.keys(props.project || {})[5] || "";
+  const descriptionTxt = Object.keys(props.project || {})[4] || "";
+  const TechnologiesTxt =
+    Object.keys(project || {}).find(
+      (property) => property === "technologies"
+    ) || "";
 
   return (
     <section
@@ -100,12 +123,13 @@ export default function RenderProject(props: RenderProjectsInterface) {
               openTecs ? " opacity-100" : "opacity-0"
             }`}
           >
-            {projectTecs.map((projectTec: PropertyInterface) => {
-              return (
-                // Use the 'openTecs' condition to render the component conditionally.
-                openTecs && <ProjectTechnologies {...projectTec} />
-              );
-            })}
+            {usedTechnologies !== undefined &&
+              usedTechnologies.map((projectTec: PropertyInterface) => {
+                return (
+                  // Use the 'openTecs' condition to render the component conditionally.
+                  openTecs && <ProjectTechnologies {...projectTec} />
+                );
+              })}
           </ul>
         </button>
 
