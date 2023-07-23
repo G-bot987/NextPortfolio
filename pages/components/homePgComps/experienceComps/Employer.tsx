@@ -7,9 +7,9 @@ interface RoleInterface {
 }
 
 export default function Employer(props: RoleInterface) {
-  const { job, index } = props;
+  const { job, index } = props ?? {};
   console.log(index);
-  const { company } = job;
+  const { company } = job ?? {};
 
   const evenIndex = index % 2 === 0 ? true : false;
 

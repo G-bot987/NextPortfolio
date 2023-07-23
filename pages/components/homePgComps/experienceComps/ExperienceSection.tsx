@@ -4,7 +4,6 @@ import { experienceInterface } from "../../../../interface/home.interface";
 
 export default function ExperienceSection(props: experienceInterface[]) {
   console.log(props);
-  Object.keys(props).map((role: any, index: number) => console.log(role));
   return (
     <ul className="flex flex-col pt-28  min-w-full min-h-full space-y-14">
       {Object.keys(props).map((role: any, index: number) => (
