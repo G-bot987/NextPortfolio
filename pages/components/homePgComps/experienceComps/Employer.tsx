@@ -17,12 +17,13 @@ export default function Employer(props: RoleInterface) {
   const companyTxt = Object.keys(job || {})[0] || "";
   const stackTxt = Object.keys(job || {})[4] || "";
   const roleTxt = Object.keys(job || {})[5] || "";
-  console.log(roleTxt);
 
   return (
     <article
       className={`  bg-white  text-black	flex flex-col min-w-[50%] font-bd-retrocentric p-4 space-y-2 ${
-        evenIndex ? ` self-start rounded-r-lg` : `self-end rounded-l-lg`
+        evenIndex
+          ? ` self-start rounded-r-lg mr-20`
+          : `self-end rounded-l-lg ml-20`
       }`}
     >
       <section className="flex flex-row min-w-full">
@@ -51,8 +52,8 @@ export default function Employer(props: RoleInterface) {
               <Technology key={index} techology={techology} />
             ))}
         </ul>
-        <article className="flex flex-row justify-start">
-          <h3 className="font-bd-retrocentric uppercase"> {`${roleTxt} :`}</h3>
+        <article className="flex flex-row justify-around space-x-2">
+          <h3 className="font-bd-retrocentric uppercase min-w-[7%]">{`${roleTxt} :`}</h3>
           <p className="font-tektur">{role}</p>
         </article>
       </section>

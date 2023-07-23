@@ -5,7 +5,6 @@ interface DescriptionInterface {
 }
 
 export default function Description(props: DescriptionInterface) {
-  console.log(props);
   const { description } = props;
   return <article>{description}</article>;
 }

@@ -32,27 +32,27 @@ header:'Professional Experience',
   experience: [
     {
       company: 'squarcle',
-      dates: 'march23-june23',
-      leave: {header:'reason for leaving', body:'placeholder'},
+      dates: 'march 23 - june 23',
+      leave: {header:'reason for leaving', body:'Working solo was a comfort zone, that was not collaborative or conducive to  development'},
       jobtitle: 'full stack developer',
       stack: ['next.js','typescript', 'mongodb','tailwind', 'aws', 'node'],
-      role: 'placeholder'
+      role: 'Spearheaded the implementation of full stack applications in the logistics sector using cutting-edge technologies. I played a pivotal role in establishing the software department and infrastructure for the company. This involved introducing and optimizing development processes.'
     },
     {      
       company: 'pyscle interactive',
-      dates: 'november22-january22',
-      leave: {header:'reason for leaving', body:'placeholder'},
+      dates: 'november 22 - March 23',
+      leave: {header:'reason for leaving', body:'Lack of development potential'},
       jobtitle: 'full stack developer',
       stack: ['angular','typescript', 'python','less'],
-      role: 'placeholder'
+      role: 'Worked independently in an agile setting, completing front end orientated sprint work, for a well respected Multi-National client in the technology sector. '
     },
     {      
       company: 'univers labs',
-      dates: 'may22-November22',
-      leave: {header:'reason for leaving', body:'placeholder'},
+      dates: 'may 22 - November 22',
+      leave: {header:'reason for leaving', body:'Company declared insolvent'},
       jobtitle: 'support developer',
       stack: ['react with and without hooks','typescript', 'mysql','react.native', 'node', 'scss'],
-      role: 'placeholder',
+      role: 'Experienced in working full stack, adept at resolving a wide range of complex bugs across extensive code bases, utilizing diverse technologies.',
     },
   ],
 },
