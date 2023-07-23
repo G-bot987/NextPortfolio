@@ -55,9 +55,12 @@ export const homeData = {
   ],
 
   supplementaryArticles :[
-    {title:'goals', body: 'place holder'},
-    {title:'pursuits and motivations', body: 'place holder'},
     {title:'why development', body: 'place holder'},
-    {title:'strengths', body:'place holder'}
+    {title:'strengths', body:'place holder'},
+    {title:'pursuits and motivations', body: 'place holder'},
+    {title:'career goals', body: 'place holder'},
+    {title:'development goals', body: 'place holder'},
+    {title:'personal goals', body:'place holder'},
+
   ]
 };
