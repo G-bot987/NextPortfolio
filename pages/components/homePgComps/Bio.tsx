@@ -8,7 +8,7 @@ export default function Catagory(props: synopsisPropertiesInterface) {
 
   return (
     <article
-      className={`text-base font-tektur border-b-2 border-solid border-black shrink-0 sm:flex sm:flex-row text-black`}
+      className={`text-base font-tektur border-b-2 border-solid border-black shrink-0 sm:flex sm:flex-row text-black px-8`}
     >
       <Image
         src={portrait?.IMG}

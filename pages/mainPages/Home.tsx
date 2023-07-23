@@ -12,7 +12,7 @@ export default function Home(props: HomePageInterface) {
   const { synopsisProperties, experience } = props;
 
   return (
-    <section className="mt-6 mr-8 ml-8  min-w-min  flex flex-col items-center min-h-screen	mb-8 ">
+    <section className="mt-6   min-w-min  flex flex-col items-center min-h-screen	mb-8 ">
       <ul className="flex  justify-evenly flex-wrap">
         {synopsisProperties && (
           <li>
@@ -20,7 +20,7 @@ export default function Home(props: HomePageInterface) {
           </li>
         )}
       </ul>
-      <ul className="flex max-[601px]:flex-col max-[600px]:content-center  max-[600px]:items-center min-[601px]:justify-around  min-w-full shrink">
+      <ul className="flex max-[601px]:flex-col max-[600px]:content-center   max-[600px]:items-center min-[601px]:justify-around  min-w-full shrink">
         {synopsisProperties &&
           Object.entries(synopsisProperties).map(
             ([category, properties], index) => {
