@@ -29,8 +29,7 @@ export interface experienceInterface{
   leave: leaveInterface,
   jobtitle: string,
   stack: string[],
-  description: string
-
+  role: string
 }
 
 export interface leaveInterface {

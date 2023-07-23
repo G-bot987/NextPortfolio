@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Footer(props: FooterInterface) {
   return (
-    <div
+    <footer
       className={`flex flex-row mt-16 justify-end py-5 self-end text-white font-tektur`}
     >
       <ul
@@ -44,6 +44,6 @@ export default function Footer(props: FooterInterface) {
           </Link>
         </li>
       </ul>
-    </div>
+    </footer>
   );
 }
