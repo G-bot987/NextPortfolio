@@ -61,6 +61,5 @@ export const homeData = {
     {title:'career goals', body: 'place holder'},
     {title:'development goals', body: 'place holder'},
     {title:'personal goals', body:'place holder'},
-
   ]
 };
