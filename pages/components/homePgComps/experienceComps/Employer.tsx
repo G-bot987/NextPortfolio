@@ -17,7 +17,6 @@ export default function Employer(props: RoleInterface) {
   const companyTxt = Object.keys(job || {})[0] || "";
   const stackTxt = Object.keys(job || {})[4] || "";
   const roleTxt = Object.keys(job || {})[5] || "";
-  console.log(roleTxt);
 
   return (
     <article

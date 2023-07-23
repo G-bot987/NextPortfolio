@@ -63,7 +63,6 @@ export default function App() {
     });
 
     setCaraArr(updatedCaraArr);
-    console.log(caraArr);
   }, []);
 
   useEffect(() => {
