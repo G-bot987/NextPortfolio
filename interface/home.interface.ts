@@ -14,18 +14,28 @@ export interface portraitInterface {
 
 export interface HomePageInterface {
   synopsisProperties: synopsisPropertiesInterface[];
-  experience: experienceInterface[];
+  experienceArticle: experienceArticleInterface;
   supplementaryArticles: supplementaryArticlesInterface[]
 }
+
+export interface experienceArticleInterface{
+  header: string;
+  experience: experienceInterface[]
+} 
 
 export interface experienceInterface{
   company: string,
   dates: string,
-  leave: string,
+  leave: leaveInterface,
   jobtitle: string,
-  tec: string[],
+  stack: string[],
   description: string
 
+}
+
+export interface leaveInterface {
+  header: string;
+  body: string
 }
 
 export interface supplementaryArticlesInterface {

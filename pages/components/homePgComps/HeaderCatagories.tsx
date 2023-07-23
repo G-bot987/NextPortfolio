@@ -27,8 +27,8 @@ export default function HeaderCatagories(props: synopsisPropertiesInterface) {
   }, []);
 
   return (
-    <article
-      className={`text-center  max-w-xs list-none  max-[601px]:py-8 font-tektur`}
+    <aside
+      className={`text-center  max-w-xs list-none  max-[601px]:py-8 font-tektur flex flex-col shrink px-10`}
     >
       {viewportWidth >= 607 && (
         <button
@@ -75,6 +75,6 @@ export default function HeaderCatagories(props: synopsisPropertiesInterface) {
           <HeaderDescription {...{ txt }} />
         </article>
       )}
-    </article>
+    </aside>
   );
 }

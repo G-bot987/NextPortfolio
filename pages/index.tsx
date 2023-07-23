@@ -149,7 +149,7 @@ export default function App() {
         </div>
       </button>
       <Header slides={[]} {...caraArr} />
-      <div ref={ref}>{renderPage()}</div>
+      <section ref={ref}>{renderPage()}</section>
       <Footer {...footerData} />
     </div>
   );
