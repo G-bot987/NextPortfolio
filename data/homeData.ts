@@ -36,7 +36,7 @@ header:'Professional Experience',
       leave: {header:'reason for leaving', body:'placeholder'},
       jobtitle: 'full stack developer',
       stack: ['next.js','typescript', 'mongodb','tailwind', 'aws', 'node'],
-      description: 'placeholder'
+      role: 'placeholder'
     },
     {      
       company: 'pyscle interactive',
@@ -44,7 +44,7 @@ header:'Professional Experience',
       leave: {header:'reason for leaving', body:'placeholder'},
       jobtitle: 'full stack developer',
       stack: ['angular','typescript', 'python','less'],
-      description: 'placeholder'
+      role: 'placeholder'
     },
     {      
       company: 'univers labs',
@@ -52,7 +52,7 @@ header:'Professional Experience',
       leave: {header:'reason for leaving', body:'placeholder'},
       jobtitle: 'support developer',
       stack: ['react with and without hooks','typescript', 'mysql','react.native', 'node', 'scss'],
-      description: 'placeholder',
+      role: 'placeholder',
     },
   ],
 },
