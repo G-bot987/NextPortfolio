@@ -9,7 +9,9 @@ interface RoleInterface {
 
 export default function Employer(props: RoleInterface) {
   const { job, index } = props ?? {};
-  const { company, dates, leave, jobtitle, tec, description } = job ?? {};
+  const { company, dates, leave, jobtitle, stack, description } = job ?? {};
+  const { header, body } = leave ?? {};
+  console.log(props);
 
   const evenIndex = index % 2 === 0 ? true : false;
 
@@ -28,15 +30,16 @@ export default function Employer(props: RoleInterface) {
           </section>
           <section className="flex flex-col justify-self-end">
             <h3>{dates}</h3>
-            <h3>{leave}</h3>
+            <h3>{body}</h3>
           </section>
         </section>
       </section>
       <section>
         <ul className="flex flex-row">
-          {tec.map((techology: string, index: number) => (
-            <Technology key={index} techology={techology} />
-          ))}
+          {stack &&
+            stack.map((techology: string, index: number) => (
+              <Technology key={index} techology={techology} />
+            ))}
         </ul>
         {description}
       </section>

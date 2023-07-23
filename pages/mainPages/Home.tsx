@@ -9,7 +9,7 @@ import HeaderCatagories from "../components/homePgComps/HeaderCatagories";
 import ExperienceSection from "../components/homePgComps/experienceComps/ExperienceSection";
 
 export default function Home(props: HomePageInterface) {
-  const { synopsisProperties, experience } = props;
+  const { synopsisProperties, experienceArticle } = props ?? {};
 
   return (
     <section className="mt-6   min-w-min  flex flex-col items-center min-h-screen	mb-8 ">
@@ -40,7 +40,7 @@ export default function Home(props: HomePageInterface) {
             }
           )}
       </ul>
-      <ExperienceSection {...experience} />
+      <ExperienceSection {...experienceArticle} />
     </section>
   );
 }
