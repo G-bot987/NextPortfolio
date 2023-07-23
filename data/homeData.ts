@@ -26,33 +26,36 @@ export const homeData = {
       txt: " Freelance work with flexibility around my current role. Day rate of 250, negotiable if outside of IR 35, Will colaborate with charities & LGBT+ groups at a significantly discounted rate. Keen to work with Shopify.",
     },
   ],
-
+  experienceArticle:{
+header:'Professional Experience',
+  
   experience: [
     {
       company: 'squarcle',
       dates: 'march23-june23',
-      leave: 'placeholder',
+      leave: {header:'reason for leaving', body:'placeholder'},
       jobtitle: 'full stack developer',
-      tec: ['next.js','typescript', 'mongodb','tailwind', 'aws', 'node'],
+      stack: ['next.js','typescript', 'mongodb','tailwind', 'aws', 'node'],
       description: 'placeholder'
     },
     {      
       company: 'pyscle interactive',
       dates: 'november22-january22',
-      leave: 'placeholder',
+      leave: {header:'reason for leaving', body:'placeholder'},
       jobtitle: 'full stack developer',
-      tec: ['angular','typescript', 'python','less'],
+      stack: ['angular','typescript', 'python','less'],
       description: 'placeholder'
     },
     {      
       company: 'univers labs',
       dates: 'may22-November22',
-      leave: 'company declared insolvent',
+      leave: {header:'reason for leaving', body:'placeholder'},
       jobtitle: 'support developer',
-      tec: ['react with and without hooks','typescript', 'mysql','react.native', 'node', 'scss'],
+      stack: ['react with and without hooks','typescript', 'mysql','react.native', 'node', 'scss'],
       description: 'placeholder',
     },
   ],
+},
 
   supplementaryArticles :[
     {title:'why development', body: 'place holder'},
