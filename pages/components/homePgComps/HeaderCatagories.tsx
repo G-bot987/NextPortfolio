@@ -28,7 +28,7 @@ export default function HeaderCatagories(props: synopsisPropertiesInterface) {
 
   return (
     <aside
-      className={`text-center  max-w-xs list-none  max-[601px]:py-8 font-tektur flex flex-col shrink px-10`}
+      className={`text-center  max-w-xs st:px-10 sd:px-0 list-none  max-[601px]:py-8 font-tektur flex flex-col shrink  `}
     >
       {viewportWidth >= 607 && (
         <button
@@ -39,7 +39,7 @@ export default function HeaderCatagories(props: synopsisPropertiesInterface) {
         >
           <article className="bg-white text-black uppercase font-bd-retrocentric underline flex flex-col justify-around  items-center max-w-full">
             <div className="flex flex-row justify-around  min-w-full">
-              <div className="pt-4">
+              <div className="pt-4 pl-4">
                 <div
                   className={`inline-block w-6 h-6 border-t-4 border-r-4 border-black transform transition-transform ${
                     open ? " rotate-[135deg]" : "-rotate-45"
@@ -49,7 +49,7 @@ export default function HeaderCatagories(props: synopsisPropertiesInterface) {
               <h3 className="pt-3 font-bd-retrocentric underline font-bold text-xl px-5">
                 {header}
               </h3>
-              <div className="pt-4">
+              <div className="pt-4 pr-4">
                 <div
                   className={`inline-block w-6 h-6 border-t-4 border-r-4 border-black transform transition-transform ${
                     open ? " rotate-[135deg]" : "-rotate-45"
