@@ -9,6 +9,7 @@ export default function ExperienceSection(props: experienceArticleInterface) {
   const { experience, header } = props ?? {};
   return (
     <ul className="flex flex-col pt-28  min-w-full min-h-full space-y-14">
+      <hr className="text-white" />
       <li className="font-bd-retrocentric self-center  uppercase underline">
         {header}
       </li>
