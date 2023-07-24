@@ -5,7 +5,9 @@ import employeeManagerIMG from "../public/images/projects/employeemanager.png";
 import inquisitiveIMG from "../public/images/projects/inquisitive.png";
 import passwordGenIMG from "../public/images/projects/passwordgenerator.png";
 import weatherDashIMG from "../public/images/projects/weatherdashboard.png";
+import portfolio from "../public/images/projects/portfolio.png";
 import dndcharactermanager from "../public/images/projects/dndcharactermanager.png";
+
 import adaptable from "../public/images/projects/adaptable.png";
 import cake from "../public/images/projects/cake.png";
 import pokedex from "../public/images/projects/pokedex.png"
@@ -28,7 +30,7 @@ export const projectsData = {
       
       header: "DnD Character Manager",
       showCase: true,
-      technologies: [2, 3, 5, 6, 9, 27, 23, 14, 28, 20, 30],
+      technologies: [2, 3, 5, 6, 9, 27, 23, , 28, 20, 30],
       summary: "Using a Dungeons and Dragons 5E character card as a template, this application offers a intuitive interface for player character creation.",
       description: "In development since late November 22, if you check out the README, you will see the plan regarding future development. This project stems from my passion for tabletop games and the challenges of running games during the Covid pandemic. Based on my personal experience with platforms like Roll20 and other digital tabletops, I found the user interface and overall design to be generic. The platform Ive been developing takes a more tailored approach to character creation, incorporating languages from my homebrew world, for example. I undertook this project to push myself out of my comfort zone and tackle complex state management issues, UX considerations, database design, and gain more exposure to backend/API development. I specifically chose Next.js instead of React to gain more experience with Next.js and leverage its optimization benefits over React, such as the use of getServerSideProps. MongoDB was selected partly because of its guaranteed free tier and also due to its seamless integration with Next.js. TypeScript offers superior bug prevention compared to JavaScript, and its interface functionality aligns well with a prop-based framework, as well as providing reassurance when dealing with APIs.",
       links: {
@@ -40,6 +42,27 @@ export const projectsData = {
       },
       imgs: {
         live: dndcharactermanager,
+        alt: "dnd character manager image",
+        git: githubIMG,
+        gitAlt: "git icon",
+      },
+    },
+
+    {
+      
+      header: "Portfolio",
+      showCase: true,
+      technologies: [2, 5, 9, 27, 21, 14, 28, 20, 30],
+      summary: "A space to flesh out the detail on my CV, show more of personality and showcase my projects, Your already here take a look around!",
+      description: "A professional portfolio showcasing my career, skills, and projects. It serves as a digital CV, providing detailed information to potential employers and recruiters. The portfolio includes an overview, background information, my interests outside of work, technologies I am proficient in, ongoing projects, and my current career goals.",
+      links: {
+        deployed: "https://portfolio-g-bot987.vercel.app/#Projects",
+        repo: "https://github.com/G-bot987/NextPortfolio",
+        deployedTxt: 'deployment',
+        repoTxt: 'Git repo!'
+      },
+      imgs: {
+        live: portfolio,
         alt: "dnd character manager image",
         git: githubIMG,
         gitAlt: "git icon",
