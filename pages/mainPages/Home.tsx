@@ -7,9 +7,11 @@ import {
 import Bio from "../components/homePgComps/Bio";
 import HeaderCatagories from "../components/homePgComps/HeaderCatagories";
 import ExperienceSection from "../components/homePgComps/experienceComps/ExperienceSection";
+import SupplementaryArticlesSection from "../components/homePgComps/supplementaryArticlesComps/SupplementaryArticlesSection";
 
 export default function Home(props: HomePageInterface) {
-  const { synopsisProperties, experienceArticle } = props ?? {};
+  const { synopsisProperties, experienceArticle, supplementaryArticles } =
+    props ?? {};
 
   return (
     <section className="mt-6   min-w-min  flex flex-col items-center min-h-screen	mb-8 ">
@@ -41,6 +43,7 @@ export default function Home(props: HomePageInterface) {
           )}
       </ul>
       <ExperienceSection {...experienceArticle} />
+      <SupplementaryArticlesSection supplements={supplementaryArticles} />
     </section>
   );
 }
