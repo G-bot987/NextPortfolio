@@ -10,7 +10,6 @@ interface PropsInterace {
 
 export default function SupplementaryArticlesSection(props: PropsInterace) {
   const { supplements } = props ?? {};
-  console.log(props);
 
   const headerTxt = Object.keys(props || {})[0] || "";
 

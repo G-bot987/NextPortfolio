@@ -27,8 +27,8 @@ export default function Article(props: ArticleInterface) {
           </section>
         </section>
       </section>
-      <section className="space-y-2">
-        <article className="flex flex-row justify-around space-x-2">
+      <section className="space-y-2  min-w-full">
+        <article className="flex flex-col space-x-2">
           <p className="font-tektur">{body}</p>
         </article>
       </section>
