@@ -45,15 +45,15 @@ export default function Employer(props: RoleInterface) {
         </section>
       </section>
       <section className="space-y-2">
-        <ul className="flex flex-row justify-start uppercase">
-          <li>{`${stackTxt} :`}</li>
+        <ul className="flex flex-row justify-start uppercase min-w-full">
+          <li className="min-w-[7%]">{`${stackTxt} :`}</li>
           {stack &&
             stack.map((techology: string, index: number) => (
               <Technology key={index} techology={techology} />
             ))}
         </ul>
-        <article className="flex flex-row justify-around space-x-2">
-          <h3 className="font-bd-retrocentric uppercase min-w-[7%]">{`${roleTxt} :`}</h3>
+        <article className="flex flex-row justify-around space-x-4">
+          <h3 className="font-bd-retrocentric uppercase min-w-[7%] flex-nowrap">{`${roleTxt} :`}</h3>
           <p className="font-tektur">{role}</p>
         </article>
       </section>
