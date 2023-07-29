@@ -14,10 +14,10 @@ export default function Article(props: ArticleInterface) {
 
   return (
     <article
-      className={`  bg-white  text-black	flex flex-col min-w-[50%] font-bd-retrocentric p-4 space-y-2 ${
+      className={`  bg-white  text-black	flex flex-col min-w-[50%] font-bd-retrocentric p-8 space-y-2 ${
         evenIndex
-          ? ` self-start rounded-r-lg mr-20`
-          : `self-end rounded-l-lg ml-20`
+          ? ` self-start rounded-r-lg mr-32`
+          : `self-end rounded-l-lg ml-32`
       }`}
     >
       <section className="flex flex-row min-w-full">

@@ -6,7 +6,7 @@ import { experienceArticleInterface } from "../../../../interface/home.interface
 export default function ExperienceSection(props: experienceArticleInterface) {
   const { experience, header } = props ?? {};
   return (
-    <ul className="flex flex-col pt-28  min-w-full min-h-full space-y-14">
+    <ul className="flex flex-col pt-28  min-w-full min-h-full space-y-20">
       <hr className="text-white" />
       <li className="font-bd-retrocentric self-center  uppercase underline">
         <h2 className={`text-2xl ${styles.neonText}`}>{header}</h2>

@@ -14,7 +14,7 @@ export default function SupplementaryArticlesSection(props: PropsInterace) {
   const headerTxt = Object.keys(props || {})[0] || "";
 
   return (
-    <ul className="flex flex-col pt-28  min-w-full min-h-full space-y-14">
+    <ul className="flex flex-col pt-28  min-w-full min-h-full space-y-20">
       <hr className="text-white" />
       <li className="font-bd-retrocentric self-center  uppercase underline">
         <h2 className={`text-2xl ${styles.neonText}`}>{headerTxt}</h2>
