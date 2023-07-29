@@ -33,7 +33,6 @@ header:'Professional Experience',
     {
       company: 'CI Group',
       dates: 'july 23 - present',
-      leave: {header:'reason for leaving', body:'Im currently with CI group and incredibly happy'},
       jobtitle: 'full stack developer',
       stack: ['Laravel','React.Native','Vue', 'PHP','JavaScript','Python', 'aws', 'node', 'MySQL', 'Valet', 'Laravel Nova'],
       role: 'As a mid-level full-stack software engineer, I have been actively involved in diverse projects for B2B clients spanning across various sectors, which has allowed me to gain valuable experience in working with a wide range of technologies. My responsibilities have encompassed project scoping, participating in client meetings, mentoring fellow team members, and contributing to sprint work and bug fixing. Throughout my journey, I have been fortunate to be a part of numerous project releases and involved in the maintenance of various sites, all of which have been built on cutting-edge technologies. Embracing this diversity has enriched my technical prowess, honing my expertise in different programming languages and frameworks. This extensive experience across a diverse stack has provided me with a solid foundation in both back-end and front-end development, and the experience of working with these tools has bolstered my problem-solving and diagnostic skills.In summary, my role as a mid-level full-stack software engineer has allowed me to thrive in a dynamic environment, collaborating with B2B clients from various industries, and navigating through challenging projects using a wide array of technologies. This diverse exposure has significantly enhanced my technical understanding and diagnostic abilities, making me a versatile and effective member of any development team.'
@@ -43,7 +42,7 @@ header:'Professional Experience',
       dates: 'march 23 - june 23',
       leave: {header:'reason for leaving', body:'Working solo was a comfort zone, that was not collaborative or conducive to  development'},
       jobtitle: 'full stack developer',
-      stack: ['next.js','typescript', 'mongodb','tailwind', 'aws', 'node'],
+      stack: ['next.js','typescript', 'mongodb','tailwind', 'aws', 'node', 'vercel'],
       role: 'Spearheaded the implementation of full stack applications in the logistics sector using cutting-edge technologies. I played a pivotal role in establishing the software department and infrastructure for the company. This involved introducing and optimizing development processes.'
     },
     {      
