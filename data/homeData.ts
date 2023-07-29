@@ -40,7 +40,7 @@ header:'Professional Experience',
     },
     {      
       company: 'pyscle interactive',
-      dates: 'november 22 - March 23',
+      dates: 'november 22 - Jan 23',
       leave: {header:'reason for leaving', body:'Lack of development potential'},
       jobtitle: 'full stack developer',
       stack: ['angular','typescript', 'python','less'],
