@@ -14,9 +14,13 @@ export default function Employer(props: RoleInterface) {
 
   const evenIndex = index % 2 === 0 ? true : false;
 
-  const companyTxt = Object.keys(job || {})[0] || "";
-  const stackTxt = Object.keys(job || {})[4] || "";
-  const roleTxt = Object.keys(job || {})[5] || "";
+  const companyTxt =
+    Object.keys(job || {}).find((property) => property === "company") || "";
+  const stackTxt =
+    Object.keys(job || {}).find((property) => property === "stack") || "";
+  const roleTxt =
+    Object.keys(job || {}).find((property) => property === "role") || "";
+  Object.keys(job || {}).find((property) => property === "role") || "";
 
   return (
     <article
@@ -37,10 +41,12 @@ export default function Employer(props: RoleInterface) {
           </section>
           <section className="flex flex-col justify-self-end space-y-2">
             <h3 className="uppercase">{dates}</h3>
-            <article className="flex flex-row space-x-2">
-              <h3 className="uppercase ">{`${header}:`}</h3>
-              <p className="font-tektur">{body}</p>
-            </article>
+            {leave && (
+              <article className="flex flex-row space-x-2">
+                <h3 className="uppercase ">{`${header}:`}</h3>
+                <p className="font-tektur">{body}</p>
+              </article>
+            )}
           </section>
         </section>
       </section>
