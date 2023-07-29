@@ -26,7 +26,7 @@ export interface experienceArticleInterface{
 export interface experienceInterface{
   company: string,
   dates: string,
-  leave: leaveInterface,
+  leave?: leaveInterface,
   jobtitle: string,
   stack: string[],
   role: string
