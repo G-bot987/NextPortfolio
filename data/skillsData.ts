@@ -56,5 +56,6 @@ export const skillsData = {
     { name: "Fastlane", skillGroupKey: 17 },
     { name: "Deis", skillGroupKey: 17 },
     { name: "Figma", skillGroupKey: 18 },
+    { name: "Forge", skillGroupKey: 10 },
   ],
 };
