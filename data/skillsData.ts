@@ -1,5 +1,5 @@
 export const skillsData = {
-  header: "Proficent With",
+  header: "Technical Competencies",
   skillgroups: [
     {groupName:'frameworks', key: 1},
     {groupName:'unit Testing', key: 2},
