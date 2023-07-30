@@ -47,6 +47,7 @@ export default function Technologies(props: TechnologiesInterface) {
               type="search"
               id="tec-search"
               name="tec"
+              className="text-white p-1 bg-transparent border-2 border-white rounded-full"
               onChange={handleInputChange}
             />
           </li>
