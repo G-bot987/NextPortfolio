@@ -13,3 +13,9 @@ export interface skillGroupInterface {
   key: number;
   groupName: string;
 }
+
+export interface fuseSkillInterface {
+  item:SkillInterface;
+  refIndex: number;
+  score: number;
+}
