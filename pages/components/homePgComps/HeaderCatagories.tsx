@@ -14,7 +14,6 @@ export default function HeaderCatagories(props: synopsisPropertiesInterface) {
   useEffect(() => {
     const tablet = window.matchMedia("(max-width: 601px)");
     setViewportWidth(tablet.matches);
-    console.log(viewportWidth);
   }, []);
   return (
     <aside
