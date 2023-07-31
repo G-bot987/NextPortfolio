@@ -9,28 +9,17 @@ export default function HeaderCatagories(props: synopsisPropertiesInterface) {
 
   const [open, setOpen] = useState(false);
 
-  const [viewportWidth, setViewportWidth] = useState(0);
+  const [viewportWidth, setViewportWidth] = useState(Boolean);
 
   useEffect(() => {
-    // Dynamically import the window object on the client-side
-    const updateViewportWidth = () => {
-      setViewportWidth(window.innerWidth);
-    };
-
-    updateViewportWidth();
-
-    // Add event listener for resize and remove it when component unmounts
-    window.addEventListener("resize", updateViewportWidth);
-    return () => {
-      window.removeEventListener("resize", updateViewportWidth);
-    };
+    const tablet = window.matchMedia("(max-width: 601px)");
+    setViewportWidth(tablet.matches);
   }, []);
-
   return (
     <aside
       className={`text-center  max-w-xs st:px-10 sd:px-0 list-none  max-[601px]:py-8 font-tektur flex flex-col shrink  `}
     >
-      {viewportWidth >= 607 && (
+      {!viewportWidth && (
         <button
           className="max-h-min text-center flex flex-col flex-shrink  min-[602px]:rounded-b-lg min-[602px]:rounded-t-none bg-white pb-3 text-black rounded-full  min-[700px]:max-h-[600px] min-[1100px]:max-h-[400px] items-center px-2"
           onClick={() => {
@@ -67,7 +56,7 @@ export default function HeaderCatagories(props: synopsisPropertiesInterface) {
           </article>
         </button>
       )}
-      {606 >= viewportWidth && (
+      {viewportWidth && (
         <article className="max-h-min text-center flex flex-col flex-shrink   bg-white  text-black rounded-full  items-center py-14 px-4 justify-center">
           <h3 className=" font-bd-retrocentric underline font-bold text-xl ">
             {header}
