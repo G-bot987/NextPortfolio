@@ -18,7 +18,7 @@ export const homeData = {
     },
     {
       header: "Goals",
-      txt: "self teaching PHP. Enhancing my understanding of; TDD & IoRedis. Developing functionality on my DND character manager integrating; weapons and login functionality ",
+      txt: "Enhancing my understanding of; TDD & IoRedis. Developing functionality on my DND character manager integrating; weapons and login functionality. Build an authentication app, create a Ecomerce project using Next and Shopify and build a PHP content manager which can be connected to this portfolio.",
     },
     { header: "Location", txt: "Stratford Upon Avon & London. I hold a full UK driving license" },
     {

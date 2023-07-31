@@ -206,7 +206,11 @@ export default function RenderProject(props: RenderProjectsInterface) {
             setOpen(!open);
           }}
         >
-          <li className="bg-white text-black uppercase font-bd-retrocentric underline flex flex-col justify-around  items-center">
+          <li
+            className={`bg-white text-black uppercase font-bd-retrocentric underline flex flex-col justify-around  items-center  ${
+              open ? "" : "rounded-b-lg"
+            }`}
+          >
             <div className="flex flex-row justify-around  min-w-full">
               <div className="pt-4">
                 <div
