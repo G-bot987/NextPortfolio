@@ -14,11 +14,11 @@ export default function CaroSlides(props: CarouselSlideInterface) {
     link,
   } = props;
   return (
-    <li className="items-center flex flex-col uppercase font-bd-retrocentric">
+    <li className="items-center flex flex-col  w-[925px] h-[325px] uppercase font-bd-retrocentric p-4">
       {type === "img" && img && alt && (
-        <div className="min-w-[200px] min-h-[350px] flex flex-col justify-evenly">
-          <h2 className="text-2xl ">{experience}</h2>
-          <div className="relative w-[200px] h-[200px]">
+        <div className="min-w-[900px] min-h-[300px] max-w-[900px] max-h-[300px] justify-evenly">
+          <h2 className="text-2xl z-10 py-2">{experience}</h2>
+          <div className="relative w-full h-[200px]">
             <Image
               src={img}
               alt={alt}
@@ -33,19 +33,17 @@ export default function CaroSlides(props: CarouselSlideInterface) {
       )}
 
       {type === "txt" && (
-        <div className="min-w-[500px] min-h-[500px] flex flex-col justify-evenly">
+        <div className="min-w-full min-h-full flex flex-col justify-evenly">
           <h1 className={`text-6xl p-8 `}>{mainHeader}</h1>
-
-          <h2>{subHeader}</h2>
-
-          <p>{technologiesTxt}</p>
+          {subHeader && <h2>{subHeader}</h2>}
+          {technologiesTxt && <p>{technologiesTxt}</p>}
         </div>
       )}
       {type === "showCase" && img && alt && (
-        <div className="min-w-[200px] min-h-[350px] flex flex-col justify-evenly">
+        <div className="min-w-full min-h-full flex flex-col justify-evenly">
           <h2 className="text-2xl">{mainHeader}</h2>
           <a className="flex justify-center" href={link}>
-            <div className="relative w-[150px] h-[150px]">
+            <div className="relative w-full h-[200px]">
               <Image
                 src={img}
                 alt={alt}
