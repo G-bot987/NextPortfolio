@@ -7,6 +7,12 @@ export interface TechnologiesInterface {
   header: string;
   skills: SkillInterface[];
   skillgroups: skillGroupInterface[];
+  articles: TechnologiesArticleInterface[];
+}
+
+export interface TechnologiesArticleInterface {
+title: string;
+body: string;
 }
 
 export interface skillGroupInterface {
