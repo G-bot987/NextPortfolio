@@ -58,4 +58,19 @@ export const skillsData = {
     { name: "Figma", skillGroupKey: 18 },
     { name: "Forge", skillGroupKey: 10 },
   ],
+
+  articles:[
+    {
+      title: 'technical passions',
+      body: 'placeholder'
+    },
+    {
+      title: 'favoured Tec stack',
+      body: 'placeholder'
+    },
+    {
+      title: 'favoured Technologies',
+      body: 'placeholder'
+    }
+  ]
 };
