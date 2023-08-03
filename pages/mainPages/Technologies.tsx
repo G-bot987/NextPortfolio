@@ -83,11 +83,12 @@ export default function Technologies(props: TechnologiesInterface) {
         <hr className="text-white" />
         <nav className=" self-center max-w-[75%]">
           <ul className="flex flex-row flex-wrap space-x-12 ">
-            {skillgroups.map(
-              (skillgroup: skillGroupInterface, index: number) => (
-                <li className={`${styles.hex}`} key={index}></li>
-              )
-            )}
+            {skillgroups &&
+              skillgroups?.map(
+                (skillgroup: skillGroupInterface, index: number) => (
+                  <li className={`${styles.hex}`} key={index}></li>
+                )
+              )}
           </ul>
         </nav>
       </article>
