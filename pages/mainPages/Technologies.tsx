@@ -73,7 +73,7 @@ export default function Technologies(props: TechnologiesInterface) {
         </article>
       </div>
 
-      <article className="flex flex-col align-center">
+      <article className="flex flex-col align-center  space-y-12">
         <hr className="text-white" />
         <h2
           className={`text-2xl font-bd-retrocentric self-center  uppercase  ${styles.neonText}`}
@@ -81,9 +81,14 @@ export default function Technologies(props: TechnologiesInterface) {
           Competency breakdown coming soon!
         </h2>
         <hr className="text-white" />
-        <nav>
-          <ul>
-            <li></li>
+        <nav className=" self-center max-w-[75%]">
+          <ul className="flex flex-row flex-wrap space-x-12 ">
+            {skillgroups &&
+              skillgroups?.map(
+                (skillgroup: skillGroupInterface, index: number) => (
+                  <li className={`${styles.hex}`} key={index}></li>
+                )
+              )}
           </ul>
         </nav>
       </article>

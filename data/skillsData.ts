@@ -69,7 +69,7 @@ export const skillsData = {
       body: 'placeholder'
     },
     {
-      title: 'favoured Technologies',
+      title: 'Technologies Im keen to work with',
       body: 'placeholder'
     }
   ]
