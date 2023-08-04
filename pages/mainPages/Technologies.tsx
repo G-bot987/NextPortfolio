@@ -86,7 +86,24 @@ export default function Technologies(props: TechnologiesInterface) {
             {skillgroups &&
               skillgroups?.map(
                 (skillgroup: skillGroupInterface, index: number) => (
-                  <li className={`${styles.hex}`} key={index}></li>
+                  // <li className={`${styles.hex}`} key={index}></li>
+                  <div
+                    className="w-20 h-20 flex flex-col items-center"
+                    key={index}
+                  >
+                    <div className="mb-4">
+                      <div className="h-1 w-10 bg-white transform rotate-45 transform translate-x-4 translate-y-3"></div>
+                      <div className="h-1 w-10 bg-white transform -rotate-45  translate-y-2 -translate-x-2"></div>
+                    </div>
+                    <div className="pl-2">
+                      <div className="h-12 w-14 border-x-4 border-white"></div>
+                    </div>
+
+                    <div>
+                      <div className="h-1 w-10 bg-white transform -rotate-45 translate-x-4 translate-y-3"></div>
+                      <div className="h-1 w-10 bg-white transform rotate-45 scale-x-[-1] translate-y-2 -translate-x-2"></div>
+                    </div>
+                  </div>
                 )
               )}
           </ul>
