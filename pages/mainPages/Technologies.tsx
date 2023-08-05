@@ -82,28 +82,28 @@ export default function Technologies(props: TechnologiesInterface) {
         </h2>
         <hr className="text-white" />
         <nav className=" self-center max-w-[75%]">
-          <ul className="flex flex-row flex-wrap space-x-12 ">
+          <ul className="flex flex-row flex-wrap space-x-1">
             {skillgroups &&
               skillgroups?.map(
                 (skillgroup: skillGroupInterface, index: number) => (
                   // <li className={`${styles.hex}`} key={index}></li>
-                  <div
-                    className="w-20 h-20 flex flex-col items-center"
+                  <li
+                    className="w-12 h-[100px] flex flex-col items-center justify-center "
                     key={index}
                   >
-                    <div className="mb-4">
-                      <div className="h-1 w-10 bg-white transform rotate-45 transform translate-x-4 translate-y-3"></div>
-                      <div className="h-1 w-10 bg-white transform -rotate-45  translate-y-2 -translate-x-2"></div>
+                    <div className="mb-5 pr-1">
+                      <div className="h-[2px] w-10 bg-white transform rotate-45 transform translate-x-4 translate-y-3"></div>
+                      <div className="h-[2px] w-9 bg-white transform -rotate-45  translate-y-2 -translate-x-2"></div>
                     </div>
-                    <div className="pl-2">
-                      <div className="h-12 w-14 border-x-4 border-white"></div>
+                    <div className="w-[55px] pl-[1px]  ">
+                      <div className="h-7 w-full border-x-2 border-white "></div>
                     </div>
 
                     <div>
-                      <div className="h-1 w-10 bg-white transform -rotate-45 translate-x-4 translate-y-3"></div>
-                      <div className="h-1 w-10 bg-white transform rotate-45 scale-x-[-1] translate-y-2 -translate-x-2"></div>
+                      <div className="h-[2px] w-9 bg-white transform -rotate-45 translate-x-4 translate-y-3"></div>
+                      <div className="h-[2px] w-10 bg-white transform rotate-45  translate-y-2 -translate-x-3"></div>
                     </div>
-                  </div>
+                  </li>
                 )
               )}
           </ul>
