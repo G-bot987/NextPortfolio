@@ -46,7 +46,7 @@ export default function Technologies(props: TechnologiesInterface) {
               {header}
             </h2>
             <li className="flex flex-row"></li>
-            <li className="max-w-fit  p-2 my-2 uppercase">
+            <li className="max-w-fit  p-2 my-2 uppercase space-x-4">
               <label htmlFor="tec-search">Competencies Search:</label>
               <input
                 type="search"
