@@ -82,26 +82,29 @@ export default function Technologies(props: TechnologiesInterface) {
         </h2>
         <hr className="text-white" />
         <nav className=" self-center max-w-[75%]">
-          <ul className="flex flex-row flex-wrap space-x-1">
+          <ul className="flex flex-row flex-wrap">
             {skillgroups &&
               skillgroups?.map(
                 (skillgroup: skillGroupInterface, index: number) => (
-                  // <li className={`${styles.hex}`} key={index}></li>
                   <li
-                    className="w-12 h-[100px] flex flex-col items-center justify-center "
+                    className="w-[100px] h-[140px] flex flex-col items-center justify-center flex "
                     key={index}
                   >
-                    <div className="mb-5 pr-1">
-                      <div className="h-[2px] w-10 bg-white transform rotate-45 transform translate-x-4 translate-y-3"></div>
-                      <div className="h-[2px] w-9 bg-white transform -rotate-45  translate-y-2 -translate-x-2"></div>
+                    <div className="pr-2 pb-1">
+                      <div className="h-[2px] w-[70px] bg-white transform rotate-45 translate-x-7 -translate-y-4"></div>
+                      <div className="h-[2px] w-[70px] bg-white transform -rotate-45  -translate-y-4 -translate-x-5"></div>
                     </div>
-                    <div className="w-[55px] pl-[1px]  ">
-                      <div className="h-7 w-full border-x-2 border-white "></div>
+                    <div className="min-w-[100px] pl-[1px]  ">
+                      <div className="h-12 w-full border-x-2 border-white flex flex-col font-tektur  items-center px-1 justify-center">
+                        <p className=" max-w-min text-[10px]">
+                          {skillgroup.groupName}
+                        </p>
+                      </div>
                     </div>
 
-                    <div>
-                      <div className="h-[2px] w-9 bg-white transform -rotate-45 translate-x-4 translate-y-3"></div>
-                      <div className="h-[2px] w-10 bg-white transform rotate-45  translate-y-2 -translate-x-3"></div>
+                    <div className="pt-1 pl-6">
+                      <div className="h-[2px] w-[70px] bg-white transform -rotate-45 translate-x-3 translate-y-4"></div>
+                      <div className="h-[2px] w-[70px] bg-white transform rotate-45  translate-y-4 -translate-x-9"></div>
                     </div>
                   </li>
                 )
