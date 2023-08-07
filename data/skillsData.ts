@@ -7,7 +7,7 @@ export const skillsData = {
     {groupName:'CSS Framewroks', key: 4},
     {groupName:'Back-end development', key: 5},
     {groupName:'DataBase Technologies', key: 6},
-    {groupName:'Containerisation software', key: 7},
+    {groupName:'container management platforms', key: 7},
     {groupName:'JavaScript Toolkits', key: 8},
     {groupName:'ORM', key: 9},
     {groupName:'Cloud Platforms', key: 10},
