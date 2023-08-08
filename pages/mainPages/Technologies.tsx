@@ -5,11 +5,12 @@ import styles from "../../styles/Home.module.css";
 import {
   SkillInterface,
   TechnologiesInterface,
-  skillGroupInterface,
   fuseSkillInterface,
+  SKillGroupsWithSkillsInterface,
 } from "../../interface/technologies.interface";
 import Skill from "../components/skillPgComps/Skill";
 import AllSkills from "../components/skillPgComps/AllSkills";
+import SkillGroup from "../components/skillPgComps/SkillsByGroupNavbar/SkillGroup";
 
 export default function Technologies(props: TechnologiesInterface) {
   const { skills, header, skillgroups } = props;
@@ -35,6 +36,15 @@ export default function Technologies(props: TechnologiesInterface) {
     }
   };
   useEffect(() => setRenderSKill(skills), []);
+
+  const SkillgroupsWithSkills = skillgroups?.map((skillgroup) => {
+    const ownedSkills = skills?.filter(
+      (skill) => skill.skillGroupKey === skillgroup.key
+    );
+
+    return { name: skillgroup.groupName, ownedSkills };
+  });
+
   return (
     <section className=" flex flex flex-col justify-between space-y-20 min-w-full">
       <div className="px-8">
@@ -83,48 +93,10 @@ export default function Technologies(props: TechnologiesInterface) {
         <hr className="text-white" />
         <nav className=" self-center max-w-[75%]">
           <ul className="flex flex-row flex-wrap">
-            {skillgroups &&
-              skillgroups?.map(
-                (skillgroup: skillGroupInterface, index: number) => (
-                  <li
-                    className={`w-[48px] h-[140px] flex flex-col items-center justify-center flex  ${
-                      index % 2 == 0 ? `mt-[92px]` : ``
-                    } `}
-                    key={index}
-                  >
-                    <div className="pr-2 pb-1">
-                      <div
-                        className={`mt-2 h-[2px] w-[69px] bg-white transform rotate-45 translate-x-7 -translate-y-4 ${styles.glow}`}
-                      ></div>
-                      <div
-                        className={`h-[2px] w-[68px] bg-white transform -rotate-45  -translate-y-4 -translate-x-5 ${styles.glow}`}
-                      ></div>
-                    </div>
-                    <div className="min-w-[98px]  ">
-                      <div
-                        className={`h-12 w-full border-white flex flex-row font-tektur  items-center justify-between`}
-                      >
-                        <div
-                          className={`h-[48px] w-[2px] bg-white ${styles.glow}`}
-                        />
-                        <p className=" max-w-min text-[10px] uppercase text-white">
-                          {skillgroup.groupName}
-                        </p>
-                        <div
-                          className={`h-[48px] w-[2px] bg-white ${styles.glow}`}
-                        />
-                      </div>
-                    </div>
-
-                    <div className="pt-1 pl-6">
-                      <div
-                        className={`h-[2px] w-[70px] bg-white transform -rotate-45 translate-x-3 translate-y-4 ${styles.glow}`}
-                      ></div>
-                      <div
-                        className={`h-[2px] w-[69px] bg-white transform rotate-45  translate-y-4 -translate-x-9 ${styles.glow}`}
-                      ></div>
-                    </div>
-                  </li>
+            {SkillgroupsWithSkills &&
+              SkillgroupsWithSkills?.map(
+                (skillgroup: SKillGroupsWithSkillsInterface, index: number) => (
+                  <SkillGroup {...skillgroup} index={index} key={index} />
                 )
               )}
           </ul>
