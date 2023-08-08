@@ -25,3 +25,8 @@ export interface fuseSkillInterface {
   refIndex: number;
   score: number;
 }
+
+export interface SKillGroupsWithSkillsInterface {
+  name: string;
+  ownedSkills: SkillInterface[];
+}
