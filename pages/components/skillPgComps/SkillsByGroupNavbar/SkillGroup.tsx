@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../../../styles/Home.module.css";
 
 import { SKillGroupsWithSkillsInterface } from "../../../../interface/technologies.interface";
@@ -7,12 +7,24 @@ export default function SkillGroup(
   Props: SKillGroupsWithSkillsInterface & { index: number }
 ) {
   const { index, ownedSkills, name } = Props;
+  const [hover, setHover] = useState(false);
+
+  const handleMouseEnter = () => {
+    setHover(true);
+  };
+
+  const handleMouseLeave = () => {
+    setHover(false);
+  };
+
   return (
     <li
-      className={`w-[48px] h-[140px] flex flex-col items-center justify-center flex  ${
+      className={` h-[140px] flex flex-col items-center justify-center flex  ${
         index % 2 == 0 ? `mt-[92px]` : ``
-      } `}
+      } ${hover ? "w-[80px]" : "w-[48px]"} `}
       key={index}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <div className="pr-2 pb-1">
         <div
@@ -22,12 +34,16 @@ export default function SkillGroup(
           className={`h-[2px] w-[68px] bg-white transform -rotate-45  -translate-y-4 -translate-x-5 ${styles.glow}`}
         ></div>
       </div>
-      <div className="min-w-[98px]  ">
+      <div className={`min-w-[98px] ${hover ? "bg-white" : ""}`}>
         <div
-          className={`h-12 w-full border-white flex flex-row font-tektur  items-center justify-between`}
+          className={`h-12 w-full border-white flex flex-row font-tektur  items-center justify-between  `}
         >
           <div className={`h-[48px] w-[2px] bg-white ${styles.glow}`} />
-          <p className=" max-w-min text-[10px] uppercase text-white text-center">
+          <p
+            className={`max-w-min text-[10px] uppercase text-white text-center ${
+              hover ? " text-black" : "text-white"
+            }`}
+          >
             {name}
           </p>
           <div className={`h-[48px] w-[2px] bg-white ${styles.glow}`} />
