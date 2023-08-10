@@ -56,6 +56,34 @@
 
 }
 
+.hex {
+  width: 120px;
+  height: 60px;
+  background-color: white;
+  border-color: white;
+  position: relative;
+  display: inline-block;
+}
+.hex:before {
+  content: " ";
+  width: 0; height: 0;
+  border-bottom: 57px solid;
+  border-color: white;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  position: absolute;
+  top: -57px;
+}
+.hex:after {
+  content: "";
+  width: 0;
+  position: absolute;
+  bottom: -57px;
+  border-top: 57px solid;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+}
+
 /* Flickering animation */
 /* @keyframes flicker {
     
