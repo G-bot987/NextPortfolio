@@ -122,6 +122,16 @@ export default function Technologies(props: TechnologiesInterface) {
         </h2>
         <hr className="text-white" />
       </article>
+
+      <article className="flex flex-col align-center">
+        <hr className="text-white" />
+        <h2
+          className={`text-2xl font-bd-retrocentric self-center  uppercase  ${styles.neonText}`}
+        >
+          Technical Strengths coming soon!
+        </h2>
+        <hr className="text-white" />
+      </article>
     </section>
   );
 }
