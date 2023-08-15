@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 import Fuse from "fuse.js";
 import styles from "../../styles/Home.module.css";
@@ -16,6 +16,8 @@ export default function Technologies(props: TechnologiesInterface) {
   const { skills, header, skillgroups } = props;
 
   const [renderSkill, setRenderSKill]: any = useState([]);
+
+  const [selectedTechnologies, setSelectedTechnologies]: any = useState([]);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     filterTechnology(event.target.value);
@@ -39,11 +41,38 @@ export default function Technologies(props: TechnologiesInterface) {
 
   const SkillgroupsWithSkills = skillgroups?.map((skillgroup) => {
     const ownedSkills = skills?.filter(
-      (skill) => skill.skillGroupKey === skillgroup.key
+      (skill) => skill.skillGroupKey === skillgroup.keyProp
     );
 
-    return { name: skillgroup.groupName, ownedSkills };
+    return {
+      name: skillgroup.groupName,
+      keyProp: skillgroup.keyProp,
+      ownedSkills,
+    };
   });
+
+  console.log(SkillgroupsWithSkills);
+
+  const filterSkillGroups = (techId: number) => {
+    if (selectedTechnologies.includes(techId)) {
+      setSelectedTechnologies((prev: any): any => {
+        console.log(prev);
+        prev.filter((p: any) => p !== techId);
+      });
+    } else {
+      setSelectedTechnologies((prev: any): any => [...prev, techId]);
+    }
+  };
+
+  const projectsFound: any = useMemo(() => {
+    const p = skillgroups?.filter((project: any) => {
+      return selectedTechnologies.every((id: any) =>
+        project.technologies.includes(id)
+      );
+    });
+
+    return p;
+  }, [selectedTechnologies.length]);
 
   return (
     <section className=" flex flex flex-col justify-between space-y-20 min-w-full">
@@ -96,7 +125,14 @@ export default function Technologies(props: TechnologiesInterface) {
             {SkillgroupsWithSkills &&
               SkillgroupsWithSkills?.map(
                 (skillgroup: SKillGroupsWithSkillsInterface, index: number) => (
-                  <SkillGroup {...skillgroup} index={index} key={index} />
+                  <div key={index}>
+                    <SkillGroup
+                      {...skillgroup}
+                      index={index}
+                      key={index}
+                      filterSkillGroups={filterSkillGroups}
+                    />
+                  </div>
                 )
               )}
           </ul>

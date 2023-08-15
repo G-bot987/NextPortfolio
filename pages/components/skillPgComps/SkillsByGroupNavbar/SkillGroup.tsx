@@ -4,9 +4,12 @@ import styles from "../../../../styles/Home.module.css";
 import { SKillGroupsWithSkillsInterface } from "../../../../interface/technologies.interface";
 
 export default function SkillGroup(
-  Props: SKillGroupsWithSkillsInterface & { index: number }
+  Props: SKillGroupsWithSkillsInterface & {
+    index: number;
+    filterSkillGroups: Function;
+  }
 ) {
-  const { index, ownedSkills, name } = Props;
+  const { index, filterSkillGroups, name, keyProp } = Props;
   const [hover, setHover] = useState(false);
 
   const handleMouseEnter = () => {
@@ -23,6 +26,12 @@ export default function SkillGroup(
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
+      <button
+        onClick={(event) => {
+          event.preventDefault();
+          filterSkillGroups(keyProp);
+        }}
+      ></button>
       {!hover && (
         <div
           className={` h-[140px] flex flex-col items-center justify-center flex  ${
@@ -67,7 +76,7 @@ export default function SkillGroup(
 
       {hover && (
         <div
-          className={` ${index % 2 == 0 ? `mt-[140px] ` : `mt-[40px]`} ${
+          className={` ${index % 2 == 0 ? `mt-[180px] ` : `mt-[40px]`} ${
             styles.hex
           } h-[140px]  `}
         >
