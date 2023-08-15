@@ -51,12 +51,9 @@ export default function Technologies(props: TechnologiesInterface) {
     };
   });
 
-  console.log(SkillgroupsWithSkills);
-
   const filterSkillGroups = (techId: number) => {
     if (selectedTechnologies.includes(techId)) {
       setSelectedTechnologies((prev: any): any => {
-        console.log(prev);
         prev.filter((p: any) => p !== techId);
       });
     } else {
@@ -64,15 +61,16 @@ export default function Technologies(props: TechnologiesInterface) {
     }
   };
 
-  const projectsFound: any = useMemo(() => {
-    const p = skillgroups?.filter((project: any) => {
-      return selectedTechnologies.every((id: any) =>
-        project.technologies.includes(id)
-      );
+  const foundTechGroup: any = useMemo(() => {
+    const tecGroup = skillgroups?.filter((skillgroup: any) => {
+      return skillgroup.keyProp === selectedTechnologies[0];
     });
-
-    return p;
+    return tecGroup;
   }, [selectedTechnologies.length]);
+
+  useEffect(() => {
+    console.log(foundTechGroup);
+  }, [foundTechGroup]);
 
   return (
     <section className=" flex flex flex-col justify-between space-y-20 min-w-full">
