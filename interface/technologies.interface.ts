@@ -16,7 +16,7 @@ body: string;
 }
 
 export interface skillGroupInterface {
-  key: number;
+  keyProp: number;
   groupName: string;
 }
 
@@ -28,5 +28,6 @@ export interface fuseSkillInterface {
 
 export interface SKillGroupsWithSkillsInterface {
   name: string;
+  keyProp: number;
   ownedSkills: SkillInterface[];
 }
