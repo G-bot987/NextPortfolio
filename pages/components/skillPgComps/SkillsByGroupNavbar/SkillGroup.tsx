@@ -26,12 +26,6 @@ export default function SkillGroup(
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <button
-        onClick={(event) => {
-          event.preventDefault();
-          filterSkillGroups(keyProp);
-        }}
-      ></button>
       {!hover && (
         <div
           className={` h-[140px] flex flex-col items-center justify-center flex  ${
@@ -47,7 +41,13 @@ export default function SkillGroup(
             ></div>
             <div className="h-0 w-0 border-t-12 border-l-6 border-r-6 border-white"></div>
           </div>
-          <div className={`min-w-[98px] ${hover ? "bg-white w-[120px]" : ""}`}>
+          <button
+            className={`min-w-[98px] ${hover ? "bg-white w-[120px]" : ""}`}
+            onClick={(event) => {
+              event.preventDefault();
+              filterSkillGroups(keyProp);
+            }}
+          >
             <div
               className={`h-12 w-full border-white flex flex-row font-tektur  items-center justify-between  `}
             >
@@ -61,7 +61,7 @@ export default function SkillGroup(
               </p>
               <div className={`h-[48px] w-[2px] bg-white ${styles.glow}`} />
             </div>
-          </div>
+          </button>
 
           <div className="pt-1 pl-6">
             <div
@@ -80,9 +80,19 @@ export default function SkillGroup(
             styles.hex
           } h-[140px]  `}
         >
-          <p className="font-tektur text-[10px] uppercase  text-center text-black font-semibold self-center pb-6 pt-3">
-            {name}
-          </p>
+          <div>
+            <button
+              onClick={(event) => {
+                event.preventDefault();
+                filterSkillGroups(keyProp);
+              }}
+              className=" min-w-full"
+            >
+              <p className="font-tektur text-[10px] uppercase  text-center text-black font-semibold self-center pb-6 pt-3">
+                {name}
+              </p>
+            </button>
+          </div>
         </div>
       )}
     </li>
