@@ -9,7 +9,6 @@ export default function SkillGroup(
     filterSkillGroups: Function;
   }
 ) {
-  console.log(Props);
   const { index, filterSkillGroups, name, keyProp } = Props;
   const [hover, setHover] = useState(false);
 
