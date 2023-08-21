@@ -61,6 +61,9 @@ export default function Technologies(props: TechnologiesInterface) {
 
   const foundTechGroup: any = useMemo(() => {
     const tecGroup = SkillgroupsWithSkills?.filter((skillgroup: any) => {
+      if (selectedTechnologies.length === 0) {
+        return SkillgroupsWithSkills;
+      }
       return skillgroup.keyProp === selectedTechnologies[0];
     });
     return tecGroup;
