@@ -53,20 +53,18 @@ export default function Technologies(props: TechnologiesInterface) {
 
   const filterSkillGroups = (techId: number) => {
     if (selectedTechnologies.includes(techId)) {
-      setSelectedTechnologies((prev: any): any => {
-        prev.filter((p: any) => p !== techId);
-      });
+      setSelectedTechnologies([]);
     } else {
-      setSelectedTechnologies((prev: any): any => [...prev, techId]);
+      setSelectedTechnologies([techId]);
     }
   };
 
   const foundTechGroup: any = useMemo(() => {
-    const tecGroup = skillgroups?.filter((skillgroup: any) => {
+    const tecGroup = SkillgroupsWithSkills?.filter((skillgroup: any) => {
       return skillgroup.keyProp === selectedTechnologies[0];
     });
     return tecGroup;
-  }, [selectedTechnologies.length]);
+  }, [selectedTechnologies[0]]);
 
   useEffect(() => {
     console.log(foundTechGroup);
