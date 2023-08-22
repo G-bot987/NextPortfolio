@@ -69,10 +69,6 @@ export default function Technologies(props: TechnologiesInterface) {
     return tecGroup;
   }, [selectedTechnologies[0]]);
 
-  useEffect(() => {
-    console.log(foundTechGroup);
-  }, [foundTechGroup]);
-
   return (
     <section className=" flex flex flex-col justify-between space-y-20 min-w-full">
       <div className="px-8">
@@ -121,8 +117,8 @@ export default function Technologies(props: TechnologiesInterface) {
         <hr className="text-white" />
         <nav className=" self-center max-w-[75%]">
           <ul className="flex flex-row flex-wrap">
-            {SkillgroupsWithSkills &&
-              SkillgroupsWithSkills?.map(
+            {foundTechGroup &&
+              foundTechGroup?.map(
                 (skillgroup: SKillGroupsWithSkillsInterface, index: number) => (
                   <div key={index}>
                     <SkillGroup
