@@ -29,5 +29,6 @@ export interface fuseSkillInterface {
 export interface SKillGroupsWithSkillsInterface {
   name: string;
   keyProp: number;
+  selected?: boolean;
   ownedSkills: SkillInterface[];
 }
