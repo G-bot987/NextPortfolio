@@ -59,15 +59,22 @@ export default function Technologies(props: TechnologiesInterface) {
     }
   };
 
-  const foundTechGroup: any = useMemo(() => {
-    const tecGroup = SkillgroupsWithSkills?.filter((skillgroup: any) => {
-      if (selectedTechnologies.length === 0) {
-        return SkillgroupsWithSkills;
+  const foundTechGroup: SKillGroupsWithSkillsInterface[] | undefined =
+    useMemo(() => {
+      const tecGroup: SKillGroupsWithSkillsInterface[] =
+        SkillgroupsWithSkills?.filter(
+          (skillgroup: SKillGroupsWithSkillsInterface) => {
+            if (selectedTechnologies.length === 0) {
+              return SkillgroupsWithSkills;
+            }
+            return skillgroup.keyProp === selectedTechnologies[0];
+          }
+        );
+      if (tecGroup && tecGroup.length === 1) {
+        tecGroup[0].selected = true;
       }
-      return skillgroup.keyProp === selectedTechnologies[0];
-    });
-    return tecGroup;
-  }, [selectedTechnologies[0]]);
+      return tecGroup;
+    }, [selectedTechnologies[0]]);
 
   return (
     <section className=" flex flex flex-col justify-between space-y-20 min-w-full">
