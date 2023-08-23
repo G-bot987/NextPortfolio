@@ -23,7 +23,7 @@ export default function App() {
 
   const [open, SetOpen] = useState(false);
   const [hover, setHover] = useState(false);
-  const [currentPage, setCurrentPage] = useState("Technologies");
+  const [currentPage, setCurrentPage] = useState("Home");
   const ref = useRef<null | HTMLDivElement>(null);
 
   const handleMouseOver = () => {
