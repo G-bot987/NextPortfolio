@@ -127,14 +127,14 @@ export default function Technologies(props: TechnologiesInterface) {
             {foundTechGroup &&
               foundTechGroup?.map(
                 (skillgroup: SKillGroupsWithSkillsInterface, index: number) => (
-                  <div key={index}>
+                  <li key={index}>
                     <SkillGroup
                       {...skillgroup}
                       index={index}
                       key={index}
                       filterSkillGroups={filterSkillGroups}
                     />
-                  </div>
+                  </li>
                 )
               )}
           </ul>
