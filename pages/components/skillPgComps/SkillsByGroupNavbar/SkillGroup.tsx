@@ -130,7 +130,7 @@ export default function SkillGroup(
               </button>
             </div>
           </div>
-          <ul className="flex flex-row w-[160px]">
+          <ul className="flex flex-row w-[190px] flex-wrap">
             {ownedSkills?.map((ownedSkill: SkillInterface, index: number) => (
               <SkillHex {...ownedSkill} index={index} key={index} />
             ))}
