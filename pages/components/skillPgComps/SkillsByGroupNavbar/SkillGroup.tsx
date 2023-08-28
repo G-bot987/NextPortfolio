@@ -115,21 +115,23 @@ export default function SkillGroup(
       )}
       {selected && (
         <article className="flex flex-col w-[350px] items-center">
-          <div className={`  ${styles.hex} h-[140px]  `}>
-            <div>
-              <button
-                onClick={(event) => {
-                  event.preventDefault();
-                  filterSkillGroups(keyProp);
-                }}
-                className=" min-w-full"
-              >
-                <p className="font-tektur text-[10px] uppercase  text-center text-black font-semibold self-center pb-6 pt-3">
-                  {name}
-                </p>
-              </button>
+          <section className="min-h-[90px]">
+            <div className={`  ${styles.hex} h-[80px]  `}>
+              <div>
+                <button
+                  onClick={(event) => {
+                    event.preventDefault();
+                    filterSkillGroups(keyProp);
+                  }}
+                  className=" min-w-full"
+                >
+                  <p className="font-tektur text-[10px] uppercase  text-center text-black font-semibold self-center pb-6 pt-3">
+                    {name}
+                  </p>
+                </button>
+              </div>
             </div>
-          </div>
+          </section>
           <ul className="flex flex-row w-[190px] flex-wrap">
             {ownedSkills?.map((ownedSkill: SkillInterface, index: number) => (
               <SkillHex {...ownedSkill} index={index} key={index} />
