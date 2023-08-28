@@ -17,8 +17,8 @@ export default function SkillHex(Props: SkillInterface & { index: number }) {
     <li
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={` h-[140px] flex flex-col items-center justify-center flex ${
-        (index + 1) % 3 == 0 ? `mx-12` : ``
+      className={` h-[95px] flex flex-col items-center justify-center flex ${
+        (index + 1) % 3 == 0 ? `mx-[47px]` : ``
       } ${hover ? "w-[90px]" : "w-[94px]"} `}
     >
       <div className="pr-2 pb-1">
