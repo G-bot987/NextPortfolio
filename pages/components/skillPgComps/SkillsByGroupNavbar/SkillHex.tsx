@@ -19,8 +19,8 @@ export default function SkillHex(Props: SkillInterface & { index: number }) {
       onMouseLeave={handleMouseLeave}
       className={` h-[95px] flex flex-col items-center justify-center flex ${
         (index + 1) % 3 == 0 ? `mx-[47px]` : ``
-      } 
-      ${hover ? "w-[94px]" : "w-[94px]"} `}
+      } ${hover ? "w-[94px]" : "w-[94px]"} `}
+      // ${hover ? "w-[90px]" : "w-[94px]"}
     >
       <div className="pr-2 pb-1">
         <div
@@ -33,6 +33,7 @@ export default function SkillHex(Props: SkillInterface & { index: number }) {
       </div>
       <button
         className={`min-w-[98px] ${hover ? "" : ""}`}
+        // ${hover ? "bg-white w-[120px]" : ""}
         // onClick={(event) => {
         //   event.preventDefault();
         //   filterSkillGroups(keyProp);
@@ -46,6 +47,9 @@ export default function SkillHex(Props: SkillInterface & { index: number }) {
             className={`max-w-min text-[10px] uppercase text-white text-center ${
               hover ? " text-white" : "text-white"
             }`}
+            // ${
+            //   hover ? " text-black" : "text-white"
+            // }
           >
             {name}
           </p>
