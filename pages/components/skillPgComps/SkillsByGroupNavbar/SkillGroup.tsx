@@ -108,7 +108,7 @@ export default function SkillGroup(
         </article>
       )}
       {selected && (
-        <article className="flex flex-col w-[350px] items-center">
+        <article className="flex flex-col w-[350px] items-center pt-6">
           <section className="min-h-[90px]">
             <div className={`  ${styles.hex} h-[80px]  `}>
               <div>
