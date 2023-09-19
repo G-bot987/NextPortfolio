@@ -1,6 +1,8 @@
 export interface SkillInterface {
   name: string;
   skillGroupKey: number;
+  about: string;
+  usedProjects?: number[] 
 }
 
 export interface TechnologiesInterface {
