@@ -19,6 +19,7 @@ export interface PropertyInterface {
 }
 
 export interface ProjectInterface {
+  projectKey: number;
   header: string;
   showCase: boolean;
   technologies: Number[];
