@@ -27,7 +27,7 @@ export const projectsData = {
 
   projects: [
     {
-      
+      projectKey: 1,
       header: "DnD Character Manager",
       showCase: true,
       technologies: [2, 3, 5, 6, 9, 27, 23, 14, 28, 20, 30],
@@ -49,6 +49,7 @@ export const projectsData = {
     },
 
     {
+      projectKey: 2,
       header: "Portfolio",
       showCase: true,
       technologies: [2, 5, 9, 27, 21, 28, 20, 30],
@@ -69,7 +70,7 @@ export const projectsData = {
     },
 
     {
-      
+      projectKey: 3,
       header: "Pokedex",
       showCase: false,
       technologies: [12, 14, 16, 17, 18, 19, 8, 28, 12, 14, 23, 20],
@@ -92,7 +93,7 @@ export const projectsData = {
     },
 
     {
-      
+      projectKey: 4,
       header: "Autism Society, Front End Tec Test Showcase",
       showCase: true,
       technologies: [2, 5, 12, 13, 30, 20, 21, 24, 25, 28, 32],
@@ -115,7 +116,7 @@ export const projectsData = {
 
 
     {
-      
+      projectKey: 5,
       header: "Shopify Tec Test, A GraphQL API Showcase",
       showCase: true,
       technologies: [5, 7,12, 14, 15, 20, 22,29, 26],
@@ -136,7 +137,8 @@ export const projectsData = {
     },
 
 
-    {
+    {      
+      projectKey: 6,
       header: "Tech Blog",
       technologies: [4, 7, 11, 8, 18, 28, 23],
       showCase: false,
@@ -156,6 +158,7 @@ export const projectsData = {
       },
     },
     {
+      projectKey: 7,
       header: "5 Star Local Group Project",
       technologies: [4, 31, 14,23, 19, 8],
       showCase: false,
@@ -175,6 +178,7 @@ export const projectsData = {
       },
     },
     {
+      projectKey: 8,
       header: "Employee Manager",
       technologies: [4, 7, 29, 22],
       showCase: false,
@@ -195,6 +199,7 @@ export const projectsData = {
       },
     },
     {
+      projectKey: 9,
       header: "Inquistive Group Project",
       technologies: [1, 4, 9, 3,31,14,23],
       showCase: false,
@@ -213,6 +218,7 @@ export const projectsData = {
       },
     },
     {
+      projectKey: 10,
       header: "Password Generator",
       technologies: [4, 7,28],
       showCase: false,
@@ -232,6 +238,7 @@ export const projectsData = {
       },
     },
     {
+      projectKey: 11,
       header: "Weather dashboard",
       technologies: [4, 7,14,28],
       showCase: false,
