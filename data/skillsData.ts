@@ -36,6 +36,7 @@ export const skillsData = {
     { name: "TailWind", skillGroupKey: 4, about:'' , usedProjects: [1,2,9]},
     { name: "Node.JS", skillGroupKey: 5 , about:'', usedProjects: [5,6,8,10,11]},
     { name: "MongoDB", skillGroupKey: 6 , about:'', usedProjects: [1,9]},
+    { name: "Postgres", skillGroupKey: 6 , about:'', usedProjects: [12]},
     { name: "Docker", skillGroupKey: 7 , about:''},
     { name: "MySQL", skillGroupKey: 6, about:'' , usedProjects: [3,6,7]},
     { name: "JQuery", skillGroupKey: 8, about:'' },
