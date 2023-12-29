@@ -19,7 +19,7 @@ export const projectsData = {
 
 
   technologies: [{ key: 1, option: 'react' }, { key: 2, option: 'next' }, { key: 3, option: 'mongodb' }, { key: 4, option: 'javascript' }, { key: 5, option: 'typescript' }, { key: 6, option: 'redux' }, { key: 7, option: 'node' }, { key: 8, option: 'mysql' }, { key: 9, option: 'tailwind' }, { key: 10, option: 'express' }, { key: 11, option: 'sequelize' }, 
-   { key: 13, option: 'SCSS' },  { key: 15, option: 'GraphQL' }, {key:16, option: 'PHP'}, {key:17, option: 'Laravel'}, {key:18, option: 'heroku'}, {key:19, option: 'bootstrap'}, { key: 26, option: 'Shopify' }, {key:30, option: 'vercel'}],
+   { key: 13, option: 'SCSS' },  { key: 15, option: 'GraphQL' }, {key:16, option: 'PHP'}, {key:17, option: 'Laravel'}, {key:18, option: 'heroku'}, {key:19, option: 'bootstrap'}, { key: 26, option: 'Shopify' }, {key:30, option: 'vercel'}, {key:33, option: 'postgres'}, {key:34, option: 'prisma'}],
 
   recentProject: [{key: 20, option: 'Yes'}],
 
@@ -30,7 +30,7 @@ export const projectsData = {
       projectKey: 1,
       header: "DnD Character Manager",
       showCase: true,
-      technologies: [2, 3, 5, 6, 9, 27, 23, 14, 28, 20, 30],
+      technologies: [2, 3, 5, 6, 9, 27, 23, 14, 28, 20, 30, 34],
       summary: "Using a Dungeons and Dragons 5E character card as a template, this application offers a intuitive interface for player character creation.",
       description: "In development since late November 22, if you check out the README, you will see the plan regarding future development. This project stems from my passion for tabletop games and the challenges of running games during the Covid pandemic. Based on my personal experience with platforms like Roll20 and other digital tabletops, I found the user interface and overall design to be generic. The platform Ive been developing takes a more tailored approach to character creation, incorporating languages from my homebrew world, for example. I undertook this project to push myself out of my comfort zone and tackle complex state management issues, UX considerations, database design, and gain more exposure to backend/API development. I specifically chose Next.js instead of React to gain more experience with Next.js and leverage its optimization benefits over React, such as the use of getServerSideProps. MongoDB was selected partly because of its guaranteed free tier and also due to its seamless integration with Next.js. TypeScript offers superior bug prevention compared to JavaScript, and its interface functionality aligns well with a prop-based framework, as well as providing reassurance when dealing with APIs.",
       links: {
@@ -43,6 +43,28 @@ export const projectsData = {
       imgs: {
         live: dndcharactermanager,
         alt: "dnd character manager image",
+        git: githubIMG,
+        gitAlt: "git icon",
+      },
+    },
+
+    {
+      projectKey: 12,
+      header: "Meal Planner",
+      showCase: true,
+      technologies: [2, 5, 6,13, 27, 23, 14, 28, 20, 30,32, 33, 34],
+      summary: "Driven by my recent experience with my Personal Trainer. This Meal Tracker was Designed to facilitate meal planning and nutrition tracking for individuals working with a personal trainer. The primary goal is to create a seamless platform for you and your personal trainer to collaborate on designing a nutrition plan tailored to your fitness goals.",
+      description: "My newest project In development since late December 23. Using some of my preferred tec with a sprinkling of new to add variety and enhance the breadth of my skills. This full stack application implements user authentication, profile management, meal and nutritional planning using state management enhanced by the backend capacity of the application. This application allows for progress monitoring and nutritional tracking and client coach communication. To allow for a smooth user experience this application is mobile first and fully responsive.  ",
+      links: {
+        deployed: "https://meal-planner-pink.vercel.app/",
+        repo: "https://github.com/G-bot987/meal-planner",
+        notes: 'under construction, please see the readme for sprint details and updates',
+        deployedTxt: 'deployment',
+        repoTxt: 'Git repo!'
+      },
+      imgs: {
+        live: githubIMG,
+        alt: "meal Planner image",
         git: githubIMG,
         gitAlt: "git icon",
       },
@@ -73,7 +95,7 @@ export const projectsData = {
       projectKey: 3,
       header: "Pokedex",
       showCase: false,
-      technologies: [12, 14, 16, 17, 18, 19, 8, 28, 12, 14, 23, 20],
+      technologies: [14, 16, 17, 18, 19, 8, 28, 12, 14, 23, 20],
       summary:
         "This project marks my first foray into Laravel and PHP development. It served as a technical test for my current role. Despite having no prior experience with PHP, I dedicated one week to complete this project, showcasing my aptitude and eagerness to explore new areas of development. I am pleased with the result achieved within such a short timeframe!",
         description: "This application showcases various functionalities, including authentication, route guarding, API usage (specifically for creating and reading data), database storage, and data filtering. Upon accessing the application, users are directed to a login page. After creating a user account, they can log in and access a Pokedex containing comprehensive Pokemon data. Users have the ability to view specific Pokemon and search for Pokemon based on their types. In future iterations, the application will include more advanced filtering options and additional features such as favoriting Pokemon and adding private notes to specific Pokemon.",
